@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            html tags
+        </title>
+        <style>
+            *{
+                background-color: tomato;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: auto;
+            }
+            .container{
+                padding: 20px;
+                background-color: rgba(215, 84, 60, 0.856);
+                height: 90vh;
+            }
+            form{
+                background-color: azure;
+                width: 300px;
+                border: none;
+                border: 1px solid whitesmoke;
+                border-radius: yellow;
+                background-color: azure;
+                color: beige;
+                cursor: pointer;
+
+            }
+            button:hover{
+                background-color: beige;
+            
+
+            }
+            optgroup{
+                color: bisque;
+            }
+            button{
+                margin-left: 50px
+            }
+        </style>
+
+    </head>
+    <body>
+        <center>
+            <h1> HTML FORM SELECT TAG</h1>
+            <p>THE SELECT TAG IS USED TO CREATE A DROPDOWN IN HTML</p>
+        </center>
+        <hr>
+      
+        <div class="container">
+            <form action="">
+                <label for="courses">Select courses</label>
+                <select name="courses" id="courses">
+                    <option value="" disabled selected>Select any courses</option>
+                    <option value="mean fullstack ">MEAN FULLSCTACK</option>
+                    <option value="mern fullstack ">MERN FULLSCTACK</option>
+                    <option value="java fullstack ">JAVA FULLSCTACK</option>
+                    <option value="python fullstack ">PYTHON FULLSCTACK</option>
+                </select>
+                <hr>
+                <label for="menu">MENU GROUP</label>
+                <select form="menu" id="menu">
+                    <option value="" disabled selected>Select any food</option>
+                    
+                    <optgroup label="south indian food">
+                        <hr>
+                       <option value=" ">IDLI</option> 
+                       <option value=" ">DOSA</option> 
+                       <option value=" ">VADE</option> 
+                       <option value=" ">SAMBAR</option> 
+                    </optgroup>
+                    <hr>
+                    <optgroup label="North indian food">
+                        <hr>
+                       <option value=" ">CHAPTI</option> 
+                       <option value=" ">PAROTA</option> 
+                       <option value=" ">VAD PAV</option> 
+                       <option value=" ">SAMOSA</option> 
+                    </optgroup>
+                    <hr>
+                    <optgroup label="Chinese food">
+                        <hr>
+                       <option value=" ">MOMO</option> 
+                       <option value=" ">GOBI</option> 
+                       <option value=" ">DUMPLING</option> 
+                       <option value=" ">NOODLES</option> 
+                    </optgroup>
+
+
+                </select>
+                <br>
+                <button>SUBMIT</button>
+
+            </form>
+        </div>
+
+    </body>
+</html>
