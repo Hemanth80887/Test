@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MANDYA MILTRY HOTEL</title>
     <style>
         body{
-            background-color: rgb(233, 233, 57);
+            background:linear-gradient(to right ,red, yellow);
             font-family: 'Times New Roman', Times, serif;
         }
         .a{
@@ -25,21 +25,45 @@
         button:hover{
             color: black;
             background-color: red;
+            margin: auto;
+            
+
+        }
+        .nati{
+            font-family: 'Times New Roman', Times, serif;
+            border:  10px solid  black;
+            background: linear-gradient(10deg gold red);
+        }
+        .chicken{
+            font-family: 'Times New Roman', Times, serif;
+            border:  4px solid  rgb(123, 25, 25);
+            padding: 20px;
+            margin: auto;
+            width: fit-content;
+            background-color: orange ;
 
         }
     </style>
 </head>
 <body>
     <center>
-        <h1>MANDYA MILTRY HOTEL</h1>
+        <div class="nati">
+            <h1>MANDYA MILTRY HOTEL</h1>
         <h2>
             MANDYA STYLE VEG AND NON VEG HOTEL
         </h2>
         <p>Family friendly and great taste</p>
+        </div>
         <hr>
-        <label>What would u like</label>
+        <div class="chicken">
+            <label>What would u like</label>
         <input type="text" placeholder="enter the item" list="items">
-        <button onclick="alert('order submitted')">Submit</button>
+        <br><br>
+         <button onclick="alert('order submitted')">Submit</button></div>
+    
+        
+        
+        
         <datalist id="items">
             <hr>
             <option value="50">Dosa</option>

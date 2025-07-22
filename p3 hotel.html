@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hotel Menu</title>
+    <style>
+        body{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVR-ANd3uJPnxASFNPN8H5PnkNbm3bUaa_hw&s);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;   
+        }
+        
+        .menu1, .menu2 {
+            background: linear-gradient(to right, red, blue, green);
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            width: fit-content;
+            margin: auto;
+            text-align: center;
+            color: azure;
+            font-weight:bold;
+        }
+        .menu1 h2, .menu2 h2 {
+            text-align: center;
+        }
+        .menu1 input, .menu2 input, .menu2 select {
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        .menu1 button, .menu2 button {
+            border: 0;
+            background-color: red;
+            padding: 5px;
+            border-radius: 5px;
+            color: aliceblue;
+            margin-top: 20px;
+        }
+        .contact {
+            border: 2px solid black;
+            width: fit-content;
+            border-radius: 5px;
+            background-color: aquamarine;
+            float: right;
+            padding: 10px;
+            margin-right: 0;
+        }
+        @keyframes anim{
+            from{
+                transform: TranslateX(200px);
+                background-color: rgb(9, 255, 0);
+            }
+            to{
+                transform: TranslateX(-200px);
+                background-color: aqua;
+            }
+        }
+        h1{
+            animation: anim 2s infinite alternate;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Hotel Menu</h1>
+        <hr>
+    </center>
+    <div class="menu1">
+        <form action="">
+            <h2>Please Fill The Details and Order Your Dish</h2>
+            <label>Name: </label>
+            <input type="text" placeholder="Enter Your Name">
+            <br>
+            <label>Phone Number: </label>
+            <input type="tel" placeholder="Enter Your Phone Number">
+            <br>
+            <label>Order-Items: </label>
+            <input type="text" placeholder="Order the items here" list="items-list">
+            <datalist id="items-list">
+                <option value="Idli-40rps">Idli</option>
+                <option value="Dosa-50rps">Dosa</option>
+                <option value="Vada-30rps">Vada</option>
+                <option value="Uttapam-60rps">Uttapam</option>
+                <option value="Pongal-55rps">Pongal</option>
+                <option value="Poori-45rps">Poori</option>
+                <option value="Chapati-40rps">Chapati</option>
+                <option value="Paratha-50rps">Paratha</option>
+                <option value="Paneer Butter Masala-120rps">Paneer Butter Masala</option>
+                <option value="Dal Fry-80rps">Dal Fry</option>
+                <option value="Veg Biryani-100rps">Veg Biryani</option>
+                <option value="Chicken Biryani-150rps">Chicken Biryani</option>
+                <option value="Mutton Biryani-200rps">Mutton Biryani</option>
+                <option value="Egg Curry-90rps">Egg Curry</option>
+                <option value="Fish Fry-160rps">Fish Fry</option>
+                <option value="Curd Rice-50rps">Curd Rice</option>
+                <option value="Lemon Rice-55rps">Lemon Rice</option>
+                <option value="Tomato Rice-60rps">Tomato Rice</option>
+                <option value="Sambar Rice-65rps">Sambar Rice</option>
+                <option value="Rasam Rice-55rps">Rasam Rice</option>
+                <option value="Fried Rice-90rps">Fried Rice</option>
+                <option value="Gobi Manchurian-80rps">Gobi Manchurian</option>
+                <option value="Chilli Paneer-100rps">Chilli Paneer</option>
+                <option value="Chicken 65-120rps">Chicken 65</option>
+                <option value="Butter Naan-35rps">Butter Naan</option>
+                <option value="Tandoori Roti-30rps">Tandoori Roti</option>
+                <option value="Masala Dosa-60rps">Masala Dosa</option>
+                <option value="Onion Dosa-65rps">Onion Dosa</option>
+                <option value="Plain Rice-40rps">Plain Rice</option>
+                <option value="Jeera Rice-60rps">Jeera Rice</option>
+            </datalist>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <hr>
+    <div class="menu2">
+        <form action="">
+            <h2>Please Fill The Details and Select Your Dish</h2>
+            <label>Name: </label>
+            <input type="text" placeholder="Enter Your Name">
+            <br>
+            <label>Phone Number: </label>
+            <input type="tel" placeholder="Enter Your Phone Number">
+            <br>
+            <label>Order-Items: </label>
+            <select name="items" id="items-select">
+                <option value="" disabled selected>Select Your Items Here</option>
+                <optgroup label="South-Indian">
+                    <option value="Idli-40rps">Idli</option>
+                    <option value="Dosa-50rps">Dosa</option>
+                    <option value="Vada-30rps">Vada</option>
+                    <option value="Uttapam-60rps">Uttapam</option>
+                    <option value="Pongal-55rps">Pongal</option>
+                </optgroup>
+                <optgroup label="North-Indian">
+                    <option value="Chapati-40rps">Chapati</option>
+                    <option value="Paratha-50rps">Paratha</option>
+                    <option value="Paneer Butter Masala-120rps">Paneer Butter Masala</option>
+                    <option value="Dal Fry-80rps">Dal Fry</option>
+                    <option value="Butter Naan-35rps">Butter Naan</option>
+                </optgroup>
+                <optgroup label="Chinese">
+                    <option value="Fried Rice-90rps">Fried Rice</option>
+                    <option value="Gobi Manchurian-80rps">Gobi Manchurian</option>
+                    <option value="Chilli Paneer-100rps">Chilli Paneer</option>
+                    <option value="Chicken 65-120rps">Chicken 65</option>
+                    <option value="Veg Biryani-100rps">Veg Biryani</option>
+                </optgroup>
+                <optgroup label="Italian">
+                    <option value="Pizza-150rps">Pizza</option>
+                    <option value="Pasta-120rps">Pasta</option>
+                    <option value="Lasagna-180rps">Lasagna</option>
+                    <option value="Risotto-140rps">Risotto</option>
+                </optgroup>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="contact">
+        <h3>For More Info Contact the owner : <i class="fa-solid fa-address-card"></i> Prabhu </h3>
+        <p style="margin: 0; text-align: right; font-weight: bolder;">+91 8618878965</p>
+    </div>
+</body>
