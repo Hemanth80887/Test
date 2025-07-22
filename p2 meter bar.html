@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METER TAG</title>
+    <style>
+        .v1{
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>METER TAGS</h1>
+        <h2>default meter tags</h2>
+        <meter></meter>
+    </center>
+    <hr>
+    <h2>Static meter tags</h2>
+    <hr>
+    <p><meter min="0" max="100" value="10" low="20"></meter>low value</p>
+    <p><meter min="0" max="100" value="40" low="20"></meter>normal value</p>
+    <p><meter min="0" max="100" value="90" low="20"></meter>high value</p>
+    <hr>
+    <p><meter value="0" min="0" max="100" low="20" id="m1" class="v1"></meter>
+        <small id="result">00</small></p>
+        
+        <script>
+            var metertag = document.getElementById('m1')
+            var smalltag = document.getElementById('result')
+
+            function incrementMetervalue(){
+                metertag.value = metertag.value + 2;
+                if (metertag.value>90) {
+                    smalltag.innerText = metertag.value + "(high value)"
+                    
+                }
+                 else if (metertag.value>20) {
+                    smalltag.innerText = metertag.value + "(normal value)"
+                    
+                }
+                else if (metertag.value<20) {
+                    smalltag.innerText = metertag.value + "(low value)"
+                    
+                }
+            }
+            setInterval('incrementMetervalue()',100);
+        </script>
+
+</body>
+</html>

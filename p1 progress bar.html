@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress and meter tag</title>
+    <style>
+        progress{
+            accent-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            progress and meter tags
+        </h1>
+        <p>the progress atg is or progress element represents the progress of a test</p>
+    </center>
+    <hr>
+    <h1>
+        Example 1 - progress tag without any attributes (default progress bar)
+    </h1>
+    <progress>
+    </progress>
+    <hr>
+    <h1>example 2 : static progress bar</h1>
+    <hr>
+    <p>HTML <progress min="0" max="100" value="90"> </progress>90%</p>
+    <p>CSS <progress min="0" max="100" value="10"> </progress>10%</p>
+    <p>JS <progress min="0" max="100" value="40"> </progress>40%</p>
+    <p>REACT <progress min="0" max="100" value="30"> </progress>30%</p>
+    <p>NODE <progress min="0" max="100" value="20"> </progress>20%</p>
+    <p>EXPRESS <progress min="0" max="100" value="10"> </progress>10%</p>
+    <p>SQL <progress min="0" max="100" value="70"> </progress>70%</p>
+    <p>EXCEL <progress min="0" max="100" value="30"> </progress>30%</p>
+    <p>WORD <progress min="0" max="100" value="40"> </progress>40%</p>
+    <p>PROWER <progress min="0" max="100" value="45"> </progress>45%</p>
+
+    <hr>
+    <h2>
+        Dynamic prgress bar
+    </h2>
+    <progress min="0" max="100" value="0" id="p1"></progress>
+    <small id="result">0%</small>
+
+    <script>
+        var downloadProgressTag = document.getElementById('p1');
+        var resultsmalltag = document.getElementById('result');
+
+        function downloadHandler(){
+            downloadProgressTag.value = downloadProgressTag.value + 1;
+            resultsmalltag.innerText = downloadProgressTag.value + "%"
+        }
+        setInterval('downloadHandler()',1000);
+    </script>
+</body>
+</html>
