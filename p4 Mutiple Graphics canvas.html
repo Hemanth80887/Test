@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>
+            CANVAS WRITTING A MULTIPLE GRAPHICS IN A SINGLE CANVAS
+        </h1>
+    </center>
+    <hr>
+     <canvas id="canvas1" width="700" height="700" style="border: 1px solid #000">
+        <script>
+            let canvas1 =document.getElementById('canvas1').getContext('2d');
+            canvas1.beginPath();
+              canvas1.fillStyle = 'orange';
+              canvas1.fillRect(200,200,300,200)
+            canvas1.closePath();
+
+            //second graphics in same graphics
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.arc(200,200,90,0,2*Math.PI);
+              canvas1.fill();
+            canvas1.closePath();
+
+            //third graphics in same graphics
+            canvas1.beginPath();
+              canvas1.font = '45px Times New Roman';
+              canvas1.fillStyle ='black';
+              canvas1.fillText('This is a dog',200, 600)
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'black';
+              canvas1.arc(145,180,15,0,2*Math.PI);
+              canvas1.fill();
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'black';
+              canvas1.arc(248,180,15,0,2*Math.PI);
+              canvas1.fill();
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.arc(105,140,40,0,2*Math.PI);//x,y,radius,starting point ,2*PI
+              canvas1.fill();
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.arc(295,140,40,0,2*Math.PI);//x,y,radius,starting point ,2*PI
+              canvas1.fill();
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.fillRect(200,400,50,150)//x,y,width,height
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.fillRect(430,400,50,150)//x,y,width,height
+            canvas1.closePath();
+
+            canvas1.beginPath();
+              canvas1.fillStyle = 'brown';
+              canvas1.fillRect(490,50,10,150)//x,y,width,height
+            canvas1.closePath();
+
+
+        </script>
+      </canvas>
+      
+       
+</body>
+</html>
