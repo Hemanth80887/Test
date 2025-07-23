@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Canvas line Draw
+        </h1>
+    </center>
+    <hr>
+    <canvas id="canvas1" width="800" height="600" style="border: 1px solid #000">
+        <script>
+            let canvas1 = document.getElementById('canvas1').getContext('2d');
+            canvas1.beginPath();
+              canvas1.moveTo(100, 100);
+              canvas1.lineTo(200, 100);
+              canvas1.lineTo(200, 200);
+              canvas1.lineTo(100, 200);
+              canvas1.lineTo(100, 100);
+
+              canvas1.lineTo(130, 80);
+              canvas1.lineTo(230, 80);
+              canvas1.lineTo(200, 100);
+
+              canvas1.moveTo(230, 80);
+              canvas1.lineTo(230, 175);
+              canvas1.lineTo(200, 200);
+
+              canvas1.moveTo(230, 175);
+              canvas1.lineTo(130, 175);
+              canvas1.lineTo(100, 200);
+
+              canvas1.moveTo(130, 175);
+              canvas1.lineTo(130, 80);
+              
+              
+              canvas1.stroke();
+            canvas1.closePath();
+        </script>
+    </canvas>
+    
+            
+        
+
+</body>
+</html>
