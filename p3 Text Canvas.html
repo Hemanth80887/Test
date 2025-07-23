@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CANVAS TEXT</h1>
+    </center>
+    <hr>
+    <h2>
+        Inserting text in canvas graphics
+    </h2>
+    <hr>
+    <canvas id="canvas1" width="500" height="500" style="border: 1px solid #000">
+        <script>
+            let canvas1 =document.getElementById('canvas1').getContext('2d');
+            canvas1.font = '48px Times New Roman'; //font size font family
+            canvas1.fillStyle = 'red'; //font color
+            canvas1.fillText("hello canvas",130,250);// text, x axis,y axis
+        </script>
+    </canvas>
+</body>
+</html>
