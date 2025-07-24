@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: rgba(2, 2, 2, 0.979);
+        }
+        .h1{
+            color: azure;
+        }
+        .h2{
+            color: azure;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       #header{
+        width: 1500px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(252, 41, 4);
+        padding: 20px;
+        
+        ul{
+            display: flex;
+            gap: 50px;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .logo{
+            width: 80px;
+            margin-left: 25px;
+        }
+    
+       button{
+        border: none;
+        padding: 13px;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       .red-bots{
+        background-color: brown;
+        font-size: 20px;
+
+       }
+       .yellow-bots{
+        background-color: brown;
+        font-size: 20px;
+       }
+       button:hover{
+        opacity: 0.6
+       }
+       a:hover{
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+       }
+       
+    </style>
+
+    
+</head>
+<body>
+    
+    <center>
+        <h1 class="h1">FERRARI</h1>
+        <br>
+        <p class="h2">Let's go racing</p>
+        
+        <br>
+    </center>
+    <div id="header">
+        <img src="https://companieslogo.com/img/orig/RACE.D-a40e5994.png?t=1720244493" alt="" class="logo" ">
+        
+        <ul type="none">
+            <li><a href="#">Racing</a></li>
+            <li><a href="#">Sports Car</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Experiences</a></li>
+            <li><a href="#">About Us</a></li>
+
+        </ul>
+
+        <div class="bots">
+            <button class="red-bots">Discover<i class="fa-solid fa-grip-lines"></i></button>
+            <button class="yellow-bots">Let's call<i class="fa-solid fa-phone"></i></button>
+        </div>
+    </div>
+    <video src="./12698128_4070_2160_24fps.mp4" controls autoplay width="100%" loop></video>
+    <video src="./8262626-hd_1920_1080_30fps.mp4" controls autoplay width="100%" loop></video>
+    <audio src="./nutcracker_march-78133.mp3" controls autoplay loop></audio>
+</body>
+</html>
