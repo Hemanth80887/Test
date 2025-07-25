@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food Restaurant Website</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/256/1668/1668966.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .first{
+            background-image: 
+           linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url(https://i.ytimg.com/vi/NUt4RgRR5eo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3ZP47s6wiRkG9u1voWFHhYJgfPg);
+            background-size: cover;
+            color: white;
+
+        }
+        .first .img1{
+            width: fit-content;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .first .menu{
+            width: fit-content;
+            margin: auto;
+        }
+        .first .menu button{
+            border: none;
+            font-size: 30px;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .first .menu button:hover{
+            cursor: pointer;
+            color: lightgray;
+        }
+        .first .content{
+            text-align: center;
+            padding: 20px;
+        }
+        .first .content h1{
+            margin:20px;
+        }
+        .second{
+            text-align: center;
+            padding: 30px;
+            margin: 10px;
+            font-size: 20px;;
+            .fp{
+                font-size: 50px;
+            }
+        }
+        .second p{
+            margin-bottom: 10px;
+        }
+        .third{
+            display: flex;
+            .sec1{
+                flex: 1;
+            }
+            .sec2{
+                flex: 1;
+                margin:20px;
+                text-align: center;
+                margin-top: 80px;
+                
+            }
+            .sec3{
+                flex: 1;
+            }
+            p{
+                padding: 20px;;
+            }
+        }
+        .forth{
+            display: flex;
+            .sec1{
+                flex: 1;
+                margin:20px;
+                text-align: center;
+                margin-top: 80px;
+            }
+            .sec2{
+                flex:1;
+            }
+            .sec3{
+                flex: 1;
+                margin:20px;
+                text-align: center;
+                margin-top: 80px;
+            }
+            p{
+                padding: 20px;;
+            }
+        }
+        .fifth{
+            text-align: center;
+            margin: 50px;
+            p{
+                margin:20px;
+                font-size: 20px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            h6{
+                font-size: 50px;;
+            }
+        }
+        .sixth{
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding:30px;
+            margin: 50px;;
+            .sec1{
+                margin: 0px;
+                margin-left: 150px;;
+            }
+            .sec2{
+                margin-left: 100px;
+            margin-right: 100px;           }
+            .sec3{
+                margin: 0px;
+                margin-right: 150px;;
+            }
+            p{
+                line-height: 30px;;
+            }
+        }
+        .seventh {
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 50px;;
+            button{
+                border: 3px solid black;
+                padding: 10px;
+                padding-left: 50px;
+                padding-right: 50px;;
+                background-color: transparent;
+            }
+            button:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+        .eight{
+            background-image: url(./image\ copy\ 4.png);
+            background-size:cover ;
+            height: 900px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;           
+        }
+        .tenth{
+            display: flex;
+            text-align: center;
+        }
+        .tenth .sec1{
+            flex:1;
+        }
+        .tenth .ip{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 3px;
+            padding-bottom: 10px;;
+        }
+        .tenth .item{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 30px;
+            padding-bottom: 60px;;
+        }
+        .tenth .sec2{
+            flex:1;
+        }
+        .eleventh{
+            display: flex;
+            margin-bottom: 60px;
+        }
+        .eleventh .left{
+            flex:1;
+        }
+        .eleventh .right{
+            flex:1;
+        }
+        .eleventh .bottom{
+            display: flex;
+            margin-top: -3px;
+        }
+        .eleventh .bleft{
+            flex:1;
+        }
+        .eleventh .bright{
+            flex:1;
+        }
+        .twelth{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            padding:10px;
+            margin: 80px;;
+            .sec1{
+                margin-left:100px;
+                
+            }
+            .sec2{
+
+            }
+            .sec3{
+                
+            }
+            .sec4{
+               
+                margin-right: 100px;;
+            } 
+
+        }
+        .twelth p{
+            letter-spacing: 3px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+        }
+        .thirteen{
+            text-align: center;
+            button{
+
+            }
+        }
+        .thirteen button:hover{
+            background-color: black;
+            cursor: pointer;
+            color: white;
+        }
+        .fourteen{
+            background-color: darkgray;
+            color: white; 
+            padding:50px;
+            margin-top: 5px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="menu">
+            <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="img1">
+            <img src="./image.png" alt="image" width="400" height="300">
+        </div>
+        <div class="content">
+            <h1>One Step to Making a Good Start</h1>
+            <p>Mauris fermentum tortor non enim aliquet condimentum. Nam aliquam pretium feugiat. Duis <br> sem est, viverra eu interdum ac, suscipit nec mauris. Suspendisse commodo tempor sagittis! <br> In justo est, sollicitudin eu scelerisque pretium, placerat eget elit.</p>
+        </div>
+    </div>
+    <div class="second">
+        <p>ABOUT OUR RESTAURANT</p>
+        <p class="fp">Exclusive <i><b>restaurant in Paris</b></i>, the ultimate way <br> to get amazing food from the best chefs in the <br> city. <i><b>Great atmosphere included.</b></i></p>
+    </div>
+    <div class="third">
+        <div class="sec1">
+            <img src="./image copy.png" alt="" width="500px">
+        </div>
+        <div class="sec2">
+            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">H I S T O R Y</p>
+            <p style="font-size: 20px;"><b>Strange story of the emergence of  <br> healthy food</b></p>
+            <p>Sample text. Click to select the text box. Click again or <br> double click to start editing the text.</p>
+            <a href="#">READ MORE</a>
+        </div>
+        <div class="sec3">
+            <img src="./image copy 2.png" alt="" width="500px">
+        </div>
+    </div>
+    <div class="forth">
+        <div class="sec1">
+            <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">C O M U N I T Y</p>
+            <p style="font-size: 20px;"><b>Healthy food in social networks, with us <br> interesting</b></p>
+            <p>Sample text. Click to select the text box. Click again or <br> double click to start editing the text.</p>
+            <a href="#">READ MORE</a>
+        </div>
+        <div class="sec2">
+            <img src="./image copy 3.png" alt="" width="500px">
+        </div>
+        <div class="sec3">
+            <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"> P H I L O S O P H Y</p>
+            <p style="font-size: 20px;"><b>Only the best food, the best musicians <br> the best guests</b></p>
+            <p>Sample text. Click to select the text box. Click again or <br> double click to start editing the text.</p>
+            <a href="#">READ MORE</a>
+        </div>
+    </div>
+    <div class="fifth">
+        <p>E V E N T S</p>
+        <h6>Events of Healthy Food</h6>
+    </div>
+    <div class="sixth">
+        <div class="sec1">
+            <h1>25</h1>
+            <p>A P R I L</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="sec2">
+            <h1>15</h1>
+            <p>M A Y</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="sec3"> 
+            <h1>19</h1>
+            <p>J U N E</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <div class="seventh">
+        <button><b style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 3px;">READ MORE</b></button>
+    </div>
+    <div class="eight">
+        <p style="letter-spacing: 3px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 250px; font-size: 25px;; ;;">FEEDBACK</p>
+        <p style=" padding-top: 50px;font-size: 50px; line-height: 75px;">Exclusive <b><i>restaurant in Paris,</i></b> the ultimate way to <br> get amazing food from the best chefs in the <br> city. <b><i>Great atmosphere included</i></b>.</p>
+    </div>
+    <div class="ninth">
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 3px; text-align: center; padding:10px;">OUR MENU</p>
+        <h2 style="text-align: center; font-size: 70px;padding: 20px;;">Delicious From The Chef</h2>
+    </div>
+    <div class="tenth">
+        <div class="sec1">
+            <p class="ip">PEAR SALAD / $11</p>
+            <p class="item">Reid’s Orchard Pears / Bitter Greens / Granola / Big Firefly / Farms <br> Black and Blue / Pine Nut Vinaigrette</p>
+            <p class="ip">FARM GREENS / $9</p>
+            <p class="item">Honey Vinaigrette / House Cheese Crouton / Fine Herbs</p>
+            <p class="ip"> RICOTTA GNUD / $18</p>
+            <p class="item">Marinated Sardine / Red Currant / Chanterelles / Pine Nuts / <br> Mantecato Vitello / Fennel / Olive / Pepitas</p>
+        </div>
+        <div class="sec2">
+            <p class="ip">BRODETTO DI PESCE / $9</p>
+            <p class="item">Adriatic Seafood Soup / Clams / Prawns / Livornese / Langoustine <br> Scallop / Celery / Olive</p>
+            <p class="ip">GRILLED KALE / $9</p>
+            <p class="item">Bitter Greens / House Cheese Crouton / Kamon Iberico</p>
+            <p class="ip">CANESTRELLI / $18</p>
+            <p class="item">Reid Orchatd Pears / Bitter Greens / House Cheese Crouton / <br> Marinated Sardine / Chanterelles / Clams</p>
+        </div>
+    </div>
+    <div class="eleventh">
+        <div class="left">
+            <img src="./image copy 5.png" alt="" width="100%">
+        </div>
+        <div class="right">
+            <div class="top">
+                <img src="./image copy 6.png" alt="" width="100%">
+            </div>
+            <div class="bottom">
+                <div class="bleft">
+                    <img src="./image copy 7.png" alt="" width="100%">
+                </div>
+                <div class="bright">
+                    <img src="./image copy 8.png" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="twelth">
+        <div class="sec1"><img src="./image copy 9.png" alt="">
+            <h1>840</h1>
+            <p>PIESE OF MEET</p>
+        </div>
+        <div class="sec2">
+            <img src="./image copy 10.png" alt="">
+            <h1>900</h1>
+            <p>PLATES OF RICE</p>
+        </div>
+        <div class="sec3">
+            <img src="./image copy 11.png" alt="">
+            <h1>450</h1>
+            <p>CROISSANTS</p>
+        </div>
+        <div class="sec4">
+            <p style="border: 1px solid black; width: fit-content; color:white;background-color: black;padding: 50px; border-radius:100%; height: 100px;"><br>WE COOK <br> EVERYDAY</p>
+        </div>
+    </div>
+    <div class="thirteen">
+        <p style="letter-spacing: 3px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 10px;">CONTACT US</p>
+        <h1 style="font-size: 60px; padding-bottom:  20px;">Get in touch</h1>
+        <input type="text" placeholder="Enter Your Name" style="margin:5px; width: 400px; height: 20px; "> <br>
+        <input type="email" placeholder="Enter a Valid email address" style="margin:5px; width:400px; height: 20px;""><br>
+        <input type="checkbox"><small> I accept the Terms of Service</small><br>
+        <button style="border: 2px solid black;padding: 10px;margin-top: 3px;letter-spacing: 2px;"><b>SUBMIT</b></button>
+    </div>
+    <div class="fourteen">
+        <p style="text-align: center;">write something here</p>
+    </div>
+</body>
+</html>
