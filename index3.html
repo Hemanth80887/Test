@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF CONVERTOR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            background-color:rgb(230, 230, 255)
+        
+        }
+    
+        h1{
+            color: blue;
+            padding: 20px;;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        form{
+            width: 450px;
+            border-bottom: 10px solid blue;
+            border-radius: 10px;
+            box-shadow: 0px 0px 50px blue;
+            padding: 50px;
+            label{
+            font-size: 30px;
+            font-weight:bold;
+            color: red;
+        }
+        }
+        input::file-selector-button{
+            padding: 5px;
+            width:150px;
+            height: 30px;
+            margin: 15px 5px 5px 0px;
+            border: none;
+            border-radius: 5px;
+            background-color:rgb(111, 248, 203);
+        }
+        button{
+            margin-top:20px;
+            width: 450px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(237, 82, 82); ;
+        }
+        input::file-selector-button:hover, button:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        #images img{
+            padding:1px;
+            height: 100px;
+            width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header><center><h1>Welcome To PDF Convertor</h1></center></header>
+    <section class="container">
+        <form action="">
+            <label for="">Select the images to convert to pdf</label>
+            <input type="file" accept="image/*" multiple id="inputfiles">
+            <div id="images"></div>
+            <button onclick="pdfconvertor()">Convert to PDF</button>
+        </form>
+    </section>
+    <script>
+        const inputfiles=document.getElementById("inputfiles");
+        const images=document.getElementById("images");
+        const allimages=[];
+        inputfiles.onchange=function(){
+            console.log(inputfiles.files);
+            for (i=0; i<inputfiles.files.length;i++){
+                const singleimage=inputfiles.files[i];
+                const reader= new FileReader();
+                reader.readAsDataURL(singleimage);
+                reader.onload=function(){
+                    const img=document.createElement("img");
+                    img.src=reader.result;
+                    allimages.push(img);
+                    img.onload=function(){
+                    images.appendChild(img);
+                    }
+
+                }
+            }
+        }
+        function pdfconvertor(){
+            const {jsPDF}=window.jspdf;
+            const pdf=new jsPDF;
+            if (allimages.length==0){
+                alert("please select the images!!!");
+            }
+            for (i=0; i<allimages.length;i++){
+                const image=allimages[i];
+                const pdfwidth=pdf.internal.pageSize.getWidth();
+                const pdfheight=pdf.internal.pageSize.getHeight();
+                if (i>0) pdf.addPage();
+                pdf.addImage(image, "JPEG", 10,10,pdfwidth,pdfheight);
+                console.log(pdfwidth,pdfheight);
+                
+
+            }
+            const name=prompt("Save as........")
+            pdf.save('${name}.pdf');
+
+        }
+    </script>
+</body>
+</html>
