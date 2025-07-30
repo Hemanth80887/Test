@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Scanner</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 30px rgb(131, 40, 24);
+            border-radius: 10px;
+            border-bottom: 5px solid tomato;
+        }
+        input::file-selector-button{
+            background-color: rgb(158, 112, 43);
+            border: none;
+            color: #f1f1f1;
+            padding: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        button{
+            width: 300px;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: rgb(190, 84, 55);
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        input::file-selector-button:hover,button:hover{
+            opacity: 0.7;
+        }
+        #images{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        #images img{
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 0px 5px gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="container">
+        <form>
+            <label for="">Select Images</label>
+            <input type="file" accept="image/*" multiple id="fileInput">
+            <button type="button"> Convert to Pdf </button>
+            <div id="images"></div>
+        </form>
+    </section>
+    <script>
+        const imagesContainer = document.getElementById('images');
+        const fileInput = document.getElementById('fileInput');
+
+        fileInput.onchange = function(){
+            console.log(fileInput.files);//to get the selected files array format
+            // let array = ['a','b','c','d']
+            // read the array using for loop
+            for(let i=0; i<fileInput.files.length;i++){
+                  console.log(fileInput.files[i]);
+                  const singleImage = fileInput.files[i];
+                  const reader = new FileReader();
+
+                  reader.onload = function(){
+                     const img = document.createElement('img');
+                     img.src = reader.result;
+                     img.onload = function(){
+                        imagesContainer.appendChild(img);
+                    }
+                }
+                reader.readAsDataURL(singleImage)
+
+    }
+
+ }
+          
+    </script>
+</body>
+</html>
