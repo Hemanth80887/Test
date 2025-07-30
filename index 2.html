@@ -1,0 +1,34 @@
+<!-- to insert the text inside the pdf -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <textarea name="" id="text" rows="5" cols="10"></textarea>
+        <button type="button" onclick="createpdf()">Download PDF</button>
+    </form>
+    <script>
+        const texttag=document.getElementById("text");
+        function createpdf(){
+            const {jsPDF}=window.jspdf;
+            const pdf=new jsPDF;
+            const x=20;
+            var y=20;
+            const splittedtext=pdf.splitTextToSize(texttag.value,200)
+        splittedtext.forEach(element => {
+            pdf.text(element,x,y);
+            y+=7;
+                
+            });
+            
+            const filename=prompt("enter file name");
+            pdf.save('${filename}.pdf')
+        }
+    </script>
+</body>
+</html>
