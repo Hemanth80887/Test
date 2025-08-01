@@ -3,103 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Scanner</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-sizing: border-box;
+    <title>Automobili Lamborghini </title>
+    <link rel="icon" href="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style> 
+        body{
+            background-color: rgb(185, 189, 179);
+            gap: 40px;
+            
         }
-        .container{
-            height: 100vh;
+        #header{
             display: flex;
+            width: 1462px;
             align-items: center;
-            justify-content: center;
-        }
-        form{
-            width: 350px;
+            justify-content: space-between;
+            background-color: rgb(0, 0, 0);
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 30px rgb(131, 40, 24);
-            border-radius: 10px;
-            border-bottom: 5px solid tomato;
+            margin-bottom: 25px;
+            position: sticky;
         }
-        input::file-selector-button{
-            background-color: rgb(158, 112, 43);
-            border: none;
-            color: #f1f1f1;
-            padding: 8px;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-size: 15px;
-        }
-        button{
-            width: 300px;
-            margin-top: 10px;
-            padding: 10px;
-            border: none;
-            background-color: rgb(190, 84, 55);
-            color: rgb(255, 255, 255);
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        input::file-selector-button:hover,button:hover{
-            opacity: 0.7;
-        }
-        #images{
+         ul{
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
+            gap: 40px;
+            font-size: 20px;
+            margin-top: 40px;
+            margin-left: 120px;
+            
         }
-        #images img{
-            width: 70px;
-            height: 70px;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0px 0px 5px gray;
+        .logo{
+            
+            width: 90px;
         }
-        
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        a:hover{
+            color: rgb(149, 226, 40);
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+        .search{
+            width: 75px;
+            height: 40px;  
+        }
+        .message{
+            width: 100px;
+            height: 40px;
+        }
+        .search:hover{
+            background-color:rgb(149, 226, 40);
+        }
+        .message:hover{
+            background-color:rgb(149, 226, 40);
+        }
+        .text{
+            position: absolute;
+
+            top: 120%;
+            left: 5%;
+            color: rgb(5, 5, 5);
+            font-size: 1.5rem;
+            border: 1px solid black;
+            padding: 5px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            background-color: rgb(255, 255, 255);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .text:hover{
+            background-color: rgba(255, 252, 252, 0.801);
+           
+        }
+        .text1{
+            position: absolute;
+            top: 85%;
+            left: 2%;
+            font-size: 5rem;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        .sec2{
+            background-image: url(./1308459.jpg);
+            background-size: cover;
+            height: 90vh; 
+            transition: 0.5s;
+
+        }
+        .sec2-text{
+            color: black;
+            font-size: 50px;
+            align-items: center; 
+            justify-content: center; 
+            padding: 10px;
+        }
+        .sec2:hover{
+            transform: scale(1.07);
+
+        }
+            
+
+
     </style>
 </head>
 <body>
-    <section class="container">
-        <form>
-            <label for="">Select Images</label>
-            <input type="file" accept="image/*" multiple id="fileInput">
-            <button type="button"> Convert to Pdf </button>
-            <div id="images"></div>
-        </form>
-    </section>
-    <script>
-        const imagesContainer = document.getElementById('images');
-        const fileInput = document.getElementById('fileInput');
+    <div id="header">
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg" alt="" width="90px" class="logo">
+    <ul type="none">
+        <li><a href="./index.html">Index</a></li>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./About me.html">About us</a></li>
+        <li><a href="./Contact.html">Contact us</a></li>
+        <li><a href="./experience.html">Experience</a></li>
+  
+    </ul>
+    <div class="btns">
+        <button class="search">Search   <i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="message">Comment <i class="fa-solid fa-message"></i></button>
+    </div>
+    </div>
+   <div class="sec1">
+     <div class="video"><video src="./20153915-uhd_3840_2160_24fps.mp4" autoplay width="100%" loop></video></div>
+     <div class="text">Discover more <i class="fa-solid fa-arrow-right"></i></div>
+     <div class="text1"><q>DARE TO LIVE <br>MORE</q></div>
+   </div>
 
-        fileInput.onchange = function(){
-            console.log(fileInput.files);//to get the selected files array format
-            // let array = ['a','b','c','d']
-            // read the array using for loop
-            for(let i=0; i<fileInput.files.length;i++){
-                  console.log(fileInput.files[i]);
-                  const singleImage = fileInput.files[i];
-                  const reader = new FileReader();
-
-                  reader.onload = function(){
-                     const img = document.createElement('img');
-                     img.src = reader.result;
-                     img.onload = function(){
-                        imagesContainer.appendChild(img);
-                    }
-                }
-                reader.readAsDataURL(singleImage)
-
-    }
-
- }
-          
-    </script>
+   
+    <div class="sec2">
+        <div class="sec2-text"><h1 ><q> <i>Are you ready to experience the pleasure of pure adrenaline</i> </q></h1></div>
+        
+    </div>
+    
 </body>
 </html>
