@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My profile</title>
-    <style>
+    <title>Automobili Lamborghini </title>
+    <link rel="icon" href="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style> 
         body{
             background-color: rgb(185, 189, 179);
             gap: 40px;
+            background
             
         }
         #header{
             display: flex;
-            width: 1480px;
+            width: 1462px;
             align-items: center;
             justify-content: space-between;
-            background-color: rgb(6, 6, 6);
+            background-color: rgb(0, 0, 0);
             padding: 20px;
             margin-bottom: 25px;
-            position: sticky;
-            top: 0;
+        
         }
          ul{
             display: flex;
@@ -38,57 +40,760 @@
             color: #fff;
         }
         a:hover{
-            color: rgb(254, 255, 254);
+            color: rgb(149, 226, 40);
             text-decoration: underline;
             text-underline-offset: 10px;
-
         }
-        .main{
-            display: flex;
+        .search{
+            width: 75px;
+            height: 40px;  
         }
-        .pic{
-            flex:1
-            
+        .message{
+            width: 100px;
+            height: 40px;
+        }
+        .search:hover{
+            background-color:rgb(149, 226, 40);
+        }
+        .message:hover{
+            background-color:rgb(149, 226, 40);
         }
         .text{
-            flex:1
-        }
+            position: absolute;
 
+            top: 120%;
+            left: 5%;
+            color: rgb(5, 5, 5);
+            font-size: 1.5rem;
+            border: 1px solid black;
+            padding: 5px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            background-color: rgb(255, 255, 255);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .text:hover{
+            background-color: rgba(255, 252, 252, 0.801);
+           
+        }
+        .text1{
+            position: absolute;
+            top: 85%;
+            left: 2%;
+            font-size: 5rem;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        .footer{
+            background-color: black;
+            margin-top:30px;
+            display: flex;
+        }
+        .foo1{
+        color: azure;
+        flex:1;
+       }
+       .foo2{
+        color: azure;
+        flex:1;
+        margin-left: 850px;
+    
+       }   
+       .foo11{
+        margin-top: 50px;
+       } 
+       .top{
+        display: flex;
+        background-color: rgba(66, 51, 51, 0.588);
+        
+       }
+       .top-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .top-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .top-text1{
+        position: absolute;
+        top: 420px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .top-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .top-text2{
+        position: absolute;
+        top: 420px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .top-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .top-image:hover{
+            transform: scale(1.07);
+
+        }
+        .t-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .t-image:hover{
+            transform: scale(1.10);
+
+        }
+        .mid{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(193, 177, 88, 0.715);
+        
+       }
+       .mid-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid-text1{
+        position: absolute;
+        top: 1300px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid-text2{
+        position: absolute;
+        top: 1300px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m-image:hover{
+            transform: scale(1.10);
+
+        }
+        .mid1{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(23, 185, 31, 0.715);
+        
+       }
+       .mid1-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid1-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid1-text1{
+        position: absolute;
+        top: 2200px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid1-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid1-text2{
+        position: absolute;
+        top: 2200px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid1-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid1-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m1-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m1-image:hover{
+            transform: scale(1.07);
+
+        }
+        .mid2{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(111, 122, 111, 0.715);
+        
+       }
+       .mid2-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid2-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid2-text1{
+        position: absolute;
+        top: 3150px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid2-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid2-text2{
+        position: absolute;
+        top: 3150px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid2-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid2-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m2-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m2-image:hover{
+            transform: scale(1.07);
+        }
+        .mid3{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(221, 97, 9, 0.715);
+        
+       }
+       .mid3-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid3-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid3-text1{
+        position: absolute;
+        top: 4100px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid3-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid3-text2{
+        position: absolute;
+        top: 4100px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid3-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid3-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m3-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m3-image:hover{
+            transform: scale(1.07);
+        }
+        .mid4{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(66, 65, 65, 0.715);
+        
+       }
+       .mid4-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid4-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid4-text1{
+        position: absolute;
+        top: 5000px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid4-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid4-text2{
+        position: absolute;
+        top: 5000px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid4-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid4-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m4-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m4-image:hover{
+            transform: scale(1.07);
+        }
+        .mid5{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(153, 43, 43, 0.715);
+        
+       }
+       .mid5-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid5-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid5-text1{
+        position: absolute;
+        top: 5900px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid5-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid5-text2{
+        position: absolute;
+        top: 5900px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid5-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid5-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m5-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m5-image:hover{
+            transform: scale(1.07);
+        }
+        .mid6{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(15, 82, 123, 0.715);
+        
+       }
+       .mid6-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid6-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid6-text1{
+        position: absolute;
+        top: 6800px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid6-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid6-text2{
+        position: absolute;
+        top: 6800px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid6-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid6-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m6-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m6-image:hover{
+            transform: scale(1.07);
+        }
+        .mid7{
+        display: flex;
+        margin-top: 50px;
+        background-color: rgba(47, 113, 7, 0.715);
+        
+       }
+       .mid7-text{
+        flex:1;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-top: 20px;
+       }
+       .mid7-image{
+        flex:1;
+        margin-left: 125px;
+        transition: 0.5s;
+       }
+       .mid7-text1{
+        position: absolute;
+        top: 7700px;
+        color: rgb(5, 5, 5);
+        font-size: 1rem;
+        border: 2px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(194, 194, 25);
+       }
+       .mid7-text1:hover{
+    
+        background-color: goldenrod;
+       }
+      .mid7-text2{
+        position: absolute;
+        top: 7700px;
+        left: 300px;
+        color: rgb(250, 249, 249);
+        font-size: 1rem;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(144, 144, 118);
+       }
+       .mid7-text2:hover{
+        background-color: rgb(1, 1, 1);
+        color: gold;
+       }
+       .mid7-image:hover{
+            transform: scale(1.07);
+
+        }
+        .m7-image{
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            margin-left: 60px;
+
+        }
+        .m7-image:hover{
+            transform: scale(1.07);
+        }
+        .logo1{
+            width: 300px;
+            padding-top: 30px;
+        }
+        
+       
        
 
     </style>
 </head>
 <body>
    <div id="header">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg" alt="" width="90px" class="logo">
+    <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg" alt="" width="90px" class="logo">
     <ul type="none">
         <li><a href="./index.html">Index</a></li>
         <li><a href="./home.html">Home</a></li>
         <li><a href="./About me.html">About us</a></li>
         <li><a href="./Contact.html">Contact us</a></li>
-        <li><a href="./Education.html">Experience</a></li>
+        <li><a href="./experience.html">Experience</a></li>
     </ul>
+      <div class="btns">
+        <button class="search">Search   <i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="message">Comment <i class="fa-solid fa-message"></i></button>
+    </div>
     </div>
 
-    <div class="main">
-        <div class="pic">
-            <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyb3hiZTlxbTF5bzlmbHFpejR3NDJnbmpoMHljbDg2dHA2Znp3Nng5eCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hQvD3uRC1b3FOY1crC/source.gif" alt="" width="500px">
-
-        </div>
-        <div class="text">
-            <p style="font-size: 20px;"><b>Ferruccio Lamborghini:</b>
-Before venturing into the automotive industry, Ferruccio Lamborghini was a successful entrepreneur with businesses in tractors and heating/cooling systems. <br><br><b>Motivation:</b>
-Lamborghini's desire to build sports cars was fueled by his personal dissatisfaction with the quality and performance of some existing sports cars, including those from Ferrari. <br><br>
-<b>Early Models:</b>
-The company's first model, the 350 GT, debuted at the Turin Auto Show in 1963. This model featured a lightweight design and a powerful V12 engine. <br><br>
-
-<b>Miura:</b>
-The legendary Miura, introduced in the mid-1960s, became a symbol of Lamborghini's innovation and performance with its low profile, transverse mid-engine configuration, and impressive top speed. <br><br>
-<b>Growth and Evolution:</b>
-Lamborghini has grown into a globally recognized brand, known for its high-performance super sports cars, and is now part of the Volkswagen Group. </p>
-
-        </div>
+    <div class="top">
+        <div class="top-text">CONFIGURE YOUR <br> <img src="./temerario_center_light.png" alt=""class="logo1"></div>
+        <div class="top-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="top-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="top-image"><img src="./model_chooser_temerario.png" width="1200px"></div>      
     </div>
-    <img src="https://media3.giphy.com/media/in4dcUSliWMO3Zk2fK/source.gif" alt="" width="500px"
+    <div class="t-image"><img src="./familyChooser-Temerario_0.png"></div>
+
+
+     <div class="mid">
+        <div class="mid-text">CONFIGURE YOUR <br><img src="./revuelto_center_light.png" class="logo1"></div>
+        <div class="mid-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid-image"><img src="./model_chooser_revuelto.png" width="1200px"></div>
+    </div> 
+    <div class="m-image"><img src="./familyChooser-Revuelto_0.png"></div>
+
+    <div class="mid1">
+        <div class="mid1-text">CONFIGURE YOUR <br><img src="./urus-se_center_desktop_dark.png" class="logo1"></div>
+        <div class="mid1-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid1-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid1-image"><img src="./model_chooser_urus_se.png" width="1200px"></div>
+    </div> 
+    <div class="m1-image"><img src="./models_urus_se.png"></div>
+
+    <div class="mid2">
+        <div class="mid2-text">CONFIGURE YOUR <br><img src="./urus-s_center_desktop_dark.png" class="logo1"></div>
+        <div class="mid2-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid2-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid2-image"><img src="./UrusS.png" width="1200px"></div>
+    </div> 
+    <div class="m2-image"><img src="./models_urus_s.png"></div>
+
+    <div class="mid3">
+        <div class="mid3-text">CONFIGURE YOUR <br><img src="./urus_perf_center_dark.png" class="logo1"></div>
+        <div class="mid3-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid3-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid3-image"><img src="./UrusPerformante.png" width="1200px"></div>
+    </div> 
+    <div class="m3-image"><img src="./models_urus_performante.png"></div>
+
+    <div class="mid4">
+        <div class="mid4-text">CONFIGURE YOUR <br><img src="./sterrato_center_dark.png" class="logo1"></div>
+        <div class="mid4-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid4-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid4-image"><img src="./modelChooser-Sterrato.png" width="1200px"></div>
+    </div> 
+    <div class="m4-image"><img src="./familyChooser-Huracan Sterrato.png"></div>
+
+    <div class="mid5">
+        <div class="mid5-text">CONFIGURE YOUR <br><img src="./tecnica_center_dark.png" class="logo1"></div>
+        <div class="mid5-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid5-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid5-image"><img src="./modelChooser-Tecnica.png" width="1200px"></div>
+    </div> 
+    <div class="m5-image"><img src="./models_huracan_tecnica_0.pngg.webp"></div>
+
+    <div class="mid6">
+        <div class="mid6-text">CONFIGURE YOUR <br><img src="./sto_center_dark.png" class="logo1"></div>
+        <div class="mid6-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid6-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid6-image"><img src="./modelChooser-STO.png" width="1200px"></div>
+    </div> 
+    <div class="m6-image"><img src="./models_huracan_sto.png"></div>
+
+    <div class="mid7">
+        <div class="mid7-text">CONFIGURE YOUR <br><img src="./Model=Huracan EVO Spyder, Align=Center, Size=Desktop, Mode=Dark.png" class="logo1"></div>
+        <div class="mid7-text1">START CONFIGURATION   <i class="fa-solid fa-cubes"></i></div>
+        <div class="mid7-text2">EXPLORE THE MODEL <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="mid7-image"><img src="./modelChooser-EVO Spyder.png" width="1200px"></div>
+    </div> 
+    <div class="m6-image"><img src="./models_huracan_evo_spyder.png"></div>
+
+
+    
+    <div class="footer">
+        <p class="foo1"> &copy;2025 Lamborghini.in. All Rights Reserved.</p>
+        <ul class="foo11">
+            <li><a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a></li>
+
+        </ul>
+        <p class="foo2">Terms & Conditions | Privacy Policy</p>
+    </div>
+    
 </body>
 </html>
