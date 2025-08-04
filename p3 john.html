@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 225px;
+            height: 520px;
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+            transition: 0.5s;
+            border-radius: 70px 10px 70px 10px;
+            background:linear-gradient(45deg,red,yellow)
+        }
+        .card-image{
+            width: 180px;
+            border: 2px solid;
+            padding: 20px;
+            border-radius: 70px 10px 70px 10px;
+            background:linear-gradient(10deg,rgb(200, 17, 17),rgb(40, 169, 40))
+    
+            
+        }
+        .card:hover{
+            transform:scale(1.10);
+            
+        }
+        .heading{
+            font-size: 30px;
+            line-height: 0.3;
+            -webkit-text-stroke: 0.5px rgb(176, 19, 19);
+            color: white;
+        }
+        .heading1{
+            font-size: 30px;
+            line-height: 0.3;
+            margin-left: 80px;
+            -webkit-text-stroke:  0.2px rgb(253, 253, 253);
+            color: rgb(187, 12, 12);
+
+        }
+        .heading2{
+            font-size: 30px;
+            line-height: 0.3;
+            -webkit-text-stroke:  0.6px rgb(15, 11, 11);
+            color: rgba(187, 12, 12, 0.518);
+        }
+        .heading3{
+            font-size: 30px;
+            line-height: 0.3;
+            margin-left: 80px;
+            -webkit-text-stroke:  0.2px rgb(253, 253, 253);
+            color: rgb(129, 187, 12);
+        }
+        .heading4{
+            font-size: 30px;
+            line-height: 0.3;
+            -webkit-text-stroke:  0.2px rgb(253, 253, 253);
+            color: rgb(76, 12, 187);
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS SELECTORS</h1>
+    </center>
+    <hr>
+    <h2>CSS CLASS SELECTORS (USING .)</h2>
+    <p>to apply styles for any a particular html element we can give one class name for that particular tag and we can select the tag by using that class</p>
+    <hr>
+    <div class="card">
+        <img src="https://static.posters.cz/image/1300/posters/wwe-john-cena-09-i8508.jpg" class="card-image" alt="thumbnail">
+        <h3 class="heading"> Defence 94</h3>
+        <h3 class="heading1"> Attack 92</h3>
+        <h3 class="heading2"> Power 85</h3>
+        <h3 class="heading3"> Agility 86</h3>
+        <h3 class="heading4"> Finisher 92</h3>
+    </div>
+</body>
+</html>
