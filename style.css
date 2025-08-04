@@ -1,0 +1,8 @@
+section{
+    background-color: rgb(142, 142, 235);
+    color: red;
+    padding: 20px;
+    width: fit-content;
+    -webkit-text-stroke: 1px rgb(35, 25, 6);
+    color: transparent;
+}
