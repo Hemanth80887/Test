@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 250px;
+            background: linear-gradient(45deg, rgb(20, 20, 20),rgb(52, 16, 83), rgb(19, 12, 47));
+            padding: 20px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            border-radius: 10px;
+            transition: 0.7s;
+        }
+        .card-image{
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .heading{
+            margin: 0;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .subtitle{
+            margin: 0;
+        }
+        .main-btn{
+            width: 100%;
+            background-color: white;
+            color: rgb(52, 16, 83);
+            border: none;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .main-btn:hover{
+            opacity: 0.7;
+        }
+        .card:hover{
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS SELECTORS</h1>
+    </center>
+    <hr>
+    <h2>CSS Class Selectors (using .)</h2>
+    <p>to apply styles for any perticulat html Element we can give one class name for that perticular tag and we can select the tag by using that class name by using .className and to apply the styyles in css internal or external</p>
+    <hr>
+
+   <div class="card">
+    <img src="https://vertexmode.com/wp-content/uploads/2022/06/tintin.jpg" class="card-image" alt="thumbnail">
+         <h3 class="heading">This is the heading</h3>
+    <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, suscipit nostrum? Repellendus ut omnis neque vero quod, ratione tempora earum explicabo dicta dignissimos magni modi nesciunt, enim aspernatur corporis aliquid.</p>
+    <button class="main-btn">Watch Now</button>
+   </div>
+</body>
+</html>
