@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1, .container2{
+            padding: 20px;
+            background-color: lightgray;
+            border: 1px solid #0c0c0c;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .container1 h1{
+            color: white;
+            background-color: #0c0c0c;
+        }
+        .container1 p{
+            color: white;
+            background-color: darkslategray;
+        }
+
+        /* //example2  */
+        .container2>h1{
+            background-color: darkred;
+            color: white;
+        }
+        .container2>div{
+            padding: 20px;
+            background-color: lightblue;
+        }
+        .container2>div>h1{
+            background-color: #0c0c0c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Descendent Selector example</h2>
+    <p>The Descendent selector will applys style sofr both child and Grand childs</p>
+    <section class="container1">
+        <h1>This is the heading1 (child)</h1>
+        <p>This is the paragraph1 (child)</p>
+
+        <h1>This is the heading2 (child)</h1>
+        <p>This is the paragraph2 (child)</p>
+
+        <div>
+              <h1>This is the heading3 (Grand child)</h1>
+              <p>This is the paragraph3 (Grand child)</p>
+        </div>
+
+          <h1>This is the heading4 (child)</h1>
+        <p>This is the paragraph4 (child)</p>
+    </section>
+
+
+    <hr>
+     <h2>Child Selector example</h2>
+    <p>The Descendent selector will applys style for only childs.</p>
+    <section class="container2">
+        <h1>This is the heading1 (child)</h1>
+        <p>This is the paragraph1 (child)</p>
+
+        <h1>This is the heading2 (child)</h1>
+        <p>This is the paragraph2 (child)</p>
+
+        <div>
+              <h1>This is the heading3 (Grand child)</h1>
+              <p>This is the paragraph3 (Grand child)</p>
+        </div>
+
+          <h1>This is the heading4 (child)</h1>
+        <p>This is the paragraph4 (child)</p>
+    </section>
+
+</body>
+</html>
