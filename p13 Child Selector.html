@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+           background-color: rgba(255, 0, 0, 0.54); 
+        }
+        .container1 h1{
+            background-color: yellow;
+            padding: 10px;       
+        }
+        .container1 p{
+            background-color: rgb(5, 26, 5);
+            color: blue;
+
+        }
+        .container2>h1{
+            background-color: brown;
+        }
+        .container2>div>h1{
+            background-color: blue;
+        }
+        .container2>p{
+            background-color: bisque;
+        }
+        .container2>div>p{
+            background-color: blueviolet;
+        }
+        .container3~h1{
+            background-color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        Descendent selector
+    </center>
+    <section class="container1">
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+
+        <div>
+            <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+        </div>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+    
+    </section>
+    <hr>
+    <center>
+        child selector
+    </center>
+    <section class="container2">
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+
+        <div>
+            <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+        </div>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+    
+    </section>
+    <hr>
+    <center>
+        general sibling selector
+    </center>
+
+    <section class="container3">
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+
+        <div>
+            <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+        </div>
+
+        <h1>This is an example</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ullam minima, natus doloremque facilis nam magni, nostrum quam optio unde dolorum, error ad rerum praesentium nobis laboriosam ut inventore.</p>
+    
+    </section>
+</body>
+</html>
