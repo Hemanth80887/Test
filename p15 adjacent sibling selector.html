@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            padding: 20px;
+            background-color: lightgray;
+            border: 1px solid #0c0c0c;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .container1+h1{
+            color: red;
+        }
+        .container1+h1+p{
+            color: blue;
+        }
+        .container1 + h1 + p + h1{
+            background-color: lightblue;
+        }
+          .container1 + h1 + p + h1 + p + div{
+            background-color: rgb(233, 250, 193);
+            padding: 10px;
+        }
+        .container1 + h1 + p + h1 + p + div h1{
+            background-color: #0c0c0c;
+            color: white;
+        }
+        .container1 + h1 + p + h1 + p + div + h1 + p{
+            background-color: lightcoral;
+        }
+
+        /* .container1~p{
+            color: blue;
+        }
+      
+        .container1~div h1{
+            color: goldenrod;
+        }
+          .container1~div p{
+            color: goldenrod;
+        } */
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Adjacent Sibling Selctor (+)</h1>
+    </center>
+    <hr>
+    <section class="container1">
+        <h1>This is the heading1 (child)</h1>
+        <p>This is the paragraph1 (child)</p>
+
+        <h1>This is the heading2 (child)</h1>
+        <p>This is the paragraph2 (child)</p>
+
+        <div>
+              <h1>This is the heading3 (Grand child)</h1>
+              <p>This is the paragraph3 (Grand child)</p>
+        </div>
+
+          <h1>This is the heading4 (child)</h1>
+        <p>This is the paragraph4 (child)</p>
+    </section>
+   
+
+     <h1>This is the heading1 (child)</h1>
+        <p>This is the paragraph1 (child)</p>
+
+        <h1>This is the heading2 (child)</h1>
+        <p>This is the paragraph2 (child)</p>
+
+        <div>
+              <h1>This is the heading3 (Grand child)</h1>
+              <p>This is the paragraph3 (Grand child)</p>
+        </div>
+
+          <h1>This is the heading4 (child)</h1>
+        <p>This is the paragraph4 (child)</p>
+    
+</body>
+</html>
