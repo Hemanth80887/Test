@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            padding: 60px;
+            background-color: rgb(255, 254, 254);
+            gap: 20px;
+
+        }
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            border: 0px solid rgb(255, 255, 255);
+            background-color: white;
+            border-radius: 30px;
+            width: 300px;
+            
+            box-shadow: 0px 0px 20px rgb(160, 151, 151);
+        }
+        .card .sec1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:5px solid rgb(255, 255, 255);
+          
+            font-size: 100px;
+            padding: 30px;
+            color: white;
+            border-radius: 30px 30px 60% 5px;
+            height: 300px;
+            
+        }
+        .card .sec2{
+            border:0px solid rgb(255, 252, 252);
+            text-align: center;
+            padding: 10px;
+        }
+        .card button{
+            color: white;
+            border-radius: 100px;
+            width:100px;
+            border:none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            padding:10px;
+            margin:10px 10px 20px 10px
+        }
+        .card .sec2 h1,p{
+            padding:10px;
+
+        }
+        .card:nth-child(1) .sec1, .card:nth-child(1) button{
+  background: linear-gradient(45deg,orange,rgb(224, 11, 11));
+        }
+        .card:nth-child(2) .sec1, .card:nth-child(2) button{
+  background: linear-gradient(45deg,rgb(178, 1, 178),rgb(22, 11, 224));
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <div class="sec1">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="sec2">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                <button>CODE</button>
+            </div>
+        </div>
+
+          <div class="card">
+            <div class="sec1">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="sec2">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                <button>CODE</button>
+            </div>
+        </div>
+          <div class="card">
+            <div class="sec1">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="sec2">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                <button>CODE</button>
+            </div>
+        </div>
+          <div class="card">
+            <div class="sec1">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="sec2">
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                <button>CODE</button>
+            </div>
+        </div>
+       
+    </section>
+</body>
+</html>
