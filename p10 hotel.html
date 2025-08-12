@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  -->
+       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+       
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .top{
+            
+            background-image: url(https://elegencia-react-ejev.vercel.app/assets/img/bg/hero_bg_1.jpg);
+            background-size: cover;
+            height: 100vh;
+        }
+        .logo{
+            display: block;
+            margin-left: 700px;
+            padding: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            transition: 600ms;
+        
+        }
+        .header ul{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 30px;
+        }
+        a:hover{
+            transform: scale(50px);
+            color: goldenrod;
+        }
+        .l1{
+            width: 20px;
+            border:none ;
+            background-color: aquamarine;
+            margin-left: 80px;
+
+        }
+        .text{
+            color: white;
+        }
+        .text1{
+            font-size:3.5rem;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 150px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+        .text2{
+            font-size: 3.5rem;
+            color: goldenrod;
+            margin-left: 220px;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 1px;
+        }
+        .text3{
+            font-size: 1.3rem;
+            word-spacing: 5px;
+            margin-left: 80px;
+            margin-top: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(181, 170, 170);
+            line-height: 30px;
+        }
+        .btn{
+            border: 1px solid black;
+            background-color: rgb(219, 203, 164);
+            color: black;
+            width: fit-content;
+            padding: 15px;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-left: 79px;
+            transition: 500ms;
+        }
+        .btn:hover{
+            background-color: gold;
+            transform: scale(50px);
+        }
+         marquee {
+            color: white;
+            background-color: black;
+            text-transform: uppercase;
+            font-size: 3rem;
+            display: block;
+
+        }
+
+        marquee span {
+            color: #ffd28d;
+        }
+        .bottom{
+            background-color: black;
+            display: flex;
+        }
+        .left{
+            color: rgb(237, 233, 233);
+            flex:1;
+            font-size: 4rem;
+            margin-left: 100px;
+            width: 200px;
+        }
+        .right{
+           flex:1;
+           margin-left: 200px;
+           
+        }
+        .left1{
+            font-size:1.1rem; 
+            margin-top: 20px;
+            word-spacing: 4px;
+            line-height: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #d8cfcf;
+            margin-bottom: 20px;
+        }
+        .left botton{
+            font-size: 1.2rem;
+            color:#d8cfcf ;
+        
+            border: none;
+            border-top:2px solid goldenrod ;
+            border-bottom: 2px solid goldenrod;
+            padding: 20px;
+            transition: 500ms;
+            
+        }
+        .left botton:hover{
+            transform: scale(50px);
+            background-color: goldenrod;
+            color: black;
+        }
+        
+     
+    </style>
+</head>
+<body>
+    <section class="top">
+        <div class="header">
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/logo/logo.png" class="logo">
+            <ul type="none">
+            
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li> <a href="#">MENU</a></li>
+            <li><a href="#">CHEF</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">PAGES</a></li>
+            <img src="./menu.png" class="l1">
+            </ul>
+        </div>
+        <div class="text">
+            <p class="text1">ELEGANCE RETREAT</p>
+            <p class="text2"><i>RESTAURANT</i></p>
+            <p class="text3">Welcome to our restaurant, where culinary artistry meets <br>exceptional dining experiences. At, we strive to create a <br>gastronomic haven that tantalizes your taste buds and leaves you <br>with</p>
+        </div>
+        <div class="btn">
+            <botton>VIEW MORE</botton>
+        </div>
+    
+         
+        
+    </section>
+    <marquee><span>EMBARK ON A GASTRONOMIC ADVENTURE</span> GUIDED BY OUR EXQUISITE CHEF</marquee>
+    <section class="bottom">
+        <div class="left">Exquisite Dining Experience Fit For <p style="color: #ffd28d;">Royalty</p>
+        <p class="left1">Welcome to our restaurant, where culinary artistry meets exceptional dining experiences. At, we strive to create a gastronomic haven that tantalizes your taste buds and leaves you with unforgettable memories.
+        <br><br>
+        Lorem to our restaurant, where culinary artistry meets exceptional dining experiences. At, we strive to create a gastronomic haven that</p>
+        <botton>Discover The Kitchen</botton>
+        </div>
+       
+        <div class="right" data-aos="zoom-in" ><img src="https://elegencia-react-ejev.vercel.app/assets/img/about/about_bg.jpg" width="650px"></div>
+    
+    </section>
+    <script>
+        AOS.init();
+    </script>
+    
+</body>
+</html>
