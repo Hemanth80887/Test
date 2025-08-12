@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            background: url(https://elegencia-react-ejev.vercel.app/assets/img/bg/hero_bg_1.jpg);
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero ul {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+
+        }
+
+        header {
+            padding: 3rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ffd28d;
+        }
+
+        .hero .sec1 {
+            padding: 8%;
+            width: 70%;
+
+        }
+
+        .hero .sec1 h1 {
+            text-transform: uppercase;
+            color: white;
+            font-size: 4rem;
+            font-weight: normal;
+
+        }
+
+        .hero .sec2 {
+            width: 500px;
+            margin-left: 11rem;
+            padding: 1rem;
+        }
+
+        .hero .sec1 p {
+            color: white;
+            font-size: 18px;
+            line-height: 1.8rem;
+            padding: 3rem 1rem;
+            width: 80%;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .hero button {
+            margin: 1rem;
+            padding: 1.5rem 1rem;
+            width: 12rem;
+            background-color: #ffd28d;
+            font-size: 1.2rem;
+
+        }
+
+        marquee {
+            color: white;
+            background-color: black;
+            text-transform: uppercase;
+            font-size: 5rem;
+            display: block;
+
+        }
+
+        marquee span {
+            color: #ffd28d;
+        }
+
+        .hero2 {
+            display: flex;
+            background-color: black;
+        }
+
+        .hero2 .sec1 {
+            flex: 1;
+            color: aliceblue;
+            padding: 5rem 1rem 5rem 5rem;
+        }
+
+        .hero2 .sec1 h1 {
+            font-size: 4.5rem;
+            font-weight: lighter;
+        }
+
+        .hero2 .sec1 h1 span {
+            color: #ffd28d;
+        }
+
+        .hero2 .sec1 p {
+            padding: 0.5rem 0.5rem 0.5rem 0rem;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.5rem;
+        }
+
+        .hero2 .sec2 {
+            flex: 1;
+        }
+
+        .hero2 .sec1 button {
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-top: 1px solid #ffd28d;
+            border-bottom: 1px solid #ffd28d;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <header>
+            <ul type="none">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">CHEF</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">PAGES</a></li>
+            </ul>
+        </header>
+        <div class="sec1">
+            <h1>Elegance Retreat </h1>
+            <h1
+                style="color: #ffd28d;text-decoration: underline; text-decoration-thickness: 1px;text-underline-offset:20px;padding-left: 10%;">
+                <i>Restaurant</i></h1>
+            <p>Welcome to our restaurant, where culinary artistry meets <br>exceptional dining experiences. At, we
+                strive to create a <br>gastronomic haven that tantalizes your taste buds and leaves you with</p> <br>
+            <button>VIEW MORE</button>
+        </div>
+    </section>
+    <marquee scrollamount="20"><span>Embark on a gastronomic adventure</span> guided our by exquisite dishes</marquee>
+    <section class="hero2">
+        <div class="sec1">
+            <h1>Exquisite Dining </h1>
+            <h1>Experience Fit for</h1>
+            <h1><span>Royalty</span></h1>
+            <p>Welcome to our restaurant, where culinary artistry meets exceptional dining experiences. At, we strive to
+                create a gastronomic haven that tantalizes your taste buds and leaves you with unforgettable memories.
+            </p>
+            <p>Lorem to our restaurant, where culinary artistry meets exceptional dining experiences. At, we strive to
+                create a gastronomic haven that.</p>
+            <button>Discover The Kitchen</button>
+        </div>
+        <div class="sec2" data-aos="zoom-in">
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/about/about_bg.jpg" alt="" width="800px">
+        </div>
+    </section>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
