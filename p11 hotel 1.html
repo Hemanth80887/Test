@@ -83,6 +83,15 @@
 
         }
 
+        .hero button:hover {
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-top: 1px solid #ffd28d;
+            border-bottom: 1px solid #ffd28d;
+
+        }
+
         marquee {
             color: white;
             background-color: black;
@@ -97,14 +106,16 @@
         }
 
         .hero2 {
-            display: flex;
-            background-color: black;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: #040d10;
+            height: 58rem;
+            padding: 8rem 0rem;
         }
 
         .hero2 .sec1 {
-            flex: 1;
             color: aliceblue;
-            padding: 5rem 1rem 5rem 5rem;
+            padding: 5rem 2rem 5rem 5rem;
         }
 
         .hero2 .sec1 h1 {
@@ -125,9 +136,7 @@
             line-height: 1.5rem;
         }
 
-        .hero2 .sec2 {
-            flex: 1;
-        }
+        .hero2 .sec2 {}
 
         .hero2 .sec1 button {
             color: white;
@@ -137,6 +146,341 @@
             border-bottom: 1px solid #ffd28d;
             padding: 1rem;
             margin-top: 2rem;
+        }
+
+        .hero3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: #05161a;
+            height: 47.5rem;
+        }
+
+
+        .hero3 .sec2 {
+            color: white;
+            margin: auto;
+
+
+        }
+
+        .hero3 .sec2 h1 {
+            color: #ffd28d;
+            font-size: 4rem;
+            font-weight: lighter;
+            padding-bottom: 1rem;
+        }
+
+        .hero3 .sec2 p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+            padding-bottom: 1rem;
+
+        }
+
+        .hero3 .sec2 h2 {
+            font-weight: normal;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero3 .sec2 hr {
+            opacity: 0.1;
+            border-color: #ffd28d;
+            margin: 5px 0px 5px 0px;
+            border-width: 0.1px;
+        }
+
+        .hero3 .sec2 button {
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-top: 1px solid #ffd28d;
+            border-bottom: 1px solid #ffd28d;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero4 {
+            color: #ffd28d;
+            background-color: #040d10;
+            text-align: center;
+        }
+
+        .hero4 p {
+            font-style: italic;
+            padding-top: 6rem;
+        }
+
+        .hero4 h1 {
+            font-weight: normal;
+            font-size: 4rem;
+            padding: 1rem;
+            padding-bottom: 4rem;
+        }
+
+        .hero5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: #040d10;
+        }
+
+        .hero5 div img {
+            width: 304px;
+        }
+
+        .hero6 {
+            background-color: #040d10;
+            color: #ffd28d;
+            text-align: center;
+            height: 8rem;
+            padding-top: 5rem;
+        }
+
+        .hero6 h1 {
+            font-size: 4rem;
+            font-weight: normal;
+        }
+
+        .hero6 p {
+            font-style: italic;
+        }
+
+        .hero7 {
+            display: flex;
+            color: #ffd28d;
+            background-color: #040d10;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero7 .sec1 {
+            flex: 1;
+            padding: 3rem;
+        }
+
+        .hero7 .sec1 .first {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            text-transform: uppercase;
+            word-spacing: 1px;
+            padding-top: 5rem;
+            text-underline-offset: 5px;
+        }
+
+        .hero7 .sec1 .second {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding-top: 5px;
+            font-size: 18px;
+        }
+
+        .hero7 .sec2 {
+            flex: 1;
+            padding: 3rem;
+        }
+
+        .hero7 .sec2 .first {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            text-transform: uppercase;
+            word-spacing: 1px;
+            padding-top: 5rem;
+            text-underline-offset: 5px;
+        }
+
+        .hero7 .sec2 .second {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding-top: 5px;
+            font-size: 18px;
+        }
+
+        .viewmore {
+            text-align: center;
+            padding: 2rem;
+            background-color: #040d10;
+        }
+
+        .viewmore button {
+            padding: 1rem;
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-top: 1px solid #ffd28d;
+            border-bottom: 1px solid #ffd28d;
+            font-size: 15px;
+        }
+
+        .hero8 {
+            display: flex;
+            padding: 8rem;
+            background-color: #040d10;
+            color: white;
+        }
+
+        .hero8 .sec1 {
+            flex: 2;
+        }
+
+        .hero8 .sec1 h1 {
+            font-size: 80px;
+            font-weight: lighter;
+            padding-bottom: 1rem;
+        }
+
+        .hero8 span {
+            color: #ffd28d;
+        }
+
+        .hero8 .sec1 p {
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .hero8 .sec2 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        .hero8 .sec3 {
+            flex: 2;
+        }
+
+        .hero9 {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2.2fr;
+            background: url(https://elegencia-react-ejev.vercel.app/assets/img/bg/bookingSystemBg.png);
+            background-position: -200px;
+            height: 100vh;
+            color: #ffd28d;
+        }
+
+        .hero9 .sec1 {
+            grid-column: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0rem 5rem 5rem 0rem;
+        }
+
+        .hero9 .sec1 h1 {
+            font-size: 70px;
+            letter-spacing: 1px;
+            font-weight: normal;
+            padding-bottom: 3rem;
+        }
+
+        .hero9 select {
+            border: 1px solid #ffd28d;
+            background-color: #040d10;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero9 input {
+            background-color: #040d10;
+            color: white;
+            border: 1px solid #ffd28d;
+            padding: 0.8rem;
+            width: 269px;
+        }
+
+        .hero9 input[type="date"] {
+            margin-left: 10px;
+            width: 280px;
+            height: 48px
+        }
+
+        .hero9 button {
+            padding: 1.5rem;
+            font-size: 18px;
+            width: 40%;
+            margin-top: 50px;
+        }
+
+        .hero10 {
+            background-color: #040d10;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero10 .sec {
+            border-top: 1px solid #ffd28d;
+            border-bottom: 1px solid #ffd28d;
+            margin: 1rem;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .hero10 .sec1,
+        .hero10 .sec1 ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            gap: 100px;
+            padding: 1rem;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero10 .sec1 li {
+            padding: 1rem;
+        }
+
+        .hero10 .sec1 a {
+            font-weight: normal;
+        }
+
+        .hero10 .sec1 h1 {
+            padding: 1rem;
+            font-weight: normal;
+            font-size: 40px;
+            padding-right: 3rem;
+        }
+
+        .hero10 .sec2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 150px;
+            font-size: 18px;
+            padding: 1rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            line-height: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero10 .sec2 hr {
+            border-color: #ffd28d;
+            opacity: 0.3;
+        }
+
+        .hero10 .sec2 button {
+            padding: 1.5rem;
+            font-size: 15px;
+        }
+
+        footer {
+            font-size: 18px;
+            text-align: center;
+            padding: 5rem;
+            background-color: #040d10;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
@@ -178,12 +522,197 @@
             <button>Discover The Kitchen</button>
         </div>
         <div class="sec2" data-aos="zoom-in">
-            <img src="https://elegencia-react-ejev.vercel.app/assets/img/about/about_bg.jpg" alt="" width="800px">
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/about/about_bg.jpg" alt="" width="100%">
         </div>
     </section>
+    <section class="hero3">
+        <div class="sec1" data-aos="zoom-in">
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/about/about_open_hour.jpg" alt="" width="100%">
+        </div>
+        <div class="sec2">
+            <h1>Opening <br>Hours</h1>
+            <p>Lorem to our restaurant, where <br> culinary artistry meets exceptional <br> dining experiences. At, we
+                strive <br> to create a gastronomic haven <br> that.</p>
+            <h2>SUNDAY - THURSDAY: <br>11:30AM - 11PM</h2>
+            <hr>
+            <h2>FRIDAY & SATURDAY: <br>11:30AM - 12AM</h2>
+            <button>Reservation</button>
+
+        </div>
+    </section>
+    <section class="hero4">
+        <p>Food Showcase</p>
+        <h1>Food Items</h1>
+    </section>
+    <section class="hero5">
+        <div><img src="https://elegencia-react-ejev.vercel.app/assets/img/portfolio/portfolio_8.jpg" alt=""></div>
+        <div><img src="https://elegencia-react-ejev.vercel.app/assets/img/portfolio/portfolio_9.jpg" alt=""></div>
+        <div><img src="https://elegencia-react-ejev.vercel.app/assets/img/portfolio/portfolio_1.jpg" alt=""></div>
+        <div><img src="https://elegencia-react-ejev.vercel.app/assets/img/portfolio/portfolio_2.jpg" alt=""></div>
+        <div><img src="https://elegencia-react-ejev.vercel.app/assets/img/portfolio/portfolio_3.jpg" alt=""></div>
+    </section>
+    <section class="hero6">
+        <p>Appetizers</p>
+        <h1>Appetizers</h1>
+    </section>
+    <section class="hero7">
+        <div class="sec1">
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+            <div class="first">
+                <p><u>Spaghetti alla Carbonara</u></p>
+                <p>$49</p>
+            </div>
+            <div class="second">
+                <span>Spaghetti alla Carbonara</span>
+                <span>Extra free juice</span>
+            </div>
+        </div>
+    </section>
+    <section class="viewmore">
+        <button>View More</button>
+    </section>
+    <section class="hero8">
+        <div class="sec1" data-aos="fade-up" data-aos-duration="3000">
+            <h1>Our <br><span>Specialties</span></h1>
+            <p>Welcome to our restaurant, where culinary artistry meets <br> exceptional dining experiences. At, we
+                strive to create a <br>gastronomic haven that tantalizes your taste buds.</p>
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/bestItem//bestItem2.jpg" alt="">
+        </div>
+        <div class="sec2"><img src="https://elegencia-react-ejev.vercel.app/assets/img/icon/star_line.svg" alt=""
+                height="400px"></div>
+        <div class="sec3" data-aos="fade-up" data-aos-duration="3000">
+            <img src="https://elegencia-react-ejev.vercel.app/assets/img/bestItem/bestItem1.jpg" alt="">
+        </div>
+    </section>
+    <section class="hero9" data-aos="zoom-in" data-aos-duration="3000">
+        <div class="sec1">
+            <h1>Reservations</h1>
+            <select name="" id="">
+                <option value="" selected>One</option>
+                <option value="">Two</option>
+                <option value="">Three</option>
+            </select>
+            <div class="sec2">
+                <input type="time" value="10:00">
+                <input type="date" value="2025-10-04">
+            </div>
+            <button>RESERVATIONS</button>
+        </div>
+    </section>
+    <section class="hero10">
+        <div class="sec">
+            <div class="sec1">
+                <h1>info@example.com</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Chef</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec2">
+                <div class="first">
+                    <p>1-800-915-6271 <br>
+                        1-800-915-6271</p>
+                </div>
+                <div class="second">
+                    <p>2726 Av. PapineauMontreal <br>
+                        H2K 4J6, Canada</p>
+                </div>
+                <div class="third">
+                    <p>SUNDAY - THURSDAY: 11:30AM - 11PM <br>
+                        <hr>
+
+                        FRIDAY & SATURDAY: 11:30AM - 12AM</p>
+                </div>
+                <div class="fourth"><button>RESERVATIONS</button></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright 2023 All Right Reserved</p>
+    </footer>
     <script>
         AOS.init();
     </script>
 </body>
 
 </html>
+
+
+
+
