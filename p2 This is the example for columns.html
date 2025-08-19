@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            /* column-count: 3; */
+            /* column-width: 200px; */
+            columns: 4;
+            column-gap: 20px;
+            /* column-rule: 5px double red; */
+            column-rule-width: 2px;
+            column-rule-style: dashed;
+            column-rule-color: green;
+
+        }
+        .container div p{
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+            /* column-fill: balance; auto*/
+        }
+        .heading{
+            color: white;
+            background-color: #0c0c0c;
+            column-span: all;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1 class="heading">This is the example for columns</h1>
+        <div class="b1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id consequuntur aliquid recusandae ducimus facere ipsum ipsam consectetur, nulla harum deserunt quos mollitia enim unde, vero dicta, voluptates dolorem pariatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dolore mollitia tenetur magni accusantium quas quia excepturi esse debitis laborum. Alias, vel est? Dolore sit voluptatem minima ipsa? Maxime, eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, cupiditate consequuntur, est hic error asperiores ad quis suscipit alias eligendi ex. Porro consectetur sint consequuntur fugiat nostrum ex doloribus accusantium.</p>
+        </div>
+        <div class="b2">
+              <p><span style="color:red">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Quia id consequuntur aliquid recusandae ducimus facere ipsum ipsam consectetur, nulla harum deserunt quos mollitia enim unde, vero dicta, voluptates dolorem pariatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dolore mollitia tenetur magni accusantium quas quia excepturi esse debitis laborum. Alias, vel est? Dolore sit voluptatem minima ipsa? Maxime, eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, cupiditate consequuntur, est hic error asperiores ad quis suscipit alias eligendi ex. Porro consectetur sint consequuntur fugiat nostrum ex doloribus accusantium.</p>
+        </div>
+        <div class="b3">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id consequuntur aliquid recusandae ducimus facere ipsum ipsam consectetur, nulla harum deserunt quos mollitia enim unde, vero dicta, voluptates dolorem pariatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur dolore mollitia tenetur magni accusantium quas quia excepturi esse debitis laborum. Alias, vel est? Dolore sit voluptatem minima ipsa? Maxime, eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, cupiditate consequuntur, est hic error asperiores ad quis suscipit alias eligendi ex. Porro consectetur sint consequuntur fugiat nostrum ex doloribus accusantium.</p>
+        </div>
+    </section>
+</body>
+</html>
