@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* empty-cells: show; */
+            empty-cells: hide;
+            /* border-collapse: collapse; */
+        }
+        td{
+            background-color: rgb(226, 226, 226);
+        }
+        th{
+            background-color: #0c0c0c;
+            color: wheat;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Empty-cell in Tables</h1>
+    </center>
+    <hr>
+    <table border="1" cellspacing="10" cellpadding="15">
+        <caption>Empty cells examples</caption>
+
+        <thead>
+            <tr>
+                <th>Si.No</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Arun</td>
+                <td>arun@gmail.com</td>
+                <td>+91837873844</td>
+            </tr>
+             <tr>
+                <td>02</td>
+                <td></td>
+                <td>kiran@gmail.com</td>
+                <td>+91837873844</td>
+            </tr>
+             <tr>
+                <td>03</td>
+                <td>varun</td>
+                <td></td>
+                <td>+91837873844</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>tharun</td>
+                <td>tharun@gmail.com</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
