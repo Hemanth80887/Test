@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        /* Header section  */
+        header{
+            background-color: #0a2536;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 3%;
+            align-items: center;
+        }
+        .yellow-text{
+            color: goldenrod;
+        }
+        nav ul{
+            display: flex;
+            list-style-type:none;
+            gap: 20px;
+            align-items: center;
+        }
+        ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        .logo{
+            color: white;
+        }
+        .search input{
+            border: none;
+            outline: none;
+            padding: 4px 10px;
+
+        }
+        .search{
+            background-color: white;
+            border-radius: 5px;
+        }
+        .search button, .yellow-btn{
+            background-color: goldenrod;
+            color: white;
+            border: none;
+            padding: 8px 13px;
+            border-radius: 0px 5px 5px 0px;
+            cursor: pointer;
+            transition: 0.7s;
+            text-transform: uppercase;
+        }
+        button:hover{
+            background-color: #0c0c0c;
+            color: white;
+        }
+        li a:hover{
+            color: goldenrod;
+        }
+
+
+        /* Hero section  */
+        .hero{
+            min-height: 91vh;
+            /* background-color: #0c0c0c; */
+            background: linear-gradient(rgba(13, 25, 66, 0.624), rgba(6, 9, 44, 0.846)), url(https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?cs=srgb&dl=pexels-stywo-1054218.jpg&fm=jpg) no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            color: white;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero .heading{
+            font-size: 5rem;
+            font-weight: 500;
+        }
+        .subtitle{
+            font-size: 1.2rem;
+        }
+        .yellow-btn{
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Advent<span class="yellow-text">ure</span></h2>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Ccntact</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1 class="heading">New Adveture</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam mollitia <br> reiciendis cum pariatur. Deleniti modi, temporibus voluptatibus suscipit blanditiis odio!</p>
+            <button class="yellow-btn">discover Now</button>
+        </div>
+    </section>
+</body>
+</html>
