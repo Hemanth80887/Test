@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{ /*unvisited link color*/
+            color: green;
+        }
+        a:visited{ /*visited link color*/
+            color: gold;
+        }
+
+
+
+        a:hover{
+            color: aliceblue;
+        }
+
+        button{
+            border: none;
+            padding: 10px 20px;
+            background-color: darkslategray;
+            color: white;
+            box-shadow: 0px 3px 10px #a5a5a5;
+            cursor: pointer;
+
+        }
+        button:active{
+            /* when we click the element  */
+            transform: scale(0.9);
+            box-shadow: 0px 0px 0px #a5a5a5;
+
+        }
+        button:hover{
+            opacity: 0.7;
+        }
+        h1:active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+     <section class="title">
+            <h1>CSS PSEUDO-CLASSES..!</h1>
+            <p>The CSS pseudo-classes allow you to style the dynamic states of an element such as hover, active and focus state, as well as elements that are existing in the document tree but can't be targeted via the use of other selectors without adding any IDs or classes to them, for example, targeting the first or last child elements.</p>
+
+            <p>A pseudo-class starts with a colon (:). Its syntax can be given with:</p>
+
+            <p><b>selector:pseudo-class { property: value; }</b></p>
+        </section>
+
+        <hr>
+
+        <h1><a href="https://google.com" target="_blank">Google</a></h1>
+        <hr>
+
+
+        <center>
+                <button>Click</button>
+        </center>
+</body>
+</html>
