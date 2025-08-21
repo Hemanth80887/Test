@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 2%;
+        }
+        header{
+            border-bottom: 1px solid gray;
+        }
+        header nav ul{
+            list-style-type: none;
+            display: flex;
+        }
+        
+        li a{
+            text-decoration: none;
+            color: #0c0c0c;
+            font-variant: small-caps;
+            padding: 10px 20px;
+            display: block;
+            border-bottom: 2px solid transparent;
+        }
+        li a:hover{
+            background-color: rgb(237, 237, 237);
+            border-bottom: 2px solid orange;
+        }
+        a:focus{
+            background-color: #0c0c0c;
+            color: rgb(255, 255, 255);
+            border-bottom: 2px solid orange;
+        }
+
+
+
+        section{
+            margin-bottom: 20px;
+            display: none; 
+            padding: 20px;
+        }
+
+        section:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <center>
+        <h1>:focus and :target</h1>
+    </center>
+    <hr> -->
+
+   <div class="container">
+     <header>
+        <nav>
+            <ul>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#employees">Employees</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <section id="users">
+            <h1>Users</h1>
+        </section>
+
+         <section id="students">
+            <h1>Students</h1>
+        </section>
+
+         <section id="employees">
+            <h1>Employees</h1>
+        </section>
+
+         <section id="profile">
+            <h1>Profile</h1>
+        </section>
+
+         <section id="settings">
+            <h1>Settings</h1>
+        </section>
+
+   </div>
+</body>
+</html>
