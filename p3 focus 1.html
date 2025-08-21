@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        form{
+            width: 300px;
+            padding: 20px;
+            box-sizing: 0px 0px 10px #ccc;
+            border: 1px solid gray;
+            margin: auto;
+        }
+        form input{
+            width: 100%;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(197, 197, 197);
+            margin-bottom: 10px;
+        }
+        label{
+            font-size: 0.9rem;
+            color: orangered;
+        }
+
+        input:focus{
+            border-bottom: 1.5px solid orangered;
+            background-color: rgba(255, 166, 0, 0.135);
+        }
+        button[type="submit"]{
+            width: 100%;
+            padding: 8px;
+            background-color: orangered;
+            border: none;
+            font-size: 1.1rem;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:focus</h1>
+    </center>
+    <hr>
+
+    <form action="" autocomplete="off">
+        <label for="name">Username</label>
+        <input type="text" placeholder="Enter your name" id="name" name="username">
+          <label for="email">Email address</label>
+        <input type="email" placeholder="Enter your email" id="email" name="email">
+        <button type="submit">Sign in</button>
+    </form>
+
+</body>
+</html>
