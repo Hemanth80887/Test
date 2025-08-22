@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 200px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            text-align: center;
+        }
+
+        input[type="checkbox"]{
+            appearance: none;
+            background: #ccc;
+            width: 70px;
+            height: 30px;
+            border-radius: 100px;
+            position: relative;
+        }
+        input[type="checkbox"]::before{
+            content: "";
+            width: 30px;
+            height: 96%;
+            border-radius: 100px;
+            position: absolute;
+            left: 2px;
+            top: 0.7px;
+            transition: 1s;
+            background: url(./assets/images/sun.png) no-repeat center;
+            background-size: cover;
+        }
+
+         input[type="checkbox"]:checked{
+            background-color: rgb(56, 51, 92);
+            /* background: url(https://t4.ftcdn.net/jpg/02/43/75/73/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg) no-repeat center; */
+            /* background-size: cover; */
+         }
+
+          input[type="checkbox"]:checked::before{
+            transform: translateX(37px);
+             background: url(./assets/images/crescent-moon.png) no-repeat center;
+            background-size: cover;
+          }
+    </style>
+</head>
+<body>
+   <section class="container">
+     <form action="">
+            <input type="checkbox" name="theme" id="theme">
+    </form>
+   </section>
+</body>
+</html>
