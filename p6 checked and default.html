@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"]{
+            accent-color: red;
+            width: 80px;
+            height: 80px;
+            appearance: none;
+            background: url(https://i.pinimg.com/originals/ec/c0/15/ecc015d4e89f77b435df3cd81928ad48.gif) no-repeat center;
+            background-size: cover;
+
+        }
+        input[type="checkbox"]:checked{
+            background: url(https://i.pinimg.com/originals/c1/e9/51/c1e95172d8c115d66148cb9ad68c1c74.gif) no-repeat center;
+            background-size: cover;
+        }
+
+
+        input[type="checkbox"]:default{
+            background: url(https://i.pinimg.com/originals/c4/07/04/c4070448ce8174b2b3e121081ddbbee5.gif) no-repeat center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:checked and :default</h1>
+    </center>
+    <hr>
+
+    <form action="">
+        <label for="">Select your Intrested Languages</label>
+        <br>
+        <label for="kannada">
+             <input type="checkbox" name="language" id="kannada" checked>
+             Kannada
+        </label>
+         <label for="English">
+             <input type="checkbox" name="language" id="English">
+             English
+        </label>
+         <label for="telugu">
+             <input type="checkbox" name="language" id="telugu" checked>
+             Telugu
+        </label>
+         <label for="marati">
+             <input type="checkbox" name="language" id="marati">
+             Marati
+        </label>
+    </form>
+</body>
+</html>
