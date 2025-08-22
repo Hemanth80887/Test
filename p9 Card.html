@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container, .container2{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #252525;
+            z-index: -1;
+            position: relative;
+        }
+        .card{
+            width: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(255, 255, 255, 0.217);
+            position: relative;
+            backdrop-filter: blur(10px) !important;
+            border: 1px solid gray;
+            color: white;
+        }
+        .card h1{
+            font-weight: 400;
+        }
+        .card p{
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .card2{
+            content: "";
+            width: 70%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(45deg,#ffbc00, #d47f01, #9dff00);
+            transform: scaleY(1.4) skew(-25deg);
+            top:0px;
+            z-index: -2;
+            filter: blur(20px);
+        }
+        
+        .c1{
+            width: 300px;
+            height: 300px;
+            border-radius: 100px;
+            background: linear-gradient(45deg,#ffbc00, #d47f01, #9dff00);
+            filter: blur(80px);
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <section class="container">
+        <div class="card">
+            <h1>Card</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aut, exercitationem harum doloribus quia dolorem mollitia quis laudantium laborum distinctio perferendis? Odio quas, at deserunt quae repellendus corrupti? Aspernatur, facilis.</p>
+
+            <div class="card2"></div>
+        </div>
+   </section>
+   <div class="container2">
+    <div class="c1"></div>
+    <div class="c2"></div>
+   </div>
+</body>
+</html>
