@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container1{
+            background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.4)),url(https://5.imimg.com/data5/SELLER/Default/2023/2/TJ/UD/JW/25906318/tour-and-travel-website-design-company-in-delhi.jpg) no-repeat center;
+            background-size: cover;
+            height: 100vh;
+        }
+        .container1 .top{
+            display: flex;
+            justify-content: space-between;
+            /* padding: 1%; */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.393);
+            font-size: 15px;
+        }
+        .container1 .top .sec1{
+            display: flex;
+            gap: 30px;
+            padding: 1% 8%;
+        }
+        .container1 .top .sec2{
+            display: flex;
+            /* align-items: center; */
+            gap: 15px;
+            padding: 0% 15%;
+        }
+        .container1 .top .sec2 a:nth-child(5){
+            border-left: 1px solid rgb(255, 255, 255,0.393);
+            border-right: 1px solid hsla(0, 0%, 100%, 0.393);
+            padding: 8% 8%;
+        }
+        .container1 .top a{
+            text-decoration: none;
+            color: white;
+        }
+        .container1 .top .sec2 a{
+            padding: 8% 0%;
+        }
+        .container1 .tb{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1% 5%;
+            position: sticky;
+            top: 0%;
+        }
+        .container1 .tb .sec2 a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .container1 .tb .sec2{
+            display: flex;
+            gap: 30px;
+        }
+        .container1 .tb .sec3 button{
+            width: 110px;
+            padding: 10px 10px;
+            color: white;
+            background-color: tomato;
+            font-weight: bold;
+            border:none;
+        }
+        .container1 .hero{
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+        }
+        .container1 .hero h1{
+            font-size: 80px;
+            line-height: 100%;
+            margin-bottom: 2%;
+            font-weight: 900;
+        }
+        .container1 .hero button{
+            margin-top: 2%;
+            width: 200px;
+            padding: 20px;
+            color:white;
+            font-weight: bold;
+            background-color: tomato;
+            border:none;
+            font-size: 15px;
+        }
+        .container2{
+            margin: auto;
+            /* border:1px solid black; */
+            background-color: white;
+            box-shadow: 0px 0px 10px black;
+            width: 70%;
+            transform: translateY(-80px);
+        }
+        .container2 .hero{
+            display: flex;
+            justify-content: space-around;
+            padding: 4%;
+        }
+        .container2 .hero input{
+            margin-top: 8%;
+            padding:10px;
+            background-color: rgba(211, 211, 211, 0.297);
+            border:none;
+            outline:none;
+        }
+        .container2 .hero .sec3 input , .container2 .hero .sec4 input{
+            color: gray;
+            text-transform: uppercase;
+        }
+        .container2 .hero input::placeholder{
+            color: rgba(128, 128, 128, 0.674);
+        }
+        .container2 .hero .sec5  button{
+            width: 150px;
+            padding: 15px;
+            border: none;
+            background-color: tomato;
+            color: white;
+            font-weight: bold;
+            margin-top: 15%;
+        }
+        .container3 {
+            display: flex;
+            justify-content:space-around;
+            padding: 0% 10%;
+        }
+        .container3 .sec1 p{
+            color: tomato;
+            font-weight: bold;
+        }
+        .container3 .sec1 span{
+            display: inline-block;
+            transform: translateY(-10px);
+            font-weight: bold;
+            padding-right: 2%;
+            font-size: 30px;
+
+        }
+        .container3 .sec1 h1{
+            font-size: 50px;
+            font-weight: 900;
+        }
+        .container3 .sec2{
+            padding: 3% 0%;
+        }
+        .container4{
+            width: 80%;
+            margin: auto;
+            opacity: 0.8;
+            text-align: center;
+        }
+        .container4 .hero{
+            display: flex;
+
+        }
+        .container4 .hero .sec1, .container4 .hero .sec2{
+            padding: 1%;
+        }
+        .container4 .hero .sec3{
+            padding: 1%;
+        }
+        .container4 .hero .sec3 img:nth-child(1){
+            margin-bottom: 8%;
+        }
+        .container4 button{
+            width: 200px;
+            padding: 15px;
+            border: none;
+            background-color: tomato;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="container1">
+        <header class="top">
+        <div class="sec1">
+            <a href="#"><i class="fa-solid fa-phone"></i> +01 (977) 2599 12</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i> company@domain.com</a>
+            <a href="#"><i class="fa-solid fa-location-dot"></i> 3146 Koontz Lane, California</a>
+        </div>
+        <div class="sec2">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </header>
+    <header class="tb">
+        <div class="sec1"><a href="#"><img src="https://demo.bosathemes.com/html/travele/assets/images/travele-logo.png" alt=""></a></div>
+        <div class="sec2"><a href="#">HOME</a><a href="#">TOUR</a><a href="#">PAGES</a><a href="#">SHOP</a><a href="#">BLOG</a><a href="#">DASHBOARD</a></div>
+        <div class="sec3"><button>BUY NOW</button></div>
+    </header>
+    <div class="hero">
+        <h1>TRAVELLING AROUND <br> THE WORLD</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, unde dolorum. Nulla facere in consectetur quae autem,<br> dicta expedita mollitia perspiciatis obcaecati excepturi, error vitae nam a incidunt culpa nobis?</p>
+        <button>CONTINUE READING</button>
+    </div>
+    </section>
+    <section class="container2">
+        <div class="hero">
+            <div class="sec1"><label for="">Search Destination*</label><br>
+            <input type="text" placeholder="Enter Destination"></div>
+            <div class="sec2"><label for="">
+Pax Number*</label><br> <input type="text" placeholder="No. of People"></div>
+            <div class="sec3"><label for="">Checkin Date*
+</label><br> <input type="date"></div>
+            <div class="sec4"><label for="">Checkout Date*
+</label><br> <input type="date"></div>
+            <div class="sec5"><button>INQUIRE NOW</button></div>
+        </div>
+    </section>
+    <section class="container3">
+        <div class="sec1">
+            <p><span>___</span>POPULAR DESTINATION</p>
+            <h1>TOP NOTCH DESTINATION</h1>
+        </div>
+        <div class="sec2"><p>Aperiam sociosqu urna praesent, tristique, corrupti <br> condimentum asperiores platea ipsum ad arcu. Nostrud. Aut <br> nostrum, ornare quas provident laoreet nesciunt.</p></div>
+    </section>
+    <section class="container4">
+        <div class="hero"><div class="sec1"><img src="https://demo.bosathemes.com/html/travele/assets/images/img1.jpg" alt=""></div>
+        <div class="sec2"><img src="https://demo.bosathemes.com/html/travele/assets/images/img2.jpg" alt=""></div>
+        <div class="sec3">
+            <div class="top"><img src="https://demo.bosathemes.com/html/travele/assets/images/img3.jpg" alt=""></div>
+            <div class="bottom"><img src="https://demo.bosathemes.com/html/travele/assets/images/img4.jpg" alt=""></div>
+        </div>
+    </div>
+    <button>MORE DESTINATION</button>
+    </section>
+</body>
+</html>
