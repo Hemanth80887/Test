@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted white;
+    padding: 0px 60px;
+}
+.contact-links, .social-links{
+    display: flex;
+    list-style-type: none;
+}
+.contact-links li, .social-links li{
+    padding: 10px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.hero-container{
+    min-height: 100vh;
+    background:linear-gradient(#00000087, #0000005b), url(https://demo.bosathemes.com/html/travele/assets/images/slider-banner-1.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.social-links li:last-child{
+    border: 1px dotted white;
+    border-bottom: none;
+}
+
+/* header section  */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+    transition: 0.5s linear;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li a{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: tomato;
+    transition: 0.7s;
+}
+
+.main-btn{
+    border: none;
+    padding:8px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+}
+.main-btn:hover{
+    background-color: rgb(61, 121, 182);
+}
+.white-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1% 10%;
+    background-color: white;
+     position: fixed !important;
+    top: 0;
+    z-index: 1020;
+    transition: 0.5s linear;
+}
+.white-header a{
+    color: #0c0c0c !important;
+}
+/* hero content section  */
+.hero-content{
+    min-height: 90vh;
+    padding: 4%;
+    text-align: center;
+    color: white;
+}
+.hero-heading{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.subtitle{
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.hero-content .main-btn{
+    margin-top: 30px;
+    padding: 13px 30px;
+}
+
+/* conatct form  */
+.contact-form{
+    padding: 4%;
+    box-shadow: 0px 2px 10px #ccc;
+    margin: auto;
+    transform: translateY(-50%);
+    background-color: white;
+    display: flex;
+    gap: 10px;
+}
+.contact-form div{
+    flex: 1;
+}
+.contact-form div input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+    margin-top: 6px;
+    color: rgb(120, 120, 120);
+
+}
+.contact-form div button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 27px;
+}
+.contact-form div input::placeholder{
+    color: rgb(120, 120, 120);
+}
+.container2{
+    background-color: rgb(241, 241, 241);
+    padding: 5%;
+    padding-top: 0px;
+}
+
+.destination-top{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.destination-left{  
+    flex: 2;
+}
+.destination-right{
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(95, 95, 95);
+}
+.heading{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+.blue-text{
+    color:#101f46;
+}
+.red-text{
+    color: tomato;
+}
+
+.title{
+    position: relative;
+    margin-left: 110px;
+    width: fit-content;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: tomato;
+    left: -110px;
+    top: 49%;
+}
+.title-white{
+    position: relative;
+    margin-left: 110px;
+    width: fit-content;
+}
+.title-white::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    left: -110px;
+    top: 49%;
+}
+
+.destination-cards{
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+
+}
+.left{
+    width: 350px;
+}
+
+.card1{
+    background: linear-gradient(#03052880, #00000093), url(https://demo.bosathemes.com/html/travele/assets/images/img1.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 90vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 9px solid white;
+}
+
+
+.middle{
+     width: 350px;
+}
+.card2{
+    background: linear-gradient(#03052880, #00000093), url(https://demo.bosathemes.com/html/travele/assets/images/img2.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 90vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 9px solid white;
+    
+}
+.right{
+    min-height: 100vh;
+    flex: 1;
+
+}
+.card3{
+    background: linear-gradient(#03052880, #00000093), url(https://demo.bosathemes.com/html/travele/assets/images/img3.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 43vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 9px solid white;
+}
+.card4{
+    background: linear-gradient(#03052880, #00000093), url(https://demo.bosathemes.com/html/travele/assets/images/img4.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 43vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 9px solid white;
+}
+
+.destination-cards .main-btn{
+    background-color: rgb(61, 121, 182);
+}
+.destination-cards .main-btn:hover{
+    background-color: tomato;
+}
+
+.container2 center .main-btn{
+    padding: 15px 30px;
+}
+
+.packages-cards{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.package-card{
+    flex: 1;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.package-card:nth-child(1){
+    background-color: rgb(255, 255, 255);
+}
+.price{
+    background-color: tomato;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 20px;
+}
+.price h2{
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.image-container{
+    position:relative;
+}
+.price{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+}
+
+.package-content{
+    padding: 20px;
+    padding-top: 0px;
+}
+.package-info{
+    background-color: rgb(61, 121, 182);
+    color: white;
+    display: flex;
+    gap: 5px;
+    padding: 8px;
+    transform: translateY(-50%);
+}
+.package-info p{
+    flex: 1;
+    padding: 3px;
+    text-align: center;
+    border-right: 1.5px solid white;
+    font-size: 0.8rem;
+}
+.package-info p:nth-child(3){
+    border-right: none;
+}
+.gray-text{
+    color: lightgray;
+}
+
+.mt-1{
+    margin-top: 15px;
+}
+.mt-2{
+    margin-top: 30px;
+}
+.mt-3{
+    margin-top: 50px;
+}
+.mt-4{
+    margin-top: 80px;
+}
+
+.package-footer{
+    display: flex;
+    border-top: 0.9px solid rgb(230, 230, 230);
+
+}
+.package-footer button{
+    flex: 1;
+    padding: 15px;
+    border: none;
+    font-size: 1.1rem;
+    border-right: 0.9px solid rgb(230, 230, 230);
+    background-color: transparent;
+    cursor: pointer;
+}
+.package-footer button:nth-child(2){
+    border-right: none;
+}
+.light-blue-text{
+    color: royalblue;
+}
+.package-footer .heart2{
+    display: none;
+}
+.package-footer button:hover .heart2{
+    display: inline-block;
+}
+.package-footer button:hover .heart1{
+    display: none;
+}
+.package-footer button:hover, .package-footer button:hover i{
+    color: rgb(61, 121, 182);
+}
+
+
+
+.travel-container{
+    display: flex;
+    padding: 10px;
+}
+.travel-left{
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.travel-right{
+    height: 100vh;
+    background-color: rgb(61, 121, 182);
+    flex: 2;
+    color: white;
+    padding: 5%;
+    padding-bottom: 0px;
+    padding-left: 0px;
+   
+}
+.travel-left-image-container{
+    background: url(https://demo.bosathemes.com/html/travele/assets/images/img8.jpg) no-repeat center;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    transform: translateX(150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-button{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+.play-button::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    z-index: -1;
+    animation: zoom-animation 1s linear infinite ;
+}
+
+
+@keyframes zoom-animation{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3);
+        opacity: 0.1;
+    }
+}
+
+
+.travel-right .title::before{
+    background-color: white;
+}
+.travel-right-content{
+    margin-left: 24%;
+}
+
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+.grid-card{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.grid-card img{
+    width: 50px;
+}
+.grid-card:nth-child(1){
+    border: 1px;
+    border-color: transparent rgba(255, 255, 255, 0.511) rgba(255, 255, 255, 0.511) transparent;
+    border-style: solid;
+}
+.grid-card:nth-child(2){
+    border: 1px;
+    border-color: transparent transparent rgba(255, 255, 255, 0.511) transparent;
+    border-style: solid;
+}
+.grid-card:nth-child(3){
+    border: 1px;
+    border-color: transparent rgba(255, 255, 255, 0.511) transparent transparent;
+    border-style: solid;
+}
+
+.fw-700{
+    font-weight: 900;
+}
+.contact{
+    display: flex;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    padding: 4%;
+    transform: translateY(80%);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    
+}
+.contact p{
+    font-weight: 500;
+    color: #0c0c0c;
+    font-size: 1.2rem;
+}
+.contact img{
+    width: 60px;
+}
+.contact h1{
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3%;
+}
+.container1 .sec{
+    box-shadow: 0px 0px 3px gray;
+    padding: 1% 2%;
+}
+.container3{
+    display: flex;
+    padding: 2% 10%;
+}
+.container3 .first{
+    flex:1;
+    height: 80vh;
+    padding: 5%;
+    position: relative;
+}
+.container3 .sec{
+    background-color: white;
+    width: 80%;
+    padding:10% 2% 10% 10%;
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    box-shadow: 0px 0px 1px gray;
+}
+.container3 .first:nth-child(1){
+    background: url(https://demo.bosathemes.com/html/travele/assets/images/img9.jpg) no-repeat center;
+   
+}
+.container3 .first:nth-child(2){
+    background: url(https://demo.bosathemes.com/html/travele/assets/images/img10.jpg) no-repeat center;
+}
+.container3 .first:nth-child(3){
+    background: url(https://demo.bosathemes.com/html/travele/assets/images/img11.jpg) no-repeat center;
+}
+.container3 .first .sec h5,.container3 .first .sec h2{
+    margin-bottom: 10px;
+}
+.container4{
+    display: flex;
+    padding: 0% 12%;
+}
+.container4 .sec{
+    flex: 1;
+    padding: 2%;
+}
+.container4 .sec .c4s2t1{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.container5{
+    background-color: #0791be;
+    width: 78%;
+    margin: auto;
+    transform: translateY(80px);
+}
+.container5 img{
+    padding: 3% 3%;
+}
+.container6{
+    background:linear-gradient(#03052880, #00000093), url(https://demo.bosathemes.com/html/travele/assets/images/img16.jpg);
+    height: 75vh;
+    background-attachment: fixed;
+    color: white;
+    padding: 10%;
+    margin-bottom: 1%;
+}
+.mb-1{
+    margin-bottom: 20px;
+}
+.container6 div{
+    border: 1px solid rgba(255, 255, 255, 0.575);
+    width: fit-content;
+    padding: 0.5%;
+}
+.container6 div input{
+    background-color: transparent;
+    border:none;
+    width: 550px;
+    padding: 2%;
+}
+.container6 div button{
+    padding: 15px;
+
+}
+.container6 input::placeholder{
+    color: rgba(255, 255, 255, 0.644);
+    text-transform:capitalize;
+    font-size: 15px;
+}
+
+    </style>
+</head>
+<body>
+
+   
+    <section class="hero-container">
+        <section class="top-header" id="header-1">
+        <ul class="contact-links">
+            <li><a href="#"><i class="fa-solid fa-phone"></i> +01 (977) 2599 12</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> company@domain.com</a></li>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i> 3146 Koontz Lane, California</a></li>
+        </ul>
+
+
+        <ul class="social-links">
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        </ul>
+    </section>
+
+
+    <header id="header2">
+        <img src="https://demo.bosathemes.com/html/travele/assets/images/travele-logo.png" alt="logo" class="logo" id="logo">
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <button class="main-btn">Buy Now</button>
+    </header>
+    
+    <section class="hero-content">
+        <h1 class="hero-heading">Traveling around <br> the world</h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.  Esse quasi, a non accusantium quisquam <br> quod odio ratione optio magni amet laboriosam nobis porro ullam </p>
+        <button class="main-btn">Continue reading</button>
+    </section>
+    </section>
+
+   <section class="container2">
+     <!-- form  -->
+     <form action="" class="contact-form">
+
+        <div>
+            <label for="destination">Search Destination*</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter Destination">
+        </div>
+
+        <div>
+            <label for="pax">Pax Number*</label>
+            <input type="number" id="pax" name="pax" placeholder="No.of People">
+        </div>
+
+         <div>
+            <label for="checkin">Checkin Date*</label>
+            <input type="date" id="checkin" name="checkin">
+        </div>
+        
+         <div>
+            <label for="checkout">Checkout Date*</label>
+            <input type="date" id="checkout" name="checkout">
+        </div>
+
+        <div>
+            <button class="main-btn">Inquire Now</button>
+        </div>
+        
+     </form>
+
+
+     <div class="destination-top">
+        <div class="destination-left">
+            <h3 class="title red-text">POPULAR DESTINATION</h3>
+            <div class="heading blue-text">TOP NOTCH DESTINATION</div>
+        </div>
+
+        <div class="destination-right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nam, est asperiores saepe magni laboriosam similique quae excepturi </p>
+        </div>
+    </div>
+
+    <!-- destination cards section  -->
+     <div class="destination-cards">
+        <div class="left">
+           <div class="card1">
+            <button class="main-btn">Thailand</button>
+
+            <div>
+                <h2>Disney land</h2>
+                <p class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+            </div>
+           </div>
+        </div>
+
+        <div class="middle">
+             <div class="card2">
+            <button class="main-btn">norway</button>
+
+            <div>
+                <h2>Besseggen ridge</h2>
+                <p class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+            </div>
+           </div>
+        </div>
+
+        <div class="right">
+            <div class="card3"]>
+            <button class="main-btn">norway</button>
+
+            <div>
+                <h2>Besseggen ridge</h2>
+                <p class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+            </div>
+           </div>
+           <br>
+            <div class="card4">
+            <button class="main-btn">norway</button>
+
+            <div>
+                <h2>Besseggen ridge</h2>
+                <p class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </p>
+            </div>
+           </div>
+        </div>
+     </div>
+
+     <center>
+        <button class="main-btn">more destination</button>
+     </center><br><br>
+     <div class="packages-top">
+        <center>
+            <h2 class="title red-text">EXPLORE GREAT PLACES</h2>
+            <h1 class="heading  blue-text">POPULAR PACKAGES</h1>
+            <p class="subtitle">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, <br> odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+        </center>
+     </div>
+
+     <div class="packages-cards">
+        <div class="package-card">
+            <div class="image-container">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/img5.jpg" width="100%" alt="package-image">
+                <div class="price"><h2>$1,900 / per person</h2></div>
+            </div>
+            
+            <div class="package-content">
+                <div class="package-info">
+                    <p><i class="fa-solid fa-clock"></i> 7D/6N </p>
+                    <p><i class="fa-solid fa-user-group"></i> People: 5</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Malaysia</p>
+                </div>
+
+                <h2 class="blue-text">Sunset view of beautiful lakeside residen</h2>
+                <p class="mt-1">(25 reviews) 
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star gray-text"></i>
+                    <i class="fa-solid fa-star gray-text"></i>
+                </p>
+                <p class="subtitle mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+            </div>
+
+          <div class="package-footer">
+            <button>Book now <i class="fa-solid fa-arrow-right red-text"></i></button>
+            <button>Wish List <i class="fa-regular fa-heart red-text heart1"></i><i class="fa-solid light-blue-text fa-heart heart2"></i></button>
+          </div>
+        </div>
+       
+           <div class="package-card">
+            <div class="image-container">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/img6.jpg" width="100%" alt="package-image">
+                <div class="price"><h2>$1,900 / per person</h2></div>
+            </div>
+            
+            <div class="package-content">
+                <div class="package-info">
+                    <p><i class="fa-solid fa-clock"></i> 7D/6N </p>
+                    <p><i class="fa-solid fa-user-group"></i> People: 5</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Malaysia</p>
+                </div>
+
+                <h2 class="blue-text">Experience the natural beauty of island</h2>
+                <p class="mt-1">(25 reviews) 
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                </p>
+                <p class="subtitle mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+            </div>
+
+          <div class="package-footer">
+            <button>Book now <i class="fa-solid fa-arrow-right red-text"></i></button>
+            <button>Wish List <i class="fa-regular fa-heart red-text heart1"></i><i class="fa-solid light-blue-text fa-heart heart2"></i></button>
+          </div>
+        </div>
+       
+
+           <div class="package-card">
+            <div class="image-container">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/img7.jpg" width="100%" alt="package-image">
+                <div class="price"><h2>$1,900 / per person</h2></div>
+            </div>
+            
+            <div class="package-content">
+                <div class="package-info">
+                    <p><i class="fa-solid fa-clock"></i> 7D/6N </p>
+                    <p><i class="fa-solid fa-user-group"></i> People: 5</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Malaysia</p>
+                </div>
+
+                <h2 class="blue-text">Vacation to the water city of Portugal</h2>
+                <p class="mt-1">(25 reviews) 
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star red-text"></i>
+                    <i class="fa-solid fa-star gray-text"></i>
+                </p>
+                <p class="subtitle mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+            </div>
+
+          <div class="package-footer">
+            <button>Book now <i class="fa-solid fa-arrow-right red-text"></i></button>
+            <button>Wish List <i class="fa-regular fa-heart red-text heart1"></i><i class="fa-solid light-blue-text fa-heart heart2"></i></button>
+          </div>
+        </div>
+     </div>
+      <center class="mt-3">
+        <button class="main-btn">view all packages</button>
+     </center><br><br>
+   </section>
+   <section class="travel-container">
+    <div class="travel-left">
+        <div class="travel-left-image-container">
+           <div class="play-button">
+            <i class="fa-solid fa-play light-blue-text"></i>
+           </div>
+        </div>
+    </div>
+    <div class="travel-right">
+      <div class="travel-right-content">
+          <h2 class="title">CALLBACK FOR MORE</h2>
+          <h1 class="heading mt-2">GO TRAVEL. DISCOVER. <br> REMEMBER US!!</h1>
+          <p class="subtitle mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Eaque adipiscing, luctus eleifend.</p>
+
+          <div class="grid-container">
+            <div class="grid-card">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon1.png" alt="">
+                <div>
+                    <h1 class="fw-700">500K+</h1>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon2.png" alt="">
+                <div>
+                    <h1 class="fw-700">250K+</h1>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+
+
+            <div class="grid-card">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon3.png" alt="">
+                <div>
+                    <h1 class="fw-700">15K+</h1>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon4.png" alt="">
+                <div>
+                    <h1 class="fw-700">10K+</h1>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="contact">
+            <img src="https://demo.bosathemes.com/html/travele/assets/images/icon5.png" alt="contact-details">
+            <div>
+                <p>Our 24/7 Emergency Phone Services</p>
+                <h1 class="red-text fw-700">Call: 123-456-7890</h1>
+            </div>
+          </div>
+      </div>
+    </div>
+   </section>
+   <div class="packages-top mt-4">
+        <center>
+            <h4 class="title red-text">TRAVEL BY ACTIVITY</h4>
+            <h1 class="heading  blue-text">ADVENTURE & ACTIVITY</h1>
+            <p class="subtitle">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, <br> odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+        </center>
+     </div>
+    <section class="container1">
+        <div class="sec"><center>
+            <img src="https://demo.bosathemes.com/html/travele/assets/images/icon6.png" alt="">
+        <h3>Adventure</h3>
+        <p>15 Destination</p>
+        </center>
+    </div>
+        <div class="sec">
+            <center>
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon10.png" alt="">
+            <h3>Trekking</h3>
+            <p>12 Destination</p>
+            </center>
+        </div>
+        <div class="sec">
+            <center>
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon9.png" alt="">
+            <h3>Camp Fire</h3>
+            <p>7 Destination</p>
+            </center>
+        </div>
+        <div class="sec">
+            <center><img src="https://demo.bosathemes.com/html/travele/assets/images/icon8.png" alt="">
+            <h3>Off Road</h3>
+        <p>15 Destination</p></center>
+        </div>
+        <div class="sec">
+            <center>
+                <img src="https://demo.bosathemes.com/html/travele/assets/images/icon7.png" alt="">
+                <h3>Camping</h3>
+                <p>13 Destination</p>
+            </center>
+        </div>
+        <div class="sec"><center>
+            <img src="https://demo.bosathemes.com/html/travele/assets/images/icon11.png" alt="">
+            <h3>Exploring</h3>
+            <p>25 Destination</p>
+        </center></div>
+    </section>
+    <div class="packages-top mt-4">
+        <center>
+            <h4 class="title red-text">TRAVEL OFFER & DISCOUNT</h4>
+            <h1 class="heading  blue-text">SPECIAL TRAVEL OFFER</h1>
+            <p class="subtitle">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, <br> odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+        </center>
+     </div>
+<section class="container3">
+    <div class="first"><div class="sec light-blue-text"><h5>CANADA</h5>
+    <h2 class="blue-text">Experience the natural <br> beauty of glacier</h2>
+<h3 class="red-text">Price: <del> $1500</del> $1200</h3></div></div>
+    <div class="first">
+        <div class="sec light-blue-text"><h5>NEW ZEALAND</h5>
+    <h2 class="blue-text">Trekking to the <br> mountain camp site</h2>
+<h3 class="red-text">Price: <del> $1500</del> $1200</h3></div>
+    </div>
+<div class="first"><div class="sec light-blue-text"><h5>MALAYSIA</h5>
+    <h2 class="blue-text">Sunset view of beautiful <br> lakeside city</h2>
+<h3 class="red-text">Price: <del> $1500</del> $1200</h3></div></div>
+</section>
+<section class="container4">
+    <div class="sec">
+        <h4 class="title red-text">OUR TOUR GALLERY</h4>
+        <h1 class="heading blue-text">BEST TRAVELER'S <br>SHARED PHOTOS</h1>
+        <p>Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Esse? Aut nostrum, ornare quas provident laoreet nesciunt odio voluptates etiam, omnis.</p>
+        <img src="https://demo.bosathemes.com/html/travele/assets/images/img12.jpg" alt="" style="margin-top: 50px;">
+    </div>
+    <div class="sec">
+        <div class="c4s2t1">
+        <img src="https://demo.bosathemes.com/html/travele/assets/images/img13.jpg" alt="">
+        <img src="https://demo.bosathemes.com/html/travele/assets/images/img14.jpg" alt="">
+    </div>
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/img15.jpg" alt="">
+    </div>
+</section>
+<section class="container5">
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/logo1.png" alt="">
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/logo2.png" alt="">
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/logo3.png" alt="">
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/logo4.png" alt="">
+    <img src="https://demo.bosathemes.com/html/travele/assets/images/logo5.png" alt="">
+</section>
+<section class="container6">
+    <h4 class="title-white mb-1 ">HOLIDAY PACKAGE OFFER</h4>
+    <h1 class="heading mb-1">HOLIDAY SPECIAL 25% OFF !</h1>
+    <h5 class="mb-1">Sign up now to recieve hot special offers and information about the best tour <br> packages, updates and discounts !!</h5>
+    <div class="mb-1"><input type="text" placeholder="Your Email Address"><button class="main-btn">SIGN UP NOW!</button></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper <br> mattis, pulvinar dapibus leo. Eaque adipiscing, luctus eleifend temporibus occaecat luctus <br> eleifend tempo ribus.</p>
+</section>
+
+   <script>
+    const logo = document.getElementById('logo')
+    const header2 = document.getElementById('header2')
+    function checkScroll(){
+        console.log(window.pageYOffset);
+        if(window.pageYOffset>40){
+            header2.classList.add('white-header');
+            logo.src = "https://demo.bosathemes.com/html/travele/assets/images/travele-logo1.png"
+        }else{
+            header2.classList.remove('white-header');
+            logo.src = 'https://demo.bosathemes.com/html/travele/assets/images/travele-logo.png'
+
+        }
+    }
+    setInterval('checkScroll()', 100)
+   </script>
+</body>
+</html>
