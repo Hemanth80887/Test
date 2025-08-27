@@ -1,0 +1,191 @@
+package com.basics;
+// Data types :how much memory required. what type of data is getting stored 
+// 1.primitive 2. Non Primitive
+// Primitive :pre-defined (8 primitives): fixed size
+// 1. byte(8 bits) 2.short(16 bits) 3. int(32 bits) 4.long(64 bits) 5. float(32 bits) 6.double (64 bits),
+// 7. char(16 bits)
+// Wrapper Classes: convert primitive to object*/
+//byte :Byte :size()
+
+// Type casting : changing from one dt to another dt
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println("byte size;"+Byte.SIZE+"bits");
+		System.out.println("short size;"+Short.SIZE+"bits");
+		System.out.println("int size;"+Integer.SIZE+"bits");
+		System.out.println("long size;"+Long.SIZE+"bits");
+		System.out.println("float size;"+Float.SIZE+"bits");
+		System.out.println("double size;"+Double.SIZE+"bits");
+		System.out.println("char size;"+Character.SIZE+"bits");
+		
+		System.out.println("______________");
+		//MIN_VALUE & MAX_VALUE
+		
+		System.out.println("byte minValue:"+Byte.MIN_VALUE+" maxValue :"+Byte.MAX_VALUE);
+		System.out.println("short minValue:"+Short.MIN_VALUE+" maxValue :"+Short.MAX_VALUE);
+		System.out.println("int minValue:"+Integer.MIN_VALUE+" maxValue :"+Integer.MAX_VALUE);
+		System.out.println("long minValue:"+Long.MIN_VALUE+" maxValue :"+Long.MAX_VALUE);
+		System.out.println("float minValue:"+Float.MIN_VALUE+" maxValue :"+Float.MAX_VALUE);
+		System.out.println("double minValue:"+Double.MIN_VALUE+" maxValue :"+Double.MAX_VALUE);
+		
+		System.out.println("________________");
+		
+		// type casting
+		 byte a = 10;
+		 int b =a;   //implict : lower data type to higher datatype , low chance of memory loss
+		 System.out.println(a+"  "+b);
+		 
+		 
+		 int d = 300;
+		 byte e = (byte) d; // explict : higher datatype to lower datatype
+		 System.out.println(d+"  "+e);
+		 
+		 
+		 
+		
+		
+		
+	}
+
+}
+
+_____________________________________________________________________________
+
+package com.basics;
+//variable 
+//1. Instance variable 2. static variable 3.Local variable
+//1. instance variable : (related to the object)
+//- variable declared outside a method
+//- object is required to access instance  variable
+//- every object is maintaining a copy of instance variable (non-shareable)
+
+// 2. Static variable :(Related to class)
+// - variable declared with static keyword
+// - can be accessed using className or objectName (recommendation: className)
+// - its a sharable resource (only one copy of static data is created per program and shared among objects)
+
+//3. Local variable:
+// - variables declared inside the method.
+// - local variables cannot be accessed outside a method.
+
+
+public class Test1 {
+	int data = 200; //instance variable
+	
+	static int data2 = 1000;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test1 obj = new Test1();
+		Test1 obj2 = new Test1();
+		Test1 obj3 = new Test1();
+		// objName.varName
+		System.out.println(obj.data);
+		System.out.println(obj2.data);
+		System.out.println(obj3.data);
+		
+		System.out.println("_______");
+		obj.data = 500;
+		System.out.println(obj.data);
+		System.out.println(obj2.data);
+		System.out.println(obj3.data);
+		
+		System.out.println("_______");
+		//className.varName
+		System.out.println(Test1.data2);
+		System.out.println(obj.data2);
+		System.out.println(obj2.data2);
+		System.out.println(obj3.data2);
+		
+		obj.data2 = 3000;
+		System.out.println(obj.data2);
+		System.out.println(obj2.data2);
+		System.out.println(obj3.data2);
+
+		int data3 = 5000; // local variable
+		System.out.println(data3);
+		}
+
+}
+
+-----------------------------------------------------------------------------------
+19/08/2025
+
+package com.basics;
+
+public class Test2 {
+	// function definition
+	public void m1() {
+		System.out.println("m1() called");
+		return;
+	}
+	public int m2() {
+		return (10*10+12);
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main() started");
+		Test2 obj = new Test2();
+		obj.m1(); //fn call /fn invocation
+		int result = obj.m2();
+		System.out.println(result);
+		System.out.println("main() ended");
+		
+
+	}
+
+}
+
+
+package programbasics;
+
+public class Test3 {
+	public void m1(Test3 obj) {
+		System.out.println("m1 started");
+		obj.m2();
+		System.out.println("m1 ended");
+	}
+	
+	public void m2() {
+		System.out.println("m2 started");
+		System.out.println("m2 ended");
+	}
+
+	public static void main(String[] args) {
+		Test3 obj = new Test3();
+		obj.m1(obj);
+		obj.m2();
+	}
+
+}
+
+
+
+package com.basics;
+
+public class Test4 {
+	int data = 100;
+	static int data2 = 200;
+	
+	public static void m1(Test4 obj) {
+		System.out.println(obj.data);
+		System.out.println(Test4.data2);
+		
+	}
+	public void m2(Test4 obj) {
+		System.out.println(obj.data);
+		System.out.println(Test4.data2);
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test4 obj = new Test4();
+		Test4.m1(obj);
+		obj.m2(obj);
+
+	}
+
+}
+
+
