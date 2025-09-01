@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classess</title>
+    <style>
+        ul{
+            width: 400px;
+            list-style-type: decimal-leading-zero;
+            list-style-position: inside;
+        }
+        ul li{
+            padding: 10px;
+            background-color: lightgrey;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        li:first-child{
+            background-color: darkgoldenrod;
+            color: rgb(108, 43, 16);
+            border: 1px dashed rgb(108, 43, 16);
+        }
+
+         li:last-child{
+            background-color: rgb(35, 106, 63);
+            color: rgb(255, 255, 255);
+            border: 1px dashed rgb(0, 0, 0);
+        }
+        li:nth-child(4){
+            color: goldenrod;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>First-child, last-child, nth-child(index)</h1>
+    </center>
+    <hr>
+    <ul>
+        <li>this is the list item 1</li>
+        <li>this is the list item 2</li>
+        <li>this is the list item 3</li>
+        <li>this is the list item 4</li>
+        <li>this is the list item 5</li>
+        <li>this is the list item 6</li>
+        <li>this is the list item 7</li>
+        <li>this is the list item 8</li>
+        <li>this is the list item 9</li>
+        <li>this is the list item 10</li>
+    </ul>
+    <hr>
+    <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+
+    
+</body>
+</html>
