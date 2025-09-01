@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:not(.b2){
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .card{
+            width: 400px;
+            margin: auto;
+        }
+        .card p{
+            border: 1px solid darkslategrey;
+            padding: 10px;
+
+        }
+        .card p:not(.b4, .b1){
+            background-color: darkslateblue;
+            color: white;
+        }
+
+        h1:not(#h3){
+            color: red;
+            background-color: gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:not Pseudo class</h1>
+    </center>
+    <hr>
+
+    <section class="card">
+        <p class="b1">this is the paragraph 1</p>
+        <p class="b2">this is the paragraph 2</p>
+        <p class="b3">this is the paragraph 3</p>
+        <p class="b4">this is the paragraph 4</p>
+        <p class="b5">this is the paragraph 5</p>
+
+        <h1 id="h1">heading1</h1>
+        <h1 id="h2">heading2</h1>
+        <h1 id="h3">heading3</h1>
+        <h1 id="h4">heading4</h1>
+        <h1 id="h5">heading5</h1>
+    </section>
+</body>
+</html>
