@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classess</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: lightslategray;
+        }
+        .container form{
+            background-color: white;
+            padding: 30px;
+        }
+        input{
+             width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .container form input:not([type="number"]){
+            border: 1px solid gray;
+        }
+        fieldset{
+            padding: 10px;
+        }
+        button{
+            border: none;
+            margin-top: 15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input:required{
+            border-bottom: 2px solid red !important;
+        }
+
+       
+        input[type="number"]:in-range{
+            border-bottom: 2px solid rgb(47, 153, 50) !important;
+            color: rgb(47, 153, 50);
+           
+        }
+        input[type="number"]:out-of-range{
+            border-bottom: 2px solid red !important;
+            color: red;
+        }
+        input[type="number"]:in-range::placeholder{
+           color: rgb(47, 153, 50);
+        }
+        input[type="number"]:out-of-range::placeholder{
+           color: red;
+        }
+
+
+
+        input:read-only{
+            border: 1px dashed red !important;
+            letter-spacing: 5px;
+            text-align: center;
+            background-color: rgb(236, 236, 236);
+            color: red;
+        }
+
+       
+       
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:disabled, :enabled, :empty</h1>
+    </center>
+    <hr>
+
+    <section class="container">
+        <form autocomplete="on">
+            <fieldset>
+                <legend>Firstname</legend>
+                <label for="f_name">Firstname</label>
+                <input type="text" name="F_name" id="f_name" placeholder="Type here.." required>
+            </fieldset>
+
+             <fieldset>
+                <legend>Email address</legend>
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Type here.." value="arun@gmail.com" readonly>
+            </fieldset>
+
+             <fieldset>
+                <legend>Age</legend>
+                <label for="email">Age</label>
+                <input type="number" name="age" id="age" placeholder="Type here.." min="18" max="60">
+            </fieldset>
+            <button type="submit">Create account</button>
+           
+        </form>
+
+
+        
+    </section>
+    
+</body>
+</html>
