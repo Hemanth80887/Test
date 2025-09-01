@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classess</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: lightslategray;
+        }
+        .container form{
+            background-color: white;
+            padding: 30px;
+        }
+        fieldset{
+            padding: 10px;
+        }
+        input{
+             width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid gray;
+        }
+
+        input:invalid{
+            border: 1.5px solid red !important;
+        }
+
+        input:valid{
+            border: 1.5px solid greenyellow !important;
+        }
+        
+
+       
+       
+    </style>
+</head>
+<body>
+    <center>
+        <h1>:disabled, :enabled, :empty</h1>
+    </center>
+    <hr>
+
+    <section class="container">
+        <form autocomplete="on">
+            <fieldset>
+                <legend>Firstname</legend>
+                <label for="f_name">Firstname</label>
+                <input type="text" name="F_name" id="f_name" placeholder="Type here.." required minlength="6">
+            </fieldset>
+
+             <fieldset>
+                <legend>Email address</legend>
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" placeholder="Type here.." required>
+            </fieldset>
+
+             <fieldset>
+                <legend>Password</legend>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter 8 digits password" minlength="8">
+            </fieldset>
+
+             <fieldset>
+                <legend>Phone number</legend>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="+91000000000" minlength="10" maxlength="13">
+            </fieldset>
+            <button type="submit">Create account</button>
+        </form>
+    </section>
+    
+</body>
+</html>
