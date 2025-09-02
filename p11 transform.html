@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0c0c0c;
+        }
+        .card{
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .card .layer{
+            position: absolute;
+            /* background-color: rgba(248, 248, 248, 0.27); */
+            background: linear-gradient(#0000002a, #000);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* backdrop-filter: blur(5px); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+            transform: translateY(100%);
+            /* transform: scale(0); */
+        }
+
+
+        .card:hover .layer{
+            transform: translateY(0%);
+            /* transform: scale(1); */
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit cumque consequatur assumenda, fugit eaque nobis provident libero animi quia. Quos vel praesentium repellendus adipisci cum aut doloribus sapiente rerum distinctio.
+            Unde voluptas, quibusdam quas consectetur deleniti nihil. Quae praesentium modi libero officia placeat, quasi ea, odit eveniet quidem amet quaerat neque porro sit est maiores. Animi et minima quidem assumenda?</p>
+
+
+            <div class="layer">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
