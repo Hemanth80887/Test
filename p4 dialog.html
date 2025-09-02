@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        dialog::backdrop{
+            background-color: tomato;
+        }
+        dialog{
+            width: 300px;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <dialog id="d1">
+        <button onclick="closehandler()">Close</button>
+        <h2>This is the dialog</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum quasi totam recusandae repellendus officia ea explicabo id veritatis tenetur velit quisquam, culpa fugiat ipsa deleniti maxime similique saepe magni.</p>
+    </dialog>
+
+    <button onclick="showhandler()">Show Dialog</button>
+
+    <script>
+        var dialog = document.getElementById('d1');
+        function showhandler(){
+            dialog.showModal();
+        }
+        function closehandler(){
+            dialog.close();
+        }
+    </script>
+</body>
+</html>
