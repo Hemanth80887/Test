@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classess</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: lightslategray;
+        }
+        .container form{
+            background-color: white;
+            padding: 30px;
+        }
+       
+        input{
+             width: 100%;
+            border: none;
+            outline: none;
+            padding: 30px;
+            margin-top: 5px;
+            border: 1px dashed rgb(2, 107, 227);
+            transition: 1s;
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background-color: orange;
+        }
+        input[type="file"]::file-selector-button{
+            border: none;
+            padding: 10px 20px;background-color: rgb(2, 107, 227);
+            color: white;
+            cursor: pointer;
+        }
+        input[type="file"]::file-selector-button:hover{
+            opacity: 0.7;
+        }
+        input[type="file"]:hover{
+            outline: 1px dashed rgb(2, 107, 227);
+            outline-offset: 5px;
+        }
+        p{
+            padding: 30px;
+            line-height: 2.1;
+        }
+        /* p::selection{
+            background-color: green;
+            color: white;
+        } */
+
+        body::selection{
+             background-color: green;
+            color: white;
+        }
+
+
+        input::placeholder{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse culpa vitae repudiandae doloribus aut eos cum delectus. Temporibus voluptatibus maxime facere accusantium soluta quia porro nulla nemo, rerum nobis!
+    Aperiam, rerum fugit ea architecto nihil rem veritatis nobis repellat, ratione sed non ab iusto, autem dolore quo. Amet, impedit id quis enim delectus velit ducimus maiores totam praesentium veniam!
+    Quo corporis deserunt esse, ullam saepe ex beatae quibusdam, asperiores natus modi error nesciunt exercitationem? Aut molestiae sunt dolor maxime, voluptate veniam natus mollitia non. Labore in culpa omnis provident!
+    Nam nemo, nesciunt reprehenderit eveniet animi, officia ut alias provident quaerat, eum odio fuga voluptatem consectetur similique. Fuga iure veniam voluptas eius quis quia nihil. Quod optio dolorum pariatur. Voluptatem!
+    Assumenda dolores voluptates ipsum dolorem at a in veritatis consectetur? Nihil, accusantium. Cum exercitationem, nostrum sit sequi, saepe adipisci unde commodi minus sapiente aspernatur inventore! Soluta magni repudiandae architecto inventore!</p>
+
+    <section class="container">
+        <form autocomplete="on">
+             <label for="resume">resume</label>
+                <input type="file" name="resume" id="resume"  required>
+                <input type="text" placeholder="Enter your name">
+             
+            <button type="submit">Create account</button>
+        </form>
+    </section>
+    
+</body>
+</html>
