@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 4%;
+            display: flex;
+            gap: 60px;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container div{
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container div h1{
+            font-weight: 500;
+        }
+        .box1{
+            box-shadow: 10px 5px 10px red, 20px 10px 10px green;
+        }
+        .box2{
+            box-shadow: -10px -10px 20px green, 10px 10px 20px red;
+        }
+        .box3{
+            background-color: white !important;
+            box-shadow: inset 5px 10px 20px  rgb(34, 33, 31), -10px -10px 20px orange, 10px 10px 20px green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="box1">
+        <h1>Box1</h1>
+       </div>
+       <div class="box2">
+        <h1>Box2</h1>
+       </div>
+       <div class="box3">
+        <h1>Box3</h1>
+       </div>
+    </div>
+
+   
+</body>
+</html>
