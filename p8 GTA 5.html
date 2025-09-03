@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container1{
+            display: flex;
+            height: 100vh;
+            padding: 4px;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: gray;
+
+        }
+        .card{
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 1s;
+            position: relative;
+            
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+        .card:hover{
+            transform: scale(1.1);
+        }
+        .layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.205);
+            padding: 20px;
+            backdrop-filter: blur(13px);
+            color: rgb(44, 41, 41);
+
+        }
+        .layer h1{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0px 2px 0px rgb(142, 124, 121);
+            letter-spacing: 3px;
+        }
+        .layer p{
+            font-weight: 450;
+            margin-bottom: 20px;
+            text-shadow: 1px 2px 0px rgb(174, 170, 157);
+            line-height: 1.5;
+            justify-content: center;
+            text-align: center;
+
+        }
+        .layer a{
+            display: block;
+            background:linear-gradient(white,gold);
+            color: black;
+            padding: 7px 30px;
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            width: fit-content;
+            margin-left: 50px;
+        }
+        a:hover{
+            opacity: 0.7;
+            background:linear-gradient(gold,white)
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="card">
+            <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/13/38/gaming-gta5-art2.jpg?resize=980:*" alt="GTA 5">
+            <div class="layer">
+                <h1>GTA 5</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt numquam provident magni laudantium facere. Nulla illo vero explicabo cum, dolores tenetur, necessitatibus rem quia amet iusto recusandae aut nobis consequuntur!</p>
+                <a href="#">Install Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://image.api.playstation.com/cdn/UP0001/CUSA04459_00/qBxvfDJJ9dbavai6xsWOcWaxRDGRb7h0.png">
+            <div class="layer">
+                <h1>Watch dogs 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, ex debitis. Ab consectetur repellendus eligendi autem ullam odit culpa alias, rem dolore, ea illum saepe architecto provident numquam modi ducimus!</p>
+                <a href="#">Install Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2024/01/god-of-war-temp-tv-series-poster.jpg">
+            <div class="layer">
+                <h1>God of War</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eaque sapiente dolorum minus! Repellendus error impedit ducimus delectus similique, tenetur quae, eos quibusdam, tempora provident tempore beatae sit voluptas corrupti.</p>
+                <a href="#">Install Now</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
