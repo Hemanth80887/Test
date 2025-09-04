@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            display: block;
+            margin-bottom: 40px;
+        }
+        .container{
+            padding: 4%;
+            cursor: pointer;
+        }
+        img:hover{
+            transform: translateX(400px);
+        }
+
+        img:nth-child(1){
+            transition: 2s;
+            transition-timing-function: linear;
+        }
+         img:nth-child(2){
+            transition: 2s;
+            transition-timing-function: ease-in;
+        }
+         img:nth-child(3){
+            transition: 2s;
+            transition-timing-function: ease-out;
+        }
+          img:nth-child(4){
+            transition: 2s;
+            transition-timing-function: ease;
+        }
+        .container div{
+            width: 400px;
+            padding: 20px;
+            background-color: darkslategray;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .container div:hover{
+            width: 100px;
+        }
+
+
+        .box1{
+            transition: 2s;
+            transition-timing-function: linear;
+        }
+         .box2{
+            transition: 2s;
+            transition-timing-function: ease-in;
+        }
+         .box3{
+            transition: 2s;
+            transition-timing-function: ease-out;
+        }
+         .box4{
+            transition: 2s;
+            transition-timing-function: ease;
+        }
+         .box5{
+            transition: 2s;
+            transition-timing-function: ease-in-out;
+        }
+         .box6{
+            transition: 2s;
+            transition-timing-function: steps(5, jump-start); /*jump-start, jump-end, end, start*/
+        }
+         .box7{
+            transition: 2s;
+            transition-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Transition timing functions</h1>
+    </center>
+    <hr>
+
+    <ul>
+        <li>Linear</li>
+        <li>Ease-in</li>
+        <li>Ease-out</li>
+        <li>Ease</li>
+        <li>Ease-in-out</li>
+        <li>Steps(n, step-function)</li>
+        <li>cubic-bazier(p1, p2, p3, p4)</li>
+    </ul>
+   <div class="container">
+     <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+    <img src="https://static.vecteezy.com/system/resources/previews/023/524/637/non_2x/red-sport-car-design-transparent-background-free-png.png" alt="">
+
+
+
+    <div class="box1">Linear</div>
+    <div class="box2">Ease-in</div>
+    <div class="box3">Ease-out</div>
+    <div class="box4">Ease</div>
+    <div class="box5">Ease-in-out</div>
+    <div class="box6">Steps(n, steps-function)</div>
+    <div class="box7">Cubic-bazier(p1, p2, p3, p4)</div>
+   </div>
+</body>
+</html>
