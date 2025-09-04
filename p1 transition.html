@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 50px;
+        }
+        .container div{
+            width: 200px;
+            height: 200px;
+            border: 5px dashed black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container .box1{
+            transition: 5s;
+        }
+         .container .box2{
+            /* transition: background-color 5s; */
+            transition: border-radius 5s; /*css propertyname   duration*/
+        } 
+        .container .box1:hover{
+            background-color: darkgoldenrod;
+            border-radius: 50px;
+            padding: 100px;
+            color: white;
+        }
+         .container .box2:hover{
+            background-color: darkgoldenrod;
+            border-radius: 50px;
+            padding: 100px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+        <section class="container">
+            <div class="box1">
+                <h1>Box1</h1>
+            </div>
+
+            <div class="box2">
+                <h1>Box2</h1>
+            </div>
+        </section>
+</body>
+</html>
