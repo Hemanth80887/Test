@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip{
+            background-color: black;
+            padding: 5px 10px;
+            color: white;
+            position: absolute;
+            width: fit-content;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none;
+            border-radius: 5px;
+            right: -170px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .tooltip::before{
+            content: '';
+            position: absolute;
+            left: -18px;
+            border-width: 9px;
+            border-style: solid;
+            border-color: transparent black transparent transparent;
+        }
+        .tooltip-container:hover .tooltip{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="tooltip-container">
+            <button>Hover</button>
+
+            <div class="tooltip">
+                This is the tooltip
+            </div>
+        </div>
+    </section>
+</body>
+</html>
