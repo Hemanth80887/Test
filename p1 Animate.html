@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            /* background: radial-gradient(rgb(56, 56, 56), rgb(24, 24, 24)); */
+            padding: 5%;
+            background: url(https://img.pikbest.com/wp/202408/geometric-abstract-pattern-wave-patterns-on-space-texture-background-a-simple-illustration_9910582.jpg!w700wp) no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.151);
+            transform: skew(35deg);
+            position: relative;
+            box-shadow: inset 10px 10px 30px #ffffff52;
+            padding: 15px;
+            font-size: 0.7rem;
+            color: white;
+            backdrop-filter: blur(10px);
+
+        }
+        .box::before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.151);
+            transform: skewY(-45deg);
+            left: -50px;
+            top: 24px;
+            backdrop-filter: blur(10px);
+
+            box-shadow: inset 1px 10px 20px #ffffff7e, -10px 10px 20px #0c0c0c;
+
+        }
+
+         .box::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.151);
+            transform: skewX(-45deg);
+            left: -25px;
+            bottom: -50px;
+            backdrop-filter: blur(100px) !important;
+            box-shadow: inset 10px 1px 20px #ffffff7e, 0px 10px 20px #0c0c0c;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis quam adipisci deleniti incidunt debitis assumenda magnam dolor consectetur labore?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis quam adipisci deleniti incidunt debitis assumenda magnam dolor consectetur labore?</p>
+        </div>
+         <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis quam adipisci deleniti incidunt debitis assumenda magnam dolor consectetur labore?</p>
+        </div>
+    </div>
+</body>
+</html>
