@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #111118;
+            gap: 30px;
+        }
+
+        .loading1, .loading2, .loading3, .loading4, .loading5, .loading6{
+            width: 50px;
+            height: 50px;
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: solid;
+            border-radius: 100px;
+            animation: loading1Animation 1s linear infinite;
+        }
+         .loading2{
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: dotted;
+           
+        }
+         .loading3{
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: dashed;
+           
+        }
+         .loading4{
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: double;
+           
+        }
+
+         .loading5{
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: groove;
+           
+        }
+         .loading6{
+            border: 6px;
+            border-color: white transparent white white;
+            border-style: ridge;
+           
+        }
+
+        @keyframes loading1Animation{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="loading1"></div>
+       <div class="loading2"></div>
+       <div class="loading3"></div>
+       <div class="loading4"></div>
+       <div class="loading5"></div>
+       <div class="loading6"></div>
+    </div>
+</body>
+</html>
