@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #111118;
+            gap: 30px;
+        }
+
+       .loading{
+        display: flex;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.068);
+        padding: 15px 20px;
+        border-radius: 100px;
+       }
+       .loading div{
+            width: 20px;
+            height: 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 100px;
+            animation: loading1Animation 1s linear infinite alternate;
+            animation-delay: var(--time);
+       }
+
+        @keyframes loading1Animation{
+            from{
+                transform: translateY(-10px);
+            }
+            to{
+                transform:translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loading">
+            <div class="c1" style="--time:0.1s"></div>
+            <div class="c2" style="--time:0.3s"></div>
+            <div class="c3" style="--time:0.5s"></div>
+            <!-- <div class="c4" style="--time:0.7s"></div>
+            <div class="c5" style="--time:0.9s"></div>
+            <div class="c6" style="--time:1.1s"></div> -->
+        </div>
+    </div>
+</body>
+</html>
