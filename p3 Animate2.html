@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       .clock-face{
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        background-color: #fff;
+        border: 1px solid rgb(8, 84, 197);
+        position: relative;
+        background: url(https://www.freeiconspng.com/uploads/roman-numeral-clock-face-png-4.png)  no-repeat center;
+        background-size: 102%;
+       }
+       .clock-face::before{
+        content: "";
+        position: absolute;
+        width: 35%;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+        right: 25px;
+        top: 50%;
+        animation: rotateAnimation 60s steps(60, jump-start) infinite;
+        transform-origin: left;
+       }
+
+       @keyframes rotateAnimation{
+        from{
+            transform: rotate(0deg) translateY(-50%);
+        }
+        to{
+            transform: rotate(360deg) translateY(-50%);
+
+        }
+       }
+
+       .clock-face::after{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(8, 84, 197);
+        border-radius: 100px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock-face">
+           
+        </div>
+    </div>
+</body>
+</html>
