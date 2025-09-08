@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            height: 100vh;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:linear-gradient(rgba(105, 104, 104, 0.455),rgba(120, 118, 118, 0.46));
+        }
+        .hero video{
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            object-fit: cover;
+            
+        }
+        .hero h1{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 5rem;
+            font-weight: 600; 
+            letter-spacing: 5px;
+        }
+        .hero h2{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 5rem;
+            font-weight: 600; 
+            letter-spacing: 5px;
+            margin-left: 70px;
+        }
+        .hero h3{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 500; 
+            letter-spacing: 5px;
+        }
+        .hero p{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 700; 
+            letter-spacing: 5px;
+            margin-top: 50px;
+            margin-left: 270px;
+        }
+        .hero button{
+            background-color: rgba(255, 255, 255, 0.301);
+            color: black;
+            padding: 20px;
+            border: 3px white solid;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            margin-left: 350px;  
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+        .hero button:hover{
+            background-color: rgb(107, 100, 100);
+            color: white;
+        }
+        .mid{
+            height: 100vh;
+        }
+        .mid  h1{
+            letter-spacing: 2px;
+            font-size: 3rem;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .mid h2{
+            letter-spacing: 2px;
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .sec{
+            display: flex;
+            justify-content:center;
+            padding: 40px;
+            margin-left: 50px;
+            gap: 100px;
+        }
+         .sec1 h1{
+            background-color: rgb(29, 171, 124);
+            width: 300px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding: 20px 0px;
+            letter-spacing: 1px;
+            color: white;
+            transform: translateY(-40%);
+            margin-left: 25px;
+        }
+       .sec1 i{
+        font-size: 1.5rem;
+       }
+       .sec p{
+        width: 280px;
+        justify-content: center;
+       }
+       .sec1 button{
+        border: none;
+        margin-top: 40px;
+        font-size: 1rem;
+        background-color: white;
+        margin-left: 110px;
+        border-bottom: 2px black solid;
+        padding: 10px;
+        letter-spacing: 2px;
+        font-weight: 600;
+       }
+       .sec1 button:hover{
+        background-color: black;
+        color: white;
+        
+       }
+    
+        
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <video src="./853889-hd_1920_1080_25fps.mp4" autoplay muted loop></video>
+        <div data-aos="zoom-in" data-aos-delay="400">
+            <h1>Transforming live </h1>
+            <h2>restoring hope</h2>
+            <h3>Duis aute irure dolor in reprehenderit in voluptate velit esse.</h3>
+            <p>Image from<a href="https://fhttps//www.freepik.com/vectors/logo">Freepik</a></p>
+            <button>READ MORE</button>
+        </div>
+    </section>
+    <section class="mid">
+        <div  data-aos="zoom-in" data-aos-delay="400">
+            <h1>We are Taking Small Steps to </h1>
+            <h2>Make Earth Better Planet</h2></div>
+        </div>
+        <div class="sec" data-aos="flip-down" data-aos-delay="500">
+            <div class="sec1">
+                <img src="https://assets.nicepagecdn.com/d2cc3eaa/378349/images/45.jpg" style="width: 350px;height: 350px;">
+                <h1>Place Of Heaven <br><i>eiusmod tempor</i></h1>
+                
+                <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="sec1">
+                <img src="https://assets.nicepagecdn.com/d2cc3eaa/378349/images/7568.jpg" style="width: 350px;height: 350px;">
+                <h1>Study Bible <br><i>eiusmod tempor</i></h1>
+                
+                <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <button>Learn More</button>
+            </div>
+
+            <div class="sec1">
+                <img src="https://assets.nicepagecdn.com/d2cc3eaa/378349/images/67568.jpg" style="width: 350px;height: 350px;">
+                <h1>Children’s Ministry <br><i>eiusmod tempor</i></h1>
+                
+                <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
