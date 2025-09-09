@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEX</title>
+    <style>
+        .container{
+            background-color: #0c0c0c;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            height: 100vh;
+            align-items: start;
+         
+        }
+        .item{
+            flex: 1;
+            height: 100px;
+            width: 200px;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: darkgoldenrod;
+        }
+
+        .item1{
+            align-self: end;
+        }
+         .item2{
+            align-self:center;
+        }
+         .item3{
+            align-self:start;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <section class="container">
+       <div class="item item1">
+        <h1>1</h1>
+       </div>
+       <div class="item item2">
+        <h1>2</h1>
+       </div>
+       <div class="item item3">
+        <h1>3</h1>
+       </div>
+    </section>
+    
+</body>
+</html>
