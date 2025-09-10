@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .grid-container{
+            padding: 10px;
+            background-color: #181818;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .item{
+            min-width: 200px;
+            min-height: 200px;
+        }
+        .item1{
+            background-color: rgb(219, 101, 101);
+           grid-column-start: 1;
+           grid-column-end: 1 span;
+           grid-row-start: 1;
+           grid-row-end: 1 span;
+        }
+        .item2{
+            background-color: rgb(238, 191, 105);
+            grid-column-start: 2;
+            grid-column-end: 2 span;
+            
+        }
+        .item3{
+            background-color: rgb(68, 160, 124);
+            height: 500px;
+            
+            /* grid-column-start: 1;
+            grid-column-end: 1 span; */
+        }
+        .item4{
+            background-color: rgb(199, 26, 26) !important;
+            padding: 20px;
+            
+            gap: 8px;
+            display: grid;
+            background-color: black;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        .item5{
+            background-color: gold;
+            
+            grid-column-start: 1;
+            grid-column-end: 2 span;
+
+           
+        }
+        .item6{
+            background-color: blue;
+            
+             
+           
+        }
+        .item7{
+            background-color: teal;
+           
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="grid-container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4">
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+            <div class="item item7"></div>
+        </div>
+    </section>
+</body>
+</html>
