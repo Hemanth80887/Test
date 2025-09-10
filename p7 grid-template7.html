@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 10px;
+            background-color: #dedede;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            height: 100vh;
+            grid-auto-rows: 100px 1fr 150px;
+            grid-template-areas: "header header header" "sidebar content1 content1" "sidebar content2 content3" "footer footer footer"; 
+        }
+
+        .container *{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header{
+            padding: 20px;
+            background-color: lightblue;
+            grid-area: header;
+        }
+
+        aside{
+            padding: 20px;
+            background-color: lightcoral;
+            grid-area: sidebar;
+        }
+        .content1{
+            padding: 20px;
+            background-color: darkgoldenrod;
+            grid-area: content1;
+        }
+        .content2{
+            padding: 20px;
+            background-color: darkcyan;
+            grid-area: content2;
+        }
+        .content3{
+            padding: 20px;
+            background-color: darkolivegreen;
+            grid-area: content3;
+        }
+        footer{
+            background-color: #0c0c0c;
+            color: white;
+            padding: 20px;
+            grid-area: footer;
+        }
+
+          @media(max-width:768px){
+            .container{
+            grid-template-areas: "header header header" "sidebar sidebar sidebar" "content1 content1 content1" "content2 content2 content3" "footer footer footer" !important; 
+
+            }
+        }
+    </style>
+
+  
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h1>header</h1>
+        </header>
+
+        <aside>
+            <h1>Sidebar</h1>
+        </aside>
+
+        <div class="content1">
+            <h1>Content1</h1>
+        </div>
+
+        <div class="content2">
+            <h1>Content2</h1>
+        </div>
+
+        <div class="content3">
+            <h1>Content3</h1>
+        </div>
+
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+    </section>
+</body>
+</html>
