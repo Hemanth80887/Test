@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+</head>
+<body>
+    <center>
+        <h1>variables</h1>
+        <p>there are 2 types of variables</p>
+    </center>
+    <hr>
+    <p>1) Global variables</p>
+    <p>2) Local variables</p>
+    <hr>
+
+    <p>1) Global Variable: the global variable we cam access inside the block or outside the block anyware in js code we can access that variables</p>
+
+    <hr>
+    <p>2) Local variables : the Local Variable is only for block that why we are calling it is  block scope.</p>
+    
+
+
+    <!-- <script>
+        //variable declaration using var let const
+        //no need to mention the datatype of the variable
+        //keyword variable_name = value
+        var firstname = "arun kumar";//string => global scope
+        console.log(firstname);
+
+        {
+        document.write(firstname);
+        }
+        document.write(firstname);
+
+        
+
+    </script> -->
+
+
+    <script>
+       {
+        //local variable
+         let firstname = "arun kumar";
+         console.log(firstname);//arun kumar
+       }
+        // document.write(firstname);
+    //    p4.html:46 Uncaught ReferenceError: firstname is not defined
+    // at p4.html:46:24
+
+    //note we are declared the firstname inside the block by using let keyword tahts why we cant access that firstname outside the of the block because let keyword is bloc scope
+
+
+    {
+        //global variable
+        var secondname = "kiran kumar";
+    document.write(secondname); //kiran kumar
+    }
+
+    document.write(secondname); //kiran kumar
+
+    </script>
+
+    <script>
+        //if we declare any variable by using any keyword that can be var or let that kind variable we can access in anywhare in js
+
+        var firstNumber = 10; //number //global variable
+        let secondNumber = 100; //number  //global variable
+
+        {
+            console.log( "FirstNumber inside the block = " + firstNumber);
+            console.log( "secondNumber inside the Block = " +secondNumber);
+            
+        }
+
+        console.log("firstNumber outside of the block = " + firstNumber);
+        console.log("secondNumber outside of the block = " + secondNumber);
+        
+    </script>
+</body>
+</html>
