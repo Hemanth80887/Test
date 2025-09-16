@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Datatype</title>
+</head>
+<body>
+    <center>
+        <h1>Boolean Datatype</h1>
+    </center>
+    <hr>
+
+    <script>
+        var isOnline = true;//boolean variable declaration
+        document.write(`<h2>The Datatype of the isOnline varaible is <span style="color:red;">${typeof isOnline}</span></h2>`);
+
+        document.write(`<h2>The value of the isOnline varaible is <span style="color:red;">${isOnline}</span></h2>`);
+
+        if(isOnline){//true
+            document.write(`<h1 style="color:green">Before re assign Online</h1>`)
+        }else{//false
+            document.write(`<h1 style="color:red">Before re assign  Offline</h1>`)
+
+        }
+
+
+        //re assigning value to boolean datatypes
+        isOnline = false;
+         if(isOnline){//true
+            document.write(`<h1 style="color:green">After re assign Online</h1>`)
+        }else{//false
+            document.write(`<h1 style="color:red">After re assign  Offline</h1>`)
+
+        }
+
+    </script>
+    
+</body>
+</html>
