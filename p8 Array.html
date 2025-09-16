@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Datatype</title>
+</head>
+<body>
+    <center>
+        <h1>Array</h1>
+        <p>to store the multiple values and can store multiple datatypes and values are seperated by comma ,</p>
+    </center>
+    <hr>
+
+
+
+    <script>
+        var fruits = ["Apple", "Banana", "Kiwi", "Grapes"]; //array declation 
+        //index length = 3; starts from 0 upto array_length - 1
+        // array length = 4 
+        document.write(`<h1>Datatype of fruits varaible = ${typeof fruits}</h1>`);
+
+        //using array values
+        document.write(`<h1>the varaible fruits value = ${fruits}</h1>`)
+        //checking values length in array
+        document.write(`<h1>the varaible fruits length = ${fruits.length} fruits</h1>`)
+
+        //getting single value formula =  array_Name[index_position]
+        document.write(`<h1>the varaible 1 fruit name = ${fruits[0]}</h1>`)
+        document.write(`<h1>the varaible 1 fruit name = ${fruits[1]}</h1>`)
+        document.write(`<h1>the varaible 1 fruit name = ${fruits[2]}</h1>`)
+        document.write(`<h1>the varaible 1 fruit name = ${fruits[3]}</h1>`)
+        document.write(`<h1>the varaible 1 fruit name = ${fruits[4]}</h1>`);
+
+
+        //checking array index position values using typeOf keyword
+        document.write(`<h2 style="color:red">Datatype of the index 0 position value = ${typeof fruits[0]}</h2>`)//string
+        document.write(`<h2 style="color:red">Datatype of the index 0 position value = ${typeof fruits[1]}</h2>`)//string
+        document.write(`<h2 style="color:red">Datatype of the index 0 position value = ${typeof fruits[2]}</h2>`)//string
+        document.write(`<h2 style="color:red">Datatype of the index 0 position value = ${typeof fruits[3]}</h2>`)//string
+        document.write(`<h2 style="color:red">Datatype of the index 0 position value = ${typeof fruits[4]}</h2>`);//undefined
+    </script>
+    
+</body>
+</html>
