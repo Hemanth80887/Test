@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+</head>
+<body>
+    <center>
+        <h1>String Datatype</h1>
+    </center>
+    <hr>
+
+
+    <script>
+
+        var username = "Kiran";//string datatype //variable declaration
+        document.write(username)
+        document.write(`<h1>Username = ${username}</h1>`); //easy method
+        document.write("<h1> username = " + username + "</h1>");
+
+        let email = 'kiran@gmail.com';
+        document.write(`<h1 style="background-color:#0c0c0c; font-family:sans-serif; font-weight:500; color:#fff; padding:10px;">The email address = ${email}</h1>`);
+
+
+        const password = `hello@123`;
+        document.write(`<h2 style="color:green;">Password = ${password} </h2>`);
+
+
+
+        //re assigning value to already declared variable but not for const keyword variable
+        //variable_name = new_value
+        username = "naveen";
+        document.write(`<h1>Username = ${username}</h1>`); //easy method
+
+        //changing email value
+        email = "naveen@gmail.com";
+        document.write(`<h2 style="color:red;">updated email address = ${email}</h2>`)
+        
+    </script>
+
+    
+</body>
+</html>
