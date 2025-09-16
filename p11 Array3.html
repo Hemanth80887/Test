@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgray;
+        }
+        .card{
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            line-height: 1.6;
+            border-radius: 10px;
+            border-bottom: 5px solid tomato;
+        }
+        .card img{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: 5px solid tomato;
+            padding: 3px;
+            display: block;
+            margin: auto;
+        }
+        p{
+            margin-top: 10px;
+        }
+
+        b{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Object</h1>
+        <p>object is used store the multiple information about the single object</p>
+        <p>the object can store multiple datatypes in a object</p>
+    </center>
+    <hr>
+
+    <pre>
+        object syntax
+        var object = {
+            key:value => one property and properties is seperated by ,
+        }
+
+        
+    </pre>
+
+    <script>
+        // var user = "arunkumar";
+        // var email = "arun@gmail.com";
+        // var age = 10;
+        // var hobbies = ["coding", "developing", "hositing", "searching templates", "learning new tech langauges"]
+
+        //using object 
+        var userDetails = {
+            username:"Arun kumar",//property
+            email:"arun@gmail.com",
+            age:15,
+            hobbies:["cycling", "reading", "shooting", "music", "learning", "watching movies"],
+            address:{
+                pincode:563733,
+                city:"bangalore",
+                doorNo:"#1056"
+            },
+            profile:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg4-t3ZMILWDTJ0LrG3s1Cm0PX1_cu8IsQSeCzHDpXBS2HTIWqrGpolp4Qm_2m7WMGbco&usqp=CAU",
+            isOnline:true
+
+        }
+
+        //using object 
+        document.write(`<h1>Userdetails variable datatype = ${typeof userDetails}</h1>`)
+        document.write(`<h1>Userdetails variable value = ${userDetails}</h1>`);
+        console.log(userDetails);
+
+        //getting object property values
+        // formula = object_name.property_keyName
+        // document.write(`<h1>Userdetails variable username = ${userDetails.username}</h1>`);
+        // document.write(`<h1>Userdetails variable email = ${userDetails.email}</h1>`);
+        // document.write(`<h1>Userdetails variable age = ${userDetails.age}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbies = ${userDetails.hobbies}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbie 1 = ${userDetails.hobbies[0]}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbie 1 = ${userDetails.hobbies[1]}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbie 1 = ${userDetails.hobbies[2]}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbie 1 = ${userDetails.hobbies[3]}</h1>`);
+        // document.write(`<h1>Userdetails variable hobbie 1 = ${userDetails.hobbies[5]}</h1>`);
+
+        // //getting objecvt from the object
+        // document.write(`<h1>Userdetails variable address object pincode  = ${userDetails.address.pincode}</h1>`);
+        // document.write(`<h1>Userdetails variable address object city  = ${userDetails.address.city}</h1>`);
+        // document.write(`<h1>Userdetails variable address object doorNo  = ${userDetails.address.doorNo}</h1>`);
+
+        // if(userDetails.isOnline){
+        // document.write(`<h1 style="color:green">User is in Online</h1>`);
+
+        // }else{
+        // document.write(`<h1 style="color:red">User is in Offline</h1>`);
+
+        // }
+
+
+        // document.write(`<img src=${userDetails.profile} alt=${userDetails.username}>`)
+
+
+
+        document.write(`
+                <section class="container">
+                        <div class="card">
+                                <img src=${userDetails.profile} alt=${userDetails.username}>
+                                <br>
+                                <h2>${userDetails.username}</h2>
+                                <p>${userDetails.email}</p>   
+                                <hr>
+                                
+                                <p><b>Age: </b> ${userDetails.age}</p>
+                                <p><b>Hobbies: </b> 
+                                    <button>${userDetails.hobbies[0]}</button>
+                                    <button>${userDetails.hobbies[1]}</button>
+                                    <button>${userDetails.hobbies[2]}</button>
+                                    <button>${userDetails.hobbies[3]}</button>
+                                    <button>${userDetails.hobbies[4]}</button>
+                                    <button>${userDetails.hobbies[5]}</button>
+                                    </p>
+
+                                    <p><b>Address: </b> city is ${userDetails.address.city} and pincode is ${userDetails.address.pincode} and door number is ${userDetails.address.doorNo}</p>
+
+                                <p><b>Status: </b> ${userDetails.isOnline==true?("<span style='color:green'>Online</span>"):("<span style='color:red'>Offline</span>")}</p>
+                        </div>
+                </section>
+        `)
+        
+
+        const colleges = [
+            {
+                collegename:"BMS"
+            },
+            {
+                collegename:"SJCIT"
+
+            },
+            {
+                collegename:"ACS"
+
+            },
+            {
+                collegename:"DPC"
+
+            }
+        ]
+    </script>
+</body>
+</html>
