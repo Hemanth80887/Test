@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object array</h1>
+    </center>
+    <hr>
+
+
+    <script>
+          var datas = [{
+                name: "Acharya Institutes",
+                image: "https://pbs.twimg.com/profile_images/1560131835811680256/z47sY1bS_400x400.jpg",
+                founder: "B M Reddy",
+                established: 2000,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "BMSIT",
+                image: "https://upload.wikimedia.org/wikipedia/en/6/65/B.M.S._Institute_of_Technology_and_Management_logo.png",
+                founder: "B.M. Sreenivasaiah",
+                established: 1964,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "70%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "Dayananda Sagar",
+                image: "https://shikshaforum.in/wp-content/uploads/2024/08/dayananda-sagar-college-of-engineering-1-1024x977.jpg",
+                founder: "Shri R. Dayananda Sagar",
+                established: 1979,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "PES",
+                image: "https://www.engineering.iastate.edu/files/2025/08/PES-University-Logo-NEW.jpg",
+                founder: "B.M. Sreenivasaiah",
+                established: 1964,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "70%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "REVA",
+                image: "https://resources.saylor.org/wwwresources/wp-content/uploads/20220525123841/REVA-University-LOGO-1200x450.jpg",
+                founder: "Shri R. Dayananda Sagar",
+                established: 1979,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "Sapthagiri College",
+                image: "https://media.licdn.com/dms/image/v2/C4D0BAQEXvHKw478ueg/company-logo_200_200/company-logo_200_200/0/1631310660575?e=2147483647&v=beta&t=5Q8BDYIve4drCTgxaNEUNKqzjJ4G5idys-fWzfEKi4w",
+                founder: "B M Reddy",
+                established: 2000,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma" , "Raju ", "Arun "],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            }
+        ]
+
+        var users = ["Ravi", "Kiran", "Suma" , "Raju ", "Arun "];
+
+        // for(let i=0; i<users.length; i++){
+        //     console.log(users[i]);
+        // }
+
+        // users.forEach((item, index) => {
+        //     console.log(item, index);
+        // })
+
+
+        datas.forEach((item, index) => {
+            console.log(item.name);
+            console.log(item.founder);
+
+            document.write(`<img src=${item.image} width="200">`)
+            document.write(`<h1>${item.name}</h1>`)
+            document.write(`<p>${item.founder}</p>`)
+
+            item.courses.forEach((courseItem, courseIndex)=>{
+            document.write(`<button>${courseItem}</button>`)
+
+        })
+            document.write(`<br>`)
+
+            item.faculties.forEach((faculty, facultyIndex)=>{
+                document.write(`<p>${faculty}</p>`)
+            })
+            document.write(`<br>`)
+            
+            
+        })
+
+      
+
+
+    </script>
+</body>
+</html>
