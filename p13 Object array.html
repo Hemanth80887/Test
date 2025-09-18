@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object array</h1>
+    </center>
+    <hr>
+
+
+    <script>
+          var datas = [{
+                name: "Acharya Institutes",
+                image: "https://pbs.twimg.com/profile_images/1560131835811680256/z47sY1bS_400x400.jpg",
+                founder: "B M Reddy",
+                established: 2000,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "BMSIT",
+                image: "https://upload.wikimedia.org/wikipedia/en/6/65/B.M.S._Institute_of_Technology_and_Management_logo.png",
+                founder: "B.M. Sreenivasaiah",
+                established: 1964,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "70%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "Dayananda Sagar",
+                image: "https://shikshaforum.in/wp-content/uploads/2024/08/dayananda-sagar-college-of-engineering-1-1024x977.jpg",
+                founder: "Shri R. Dayananda Sagar",
+                established: 1979,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "PES",
+                image: "https://www.engineering.iastate.edu/files/2025/08/PES-University-Logo-NEW.jpg",
+                founder: "B.M. Sreenivasaiah",
+                established: 1964,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "70%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "REVA",
+                image: "https://resources.saylor.org/wwwresources/wp-content/uploads/20220525123841/REVA-University-LOGO-1200x450.jpg",
+                founder: "Shri R. Dayananda Sagar",
+                established: 1979,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma", "Raju", "Arun"],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            },
+            {
+                name: "Sapthagiri College",
+                image: "https://media.licdn.com/dms/image/v2/C4D0BAQEXvHKw478ueg/company-logo_200_200/company-logo_200_200/0/1631310660575?e=2147483647&v=beta&t=5Q8BDYIve4drCTgxaNEUNKqzjJ4G5idys-fWzfEKi4w",
+                founder: "B M Reddy",
+                established: 2000,
+                courses: ["Engineering", "MBA", "MCA", "BCOM"],
+                faculties: ["Ravi", "Kiran", "Suma" , "Raju ", "Arun "],
+                placementrate: "50%",
+                timings: "9am to 5pm",
+                helpline: 7596321458,
+                rating: "",
+                available: true
+            }
+        ]
+
+        //using method
+        //declaration; condition; increment/decrement
+        for(var i=0; i<datas.length; i++){
+            console.log(i);
+            console.log(datas[i].name);
+            document.write(`<img src=${datas[i].image} width="200">`)
+            document.write(`<h1>${datas[i].name}</h1>`)
+            document.write(`<p>${datas[i].founder}</p>`)
+
+            for(var j =0; j<datas[i].courses.length; j++){
+                document.write(`<button>${datas[i].courses[j]}</button>`)
+            }
+            document.write(`<br></br>`)
+
+            }
+
+        //i=0  0<6 true
+        //i=1 1<6  true
+        //i-2 2<6 true
+        //i=3 3<6 true
+        //i=4 4<6 true
+        //i=5 5<6 true
+        //i=6 6<6 false
+
+        // ended loop 
+
+
+
+        //0
+        //1
+        //2
+        //3
+        //4
+        //5
+
+    </script>
+</body>
+</html>
