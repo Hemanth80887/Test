@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Generating Output</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>Document.write()</li>
+        <li>alert()</li>
+        <li>confirm()</li>
+        <li>prompt()</li>
+        <li>innerHTML</li>        
+        <li>innerText</li>  
+        <li>console.log()</li>      
+        <li>console.warn()</li>      
+        <li>console.info()</li>      
+        <li>console.error()</li>      
+    </ol>
+
+    <script>
+        var firstName = "Arun kumar"; //variable declaration
+        console.log("firstname variable = " + firstName);
+        console.warn("firstname variable = " + firstName);
+        console.error("firstname variable = " + firstName);
+        console.info("firstname variable = " + firstName);
+
+        //displaying values in document from javascript
+        document.write("firstName variable = ", firstName);
+
+        //displaying html elements in document using document.write() method
+        document.write("<h1>Hello this is the heading from js using document.write() method<h1>")
+        document.write("<h2>Hello this is the heading from js using document.write() method<h1>")
+        document.write("<h3>Hello this is the heading from js using document.write() method<h1>")
+        
+            //displaying expression with html elements
+        document.write("<h1>Firstanem variable = firstName</h1>")//wrong method
+        document.write(`<h1>Firstanem variable = ${firstName}</h1>`)//correct method
+        document.write(`<h1>Firstanem variable = ${1/10}</h1>`)//correct method
+
+        //displaying output in dialogues
+        //alert
+        alert("hello world");
+        alert("firstname variable = " + firstName);
+
+
+        //confirm
+        confirm("hello world");
+        confirm("firstname variable = " + firstName);
+
+        prompt("firstname variable = " + firstName);
+
+        //getting value from user
+        var age = prompt("ENter your age");
+        document.write(`<h1>Age = ${age}</h1>`);
+    </script>
+</body>
+</html>
