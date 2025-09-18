@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Using innerHTML and innerText</h1>
+    </center>
+    <hr>
+
+    <div id="card">
+        
+    </div>
+    <p id="subtitle"></p>
+
+
+    <script>
+        var cardDivision = document.getElementById('card');
+        var subtitleParagraph = document.getElementById("subtitle");
+
+
+        //inserting html elements
+        cardDivision.innerHTML = `
+        <h1>hello world</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta fugiat iure facere ipsam? Fugiat aut blanditiis aperiam pariatur in eaque recusandae iusto, ipsa quisquam optio ipsum quod totam harum voluptates!</p>
+        `
+
+
+        //inserting only text
+        subtitleParagraph.innerText = "this is the text inserted from javascript using innerText method";
+
+
+        //keeping previous value with new value
+         cardDivision.innerHTML += `
+        <h1>hello world2</h1>
+        <p>this is the text from js</p>
+        `
+
+    </script>
+</body>
+</html>
