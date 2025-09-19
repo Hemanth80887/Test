@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Conditional statements</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>simple if statement</li>
+        <li>if else statement</li>
+        <li>else if statements</li>
+        <li>switch statements</li>
+    </ol>
+    <hr>
+
+    <h2>Simple if statement</h2>
+    <hr>
+
+    <script>
+        var testVariable = 100;
+        // if(condition){true
+        //     //code 
+        // }
+
+        if(testVariable>50){//100>50 = true
+            // if condition is true then this block will execute 
+            console.log('test variable is greter than to 50');
+            
+        }
+
+          if(testVariable>200){//100>200 = false
+            // if condition is true then this block will execute 
+            console.log('test variable is greter than to 200');
+        }
+
+
+        if(100 == "100"){//true
+            //== will check only the values
+            console.log("100 is equal to 100");
+            
+        }
+
+          if(100 === "100"){//false
+            //100="100" true
+            //number = string false
+            //=== will checks both values and datatypes
+            console.log("100 is equal to 100");
+            
+        }
+
+        if(true == 1){
+            console.log("condition is the true");
+            
+        }
+
+         if(true == 0){
+            console.log("condition is the true");
+            
+        }
+    </script>
+</body>
+</html>
