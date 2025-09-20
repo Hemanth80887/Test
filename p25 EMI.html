@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #emi-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 4%;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container p-5">
+        <form action="" class="p-3 shadow rounded-3">
+            <label for="dd" class="form-label">Enter loan amount</label>
+            <input type="number" placeholder="RS: 1000/--100000/-" id="amount" class="form-control mb-3">
+            
+            <label for="ddd" class="form-label">EMI Plan</label>
+            <select name="" id="months" class="form-select">
+                <option value="1">1 Month</option>
+                <option value="2">2 Month</option>
+                <option value="3">3 Month</option>
+                <option value="4">4 Month</option>
+                <option value="5">5 Month</option>
+                <option value="6">6 Month</option>
+                <option value="7">7 Month</option>
+                <option value="8">8 Month</option>
+                <option value="9">9 Month</option>
+                <option value="10">10 Month</option>
+                <option value="11">11 Month</option>
+                <option value="12">12 Month</option>
+                <option value="13">13 Month</option>
+                <option value="14">14 Month</option>
+                <option value="15">15 Month</option>
+                <option value="16">16 Month</option>
+                <option value="17">17 Month</option>
+                <option value="18">18 Month</option>
+                <option value="19">19 Month</option>
+                <option value="20">20 Month</option>
+            </select>
+            <button type="button" onclick="loanhandler()" class="mt-3 btn btn-primary">Take Loan</button>
+            <button type="reset" class="mt-3 btn btn-outline-danger">Take Loan</button>
+        </form>
+
+    </section>
+
+
+    <section id="emi-container"></section>
+
+
+    <script>
+        var amount = document.getElementById('amount');
+        var months = document.getElementById('months');
+
+        var container = document.getElementById('emi-container')
+        var EMIS = [];
+
+        function loanhandler(){
+        console.log(amount.value);
+        console.log(months.value);
+
+        console.log(amount.value / months.value);
+
+        
+        for(var i = 0; i<months.value; i++){
+            EMIS.push({
+                EMIDate:"10/2025",
+                TotalAmount:amount.value,
+                EMIAmount:parseInt(amount.value/months.value),
+                isPaid:false,
+                paidAmount:0
+            })
+        }
+        console.log(EMIS);
+
+        EMIS.forEach((item, index)=>{
+            container.innerHTML += `
+                <div class="card  shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h1 class="fs-5">EMI ${index+1}</h1>    
+                        <h1 class="fs-5 text-success"> &#8377; ${item.TotalAmount}/-</h1>    
+                    </div>  
+                    
+                    <div class="card-body">
+                        <p class="fs-6"><b>EMI Date: </b> ${item.EMIDate}</p>
+                        <p class="fs-6"><b>EMI Amount: </b> &#8377; ${item.EMIAmount}/-</p>
+                    ${item.isPaid==true?(' <p class="alert alert-success"> This month EMI is Paid</p>'):('<p class="alert alert-danger"> This month EMI is pending</p>')}
+                        <p class="fs-6"><b>Paid Amount: </b> &#8377; ${item.paidAmount}/-</p>
+
+                        </div>
+                        <div class="card-footer">
+                        ${item.isPaid==true?(""):(`<button onclick='payEMI(${index})' class="w-100 btn btn-success">Pay EMI</button>`)} 
+                        </div>
+                </div>
+            `
+        })
+
+        
+        
+        }
+
+        function payEMI(index){
+            console.log(EMIS);
+            
+          var userAmount = prompt("Enter paying amount");
+
+          if(userAmount==EMIS[index].EMIAmount){
+            console.log(userAmount==EMIS[0].EMIAmount);
+            
+            EMIS[index].isPaid = true;
+            EMIS[index].paidAmount = userAmount;
+          }
+            container.innerHTML = "";
+            EMIS.forEach((item, index)=>{
+            container.innerHTML += `
+                <div class="card  shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h1 class="fs-5">EMI ${index+1}</h1>    
+                        <h1 class="fs-5 text-success"> &#8377; ${item.TotalAmount}/-</h1>    
+                    </div>  
+                    
+                    <div class="card-body">
+                        <p class="fs-6"><b>EMI Date: </b> ${item.EMIDate}</p>
+                        <p class="fs-6"><b>EMI Amount: </b> &#8377; ${item.EMIAmount}/-</p>
+                    ${item.isPaid==true?(' <p class="alert alert-success"> This month EMI is Paid</p>'):('<p class="alert alert-danger"> This month EMI is pending</p>')}
+                        <p class="fs-6"><b>Paid Amount: </b> &#8377; ${item.paidAmount}/-</p>
+
+                        </div>
+                        <div class="card-footer">
+                        ${item.isPaid==true?("paid"):(`<button onclick=payEMI(${index}) class="w-100 btn btn-success">Pay EMI</button>`)} 
+                        </div>
+                </div>
+            `
+        })
+        }
+
+
+
+
+
+        
+        
+    </script>
+</body>
+</html>
