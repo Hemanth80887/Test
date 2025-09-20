@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>If else statement/h1>
+    </center>
+    <hr>
+
+
+    <script>
+        var hasMoney = true;
+
+        if(hasMoney){//true
+            //if true
+            console.log('You can Buy a coffee 🍵');
+            
+        }else{
+            //if false
+            console.log("You can't Buy a coffee 🍵, better luck for nest life.");
+
+        }
+
+        var battery = 15;
+        if(battery>=20){//false
+            //15>20 false
+            //15=20 false
+            console.log('no need battery saver 🔋');
+            
+        }else{
+            console.log("use battery saver 🪫");
+            
+        }
+
+
+        var hasTicket = false;
+        var isAdult = true;
+        if(hasMoney){
+            hasTicket = true;
+            console.log('You got the ticket');
+            
+        }else{
+            console.log('No money, No entry');
+            
+        }
+
+        if(hasTicket){
+            console.log("enjoy the movie🍿");
+            
+        }else{
+            console.log("Buy the ticket first 🎫");
+            
+        }
+    </script>
+</body>
+</html>
