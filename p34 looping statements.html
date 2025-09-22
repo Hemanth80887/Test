@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>looping statements</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>for..loop</li>
+        <li>while..loop</li>
+        <li>do..while..loop</li>
+        <li>for..of</li>
+        <li>for..in</li>
+        <li>for..each</li>
+    </ol>
+    <hr>
+
+    <h2>For loop</h2>
+
+    <hr>
+
+
+    <script>
+        //for(declaration; condition; increment/decrement){
+            //if condition is true this code block will execute or if condition is false then it will out of the loop
+
+            
+        // }
+
+        for(var number = 1; number<=10; number++){
+            console.log("number = ", number);
+        }
+        
+        var tableNumber = prompt("Enter a number to generate a table..")
+
+        for(var i=1; i<=10; i++){
+            document.write(`<h1>${tableNumber} * ${i} = ${tableNumber*i}</h1>`)
+        }
+    </script>
+</body>
+</html>
