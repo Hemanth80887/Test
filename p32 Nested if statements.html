@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Nested if statements</h1>
+    </center>
+    <hr>
+
+
+
+
+    <script>
+        var isLoggedIn = true;
+        var hasProductsinCart = true;
+        var haspaymentMethodAdded = false;
+
+        if(isLoggedIn==true){
+            console.log("Welcome back");
+            
+            if(hasProductsinCart == true){
+                console.log("You have products in cart..! ");
+                if(haspaymentMethodAdded == true){
+                    console.log("great! you are added payment method, Now you can proceed to checkout");
+                    
+                }else{
+                    console.log("Please add a payment method to complete your purchase.");
+                    
+                }
+                
+            }else{
+                console.log("Your cart is empty, start shoping..!");
+            }
+
+        }else{
+            console.log("please Log in to Continue...");
+        }
+    </script>
+</body>
+</html>
