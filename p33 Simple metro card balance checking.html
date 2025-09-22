@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Simple metro card balance checking</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        var  hasMetroCard = true;
+        var cardBalance = 10;
+        var minimumBalance = 90;
+
+        if(hasMetroCard == true){
+            console.log("✅ Great! you have Metro Card");
+            if(cardBalance>=minimumBalance){
+                console.log("🪙 Your balance is sufficient. you can travel..");
+            }else{
+                console.log("⚠️ Your balance is low!.  Please recharge Metro card.");
+            }     
+        }else{
+            console.log("❌ You Don't have Metro card. Please Buy a token or new card");
+        }
+    </script>
+</body>
+</html>
