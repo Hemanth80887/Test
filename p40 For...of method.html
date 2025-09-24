@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>For...of method</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        //for(declaration of array)
+        var fruits = ["apple", "banana", "cherry", "kiwi"];
+        
+
+        //using for loop
+        // for(let i=0; i<fruits.length; i++){
+        //     console.log(i);
+        //     console.log(fruits[i]); 
+        // }
+
+        //length = 4;
+        //i=4;
+
+
+        //using for...in loop
+        // for(var index in fruits){
+        //     console.log(index);
+        //     console.log(fruits[index]);
+            
+            
+        // }
+
+        //using for...of method
+        for(var item of fruits){
+            //for..of method will reads directly index values of the array
+            console.log(item);
+            
+        }
+    </script>
+</body>
+</html>
