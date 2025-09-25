@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Function without return value , with parameters (sending value outside to function)</h1>
+    </center>
+    <hr>
+
+
+
+    <script>
+        function example1Function(a, b){
+            console.log("a = " , a);
+            console.log("b = " , b);
+
+            var total = a + b;
+            console.log('total = ', total);
+            
+
+
+        }
+        //we can send the parameters on function calling time
+        example1Function(100, 400);
+        example1Function(10, 40);
+
+        function calculationHandler(fNumber, sNumber, Operator){
+            var total = 0;
+
+            switch(Operator){
+                case "+": 
+                    total = fNumber + sNumber;
+                    break;
+                case "-": 
+                    total = fNumber - sNumber;
+                    break;
+                case "*": 
+                    total = fNumber * sNumber;
+                    break;
+                case "/": 
+                    total = fNumber / sNumber;
+                    break;
+                case "%": 
+                    total = fNumber % sNumber;
+                    break;
+                default: 
+                    total = "Result not found";
+            }
+
+            console.log("Total = ", total);
+            
+        }
+        calculationHandler(10, 20, "+")
+        calculationHandler(10, 20, "-")
+        calculationHandler(10, 20, "*")
+        calculationHandler(10, 20, "/")
+        calculationHandler(10, 20, "%")
+        calculationHandler(10, 20, "invalid");
+
+        // var accNo = "AC12345678987765";
+        // var output = "AC**********776"
+
+        function accountNumberFormater(accNo, symbol){
+           if(accNo.length<15){
+            alert("⚠️ Please enter valid account number...!")
+                return;
+           }
+
+            for(let i = 0; i<accNo.length; i++){
+                 if(i<2 || i>= accNo.length-3){
+                    //   console.log(accNo[i]);
+                    document.write(`<span>${accNo[i]}</span>`)
+                 }else{
+                    // console.log("*");
+                    document.write(`<span>${symbol}</span>`)
+
+                    
+                 }
+                   
+                    
+            }
+
+            document.write('<br>')
+        }
+
+        //
+        accountNumberFormater("AC1234567898776", "#")
+        accountNumberFormater("AC1234567898776", "#️⃣")
+        accountNumberFormater("AC1234567898776", "*")
+    </script>
+
+</body>
+</html>
