@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Withour parameters, with return value</h1>
+    </center>
+    <hr>
+
+    <p>note: return value is nothing but send values from the function and that returned value stores inside the function to print that returned value need to print the function name. </p>
+
+    <hr>
+
+
+    <script>
+        var firstnumber = 100, secondNumber = 300;
+        function sumof2Numbers(){
+            let total = firstnumber + secondNumber;
+            //to send any value from function block to outside 
+            return total;//if we return the function will stops on return line only
+            console.log("hello");
+            
+        }
+
+        // console.log(sumof2Numbers());
+        // console.log(sumof2Numbers());
+
+
+        function calculations(){
+            var sum = firstnumber + secondNumber
+            var sub = firstnumber - secondNumber
+            var multi = firstnumber * secondNumber
+            var divi = firstnumber / secondNumber
+            var modulus = firstnumber % secondNumber
+
+            // return sum;
+            // return sub;
+            // return multi;
+            // return divi;
+            // return modulus;
+
+            // return [sum, sub, multi, divi, modulus];
+
+            return {
+                sum, sub, multi, divi, modulus
+            }
+        }
+
+        //for arrays
+        // console.log(calculations());
+        // console.log("sum = ", calculations()[0]);
+        // console.log("substraction = ", calculations()[1]);
+        // console.log("mutliplication = ", calculations()[2]);
+        // console.log("division = ", calculations()[3]);
+        // console.log("modulus = ", calculations()[4]);
+
+
+        //for objects
+        console.log(calculations());
+        for(let key in calculations()){
+            console.log(key, "= ",  calculations()[key]);
+            
+        }
+        
+
+
+        // function* calculations2(){
+        //     var sum = firstnumber + secondNumber
+        //     var sub = firstnumber - secondNumber
+        //     var multi = firstnumber * secondNumber
+        //     var divi = firstnumber / secondNumber
+        //     var modulus = firstnumber % secondNumber
+
+        //    yield sum;
+        //    yield sub;
+        //    yield multi;
+        //    yield divi;
+        //    yield modulus;
+        // }
+        // console.log(calculations2());
+        
+        
+       
+        
+    </script>
+</body>
+</html>
