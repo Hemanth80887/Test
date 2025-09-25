@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Pattrens using loops</h1>
+    </center>
+    <hr>
+
+    <pre>
+        * * * * * *
+        * * * * * *
+        * * * * * *
+        * * * * * *
+        * * * * * *
+    </pre>
+
+    <script>
+        for(var row = 1; row<=5; row++){
+            for(var col = 1; col<=6; col++){
+            document.write('<h1 style="display:inline;">* </h1>')
+            }
+            document.write('<br>')  
+        }
+    </script>
+
+
+    <pre>
+        * * * * * *
+        * * * * * 
+        * * * * 
+        * * * 
+        * * 
+        * 
+
+    </pre>
+
+
+    <script>
+        for(var row = 0; row<6; row++){
+            for(var col = 6-row; col>0; col--){
+            document.write('<h1 style="display:inline;">* </h1>')
+            }
+            document.write('<br>')  
+
+        }
+
+        //* * * * * *
+        //* * * * *
+    </script>
+    
+    <pre>
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *
+        * * * * * *
+    </pre>
+
+
+    <script>
+        for(var row = 1; row<=6; row++){
+            for(var col = 0; col<row; col++){
+              document.write('<h1 style="display:inline;">* </h1>')
+            }
+            document.write('<br>')  
+        }
+        //*
+        //* *
+        //* * *
+    </script>
+
+    <pre>
+        1 
+        1 2
+        1 2 3
+        1 2 3 4
+        1 2 3 4 5
+        1 2 3 4 5 6
+    </pre>
+
+    <script>
+        
+    </script>
+
+
+<pre>
+        1 
+        2 2
+        3 3 3
+        4 4 4 4
+        5 5 5 5 5
+        6 6 6 6 6 6
+    </pre>
+
+    <ol>
+        <li>first column should be green color in all rows</li>
+        <li>in last row last column sjould be blue color</li>
+        <li>in 3red row fisrt and second column should be gray color</li>
+        <li>remaining all columns should be red color</li>
+    </ol>
+    
+
+    <script>
+        for(var row = 1; row<=6; row++){
+            for(var col = 0; col<row; col++){
+              document.write(` ${row}` )
+            }
+            document.write('<br>')  
+        }
+        //*
+        //* *
+        //* * *
+    </script>
+
+    <script>
+        for(var row = 1; row<=6; row++){
+            for(var col = 1; col<=row; col++){
+                if(col==1){
+                    document.write(` <h1 style="color:green;display:inline" >${row}</h1>` )
+                }
+                else if(col==6){
+                    document.write(` <h1 style="color:blue;display:inline" >${row}</h1>` )
+                }
+                else if(row ==4 && col<4){
+                    document.write(` <h1 style="color:gray;display:inline" >${row}</h1>` )
+
+                }
+                else{
+                    document.write(` <h1 style="color:red;display:inline" >${row}</h1>` )
+                }
+              
+            }
+            document.write('<br>')  
+        }
+        //1
+        //1 2
+        //1 2 3
+    </script>
+
+        <script>
+        for(var row = 1; row<=6; row++){
+            for(var col = 0; col<row; col++){
+              document.write('<h1 style="display:inline;">0 </h1>')
+            }
+            document.write('<br>')  
+        }
+        //*
+        //* *
+        //* * *
+    </script>
+
+
+</body>
+</html>
