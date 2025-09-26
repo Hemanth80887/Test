@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Datatype conversions (converting one datatype to another one datatype)</h1>
+    </center>
+    <hr>
+
+    <h1>Number datatype</h1>
+    <hr>
+
+    <script>
+        var string1 = "100";//string
+        document.write(`<h1>type of the string1 variable  = ${typeof(string1)}</h1>`);
+
+        //converting string1 datatype to number datatype
+        var num1 =  Number(string1) ;//number
+        document.write(`<h1>type of the num1 variable  = ${typeof(num1)}</h1>`);
+
+        //example2
+        var x = "123.345";
+        var y = "1234.7654567898";
+        var z = "Apple";
+
+        document.write(`<h1>type of the x variable  = ${typeof(x)}</h1>`);
+        document.write(`<h1>type of the y variable  = ${typeof(y)}</h1>`);
+        document.write(`<h1>type of the z variable  = ${typeof(z)}</h1>`);
+
+        var a = Number(x);
+        document.write(`<h1>type of the a variable  = ${typeof(a)}</h1>`);//number
+        document.write(`<h1>value of the a variable  = ${a}</h1>`);//123.345
+
+         var b = Number(y);
+        document.write(`<h1>type of the b variable  = ${typeof(b)}</h1>`);//number
+        document.write(`<h1>value of the b variable  = ${b}</h1>`);//1234.7654567898
+
+        var c = Number(z);
+        document.write(`<h1>type of the c variable  = ${typeof(c)}</h1>`);//number
+        document.write(`<h1>value of the c variable  = ${c}</h1>`);//Nan (Not a number)
+
+
+        //converting string to number only but with integer
+        var d = parseInt(x);//number
+        document.write(`<h1>type of the d variable  = ${typeof(d)}</h1>`);//number
+        document.write(`<h1>value of the d variable  = ${d}</h1>`);//123
+
+
+        //converting string to number only but with floating values
+        var e = parseFloat(x);//number
+        document.write(`<h1>type of the e variable  = ${typeof(e)}</h1>`);//number
+        document.write(`<h1>value of the e variable  = ${e}</h1>`);//123.345
+
+
+
+        //example3
+
+        var flotingNumber = 1245.677058654;
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber}</h1>`)
+
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber.toFixed()}</h1>`)
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber.toFixed(1)}</h1>`)
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber.toFixed(2)}</h1>`)
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber.toFixed(3)}</h1>`)
+        document.write(`<h1>floatingNumber variable value = ${flotingNumber.toFixed(4)}</h1>`)
+
+
+        //example4
+        document.write(`<h1>Number(true) ${Number(true)}</h1>`)//1
+        document.write(`<h1>Number(false) ${Number(false)}</h1>`)//0
+        document.write(`<h1>Number(null) ${Number(null)}</h1>`)//0
+        document.write(`<h1>Number(" 123 ") ${Number(" 123 ")}</h1>`)//123
+        document.write(`<h1>Number(" ") ${Number(" ")}</h1>`)//0
+        document.write(`<h1>Number("") ${Number("")}</h1>`)//0
+        document.write(`<h1>Number("123e-2") ${Number("123e-2")}</h1>`)//1.23
+        document.write(`<h1>Number("undefined") ${Number("undefined")}</h1>`)//NaN
+        document.write(`<h1>Number(undefined) ${Number(undefined)}</h1>`)//NaN
+        document.write(`<h1>Number(undefined) ${Number("null")}</h1>`)//NaN
+
+
+    </script>
+</body>
+</html>
