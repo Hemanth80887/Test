@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Functions</h1>
+    </center>
+
+    <hr>
+    <h1>ECMA Script code</h1>
+    <hr>
+    <ol>
+        <li>Local function (creatin the function using function keyword)</li>
+        <li>Function Expression</li>
+        <li>Arrow functions</li>
+    </ol>
+
+    <script>
+        document.write(`<h1>Function defining...! Local function</h1>`);
+
+        function sum(a, b){ //declaration
+            return a+b;
+        }
+        //calling local function
+        document.write(`<h1>Sum of a and b = ${sum(10, 30)}</h1>`)
+        document.write(`<h1>Sum of a and b = ${sum(100, 30)}</h1>`);
+
+        //example2 function expressions
+        var sub = function(a, b){
+            return a-b;
+        }
+        document.write(`<h1>Substraction of a and b = ${sub(100, 30)}</h1>`);
+
+        //example3 for arrow function
+        //in arrow function there are now function function keyword
+
+        // function fullname(firstname, lastname){
+        //     return firstname + " " + lastname;
+        // }
+        // document.write(`<h1>fullname = ${fullname("Arun", "kumar")}</h1>`);
+
+        var fullname = (firstname, lastname)=>{
+            return firstname + " " + lastname;
+        }
+        document.write(`<h1>arrow function fullname = ${fullname("Arun", "kumar")}</h1>`);
+
+
+        //returning value without block {}
+        //when we have only single line of inside the block that time no need to use block {}
+        // var modulus = (a, b) => {
+        //     return a % b;
+        // }
+
+        var modulus = (a, b) => a%b; //returning here a%b
+
+        document.write(`<h1>arrow function modulus = ${modulus(100, 3)}</h1>`);
+
+
+
+        
+
+    </script>
+</body>
+</html>
