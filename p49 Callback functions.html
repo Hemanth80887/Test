@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Callback functions</h1>
+        <p>the callback function is nothing but passing function as an argument or parameter to another function, to be executed later</p>
+    </center>
+    <hr>
+
+
+    <script>
+        //example1
+        function orderPizza(isOrdered, happy, sad){
+            if(isOrdered==true){
+                happy();//calling
+            }else{
+                sad();//calling
+            }
+        }
+
+        function happyFunction(){
+            console.log("Thanks..! Eating the pizza happily!");
+        }
+
+        function sadFunction(){
+            console.log("Waiting for order..!");
+        }
+
+
+        orderPizza(true, happyFunction, sadFunction )
+        orderPizza(false, happyFunction, sadFunction );
+
+
+
+
+        //example2
+
+        function PizzaOrderhandler(falvor, happy){//string, callback function
+            console.log(`🍕 Ordering a ${falvor} Pizza...`);
+            
+            //the settimout method is used to execute the code after some time need pass time in milliseconds
+
+           
+            setTimeout(function(){ //callback function number
+                console.log(`${falvor} pizza is ready!`);
+                happy();
+            }, 3000); //3000ms => 3s 
+        }
+
+
+
+
+
+        function happyFunction2(){
+            console.log("Thanks..! Eating the pizza happily!");
+        }
+
+        PizzaOrderhandler("Cheese Burst", happyFunction2);
+
+
+        
+    </script>
+</body>
+</html>
