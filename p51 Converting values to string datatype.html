@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Converting values to string datatype</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        var bool1 = true;
+        var bool2 = false;
+        var num1 = 33;
+        var num2 = 234.5678;
+
+
+        document.write(`<h1>Datatype of bool1 = ${typeof(bool1)}</h1>`)
+        document.write(`<h1>Datatype of bool2 = ${typeof(bool2)}</h1>`)
+        document.write(`<h1>Datatype of num1 = ${typeof(num1)}</h1>`)
+        document.write(`<h1>Datatype of num2 = ${typeof(num2)}</h1>`)
+
+        //converting
+        var str1 = String(bool1);//string
+        document.write(`<h1>Datatype of str1 = ${typeof(str1)}</h1>`); //string
+        document.write(`<h1>Value of str1 = ${str1}</h1>`); //"true"
+
+
+        var str2 = String(bool2);//string
+        document.write(`<h1>Datatype of str2 = ${typeof(str2)}</h1>`); //string
+        document.write(`<h1>Value of str2 = ${str2}</h1>`)//"false"
+
+        var str3 = String(num1);//string
+        document.write(`<h1>Datatype of str3 = ${typeof(str3)}</h1>`);//string
+        document.write(`<h1>Value of str3 = ${str3}</h1>`); //"33"
+
+        var str4 = String(num2);//string
+        document.write(`<h1>Datatype of str4 = ${typeof(str4)}</h1>`);//string
+        document.write(`<h1>Value of str4 = ${str4}</h1>`); //"234.5678"
+
+
+        //example2
+        document.write(`<h1>Value of String(123) = ${String(123)}</h1>`); //"123"
+        document.write(`<h1>Value of String(123) = ${String(100+40)}</h1>`); //"140"
+        document.write(`<h1>Value of String(123) = ${String(true)}</h1>`); //"true"
+        document.write(`<h1>Value of String(123) = ${String(false)}</h1>`); //"false"
+        document.write(`<h1>Value of String(123) = ${String(1234e-2)}</h1>`); //"12.34"
+        document.write(`<h1>Value of String(123) = ${String(undefined)}</h1>`); //"undefined"
+        document.write(`<h1>Value of String(123) = ${String(null)}</h1>`); //"null"
+
+    </script>
+</body>
+</html>
