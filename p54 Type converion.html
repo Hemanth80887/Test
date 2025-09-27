@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Type converion using Operators</h1>
+    </center>
+    <hr>
+
+    <script>
+        var x1 = "100"; //x1 is a string dfatatype
+        document.write(`<h1>Type of x1 varaible = ${typeof(x1)}</h1>`);
+
+        // var y1 = Number(x1);
+        // var y1 = +x1; //+string =. number
+        // var y1 = -x1;//-string = number
+        document.write(`<h1>Type of y1 varaible = ${typeof(y1)}</h1>`);
+
+        //example2
+
+        var x2 = 123;//x2 is a number datatype
+        document.write(`<h1>Type of x2 varaible = ${typeof(x2)}</h1>`);
+
+        // var y2 = String(x2);
+        var y2 = x2 + "";//number + string => string datatype
+        document.write(`<h1>Type of y2 varaible = ${typeof(y2)}</h1>`);
+
+        var x3 = "345";//x3 is a string datatype
+        document.write(`<h1>Type of x3 varaible = ${typeof(x3)}</h1>`);
+
+        var y3 = x3-0;//string - number = number
+        document.write(`<h1>Type of y3 varaible = ${typeof(y3)}</h1>`);
+
+
+        //example3
+        document.write(`<h1>Value of the "3" -2 = ${"3" - 2}</h1>`);//1 => string - number = number
+        document.write(`<h1>Value of the "3" + 2 = ${"3" + 2}</h1>`);//32 => string + number = string
+        document.write(`<h1>Value of the 3 + "2" = ${3 + "2"}</h1>`);//32 => number + string = string
+        document.write(`<h1>Value of the 3 * "2" = ${3 * "2"}</h1>`);//6 => number * string = number
+        document.write(`<h1>Value of the "3" * 2 = ${"3" * 2}</h1>`);//6 => string * number = number
+        document.write(`<h1>Value of the "10" / 2 = ${"10" / 2}</h1>`);//5 => string / number = number
+        document.write(`<h1>Value of the 10 / "2" = ${10 / "2"}</h1>`);//5 => number / string = number
+</script>
+</body>
+</html>
