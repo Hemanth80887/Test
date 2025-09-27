@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>COnverting values to Boolean datatypes</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        var num1 = 1;
+        var num2 = 0;
+        var str1 = "1"
+        var str2 = "0"
+        var str3 = "hello";// if any variable if it containes a values that can be any value if we convert that variable to boolean that time we will get true only
+        var str4 = ""
+        var str5;
+
+        document.write(`<h1>num1 variable = ${typeof(num1)}</h1>`)
+        document.write(`<h1>num2 variable = ${typeof(num2)}</h1>`)
+        document.write(`<h1>str1 variable = ${typeof(str1)}</h1>`)
+        document.write(`<h1>str2 variable = ${typeof(str2)}</h1>`)
+        document.write(`<h1>str3 variable = ${typeof(str3)}</h1>`)
+        document.write(`<h1>str4 variable = ${typeof(str4)}</h1>`)
+        document.write(`<h1>str5 variable = ${typeof(str5)}</h1>`)
+
+
+        var a = Boolean(num1);
+        document.write(`<h1>a variable type = ${typeof(a)}</h1>`);//boolean
+        document.write(`<h1>a variable value = ${a}</h1>`);//true
+
+        var b = Boolean(num2);
+        document.write(`<h1>b variable type = ${typeof(b)}</h1>`);//boolean
+        document.write(`<h1>b variable value = ${b}</h1>`);//false
+
+
+        var c = Boolean(str1);
+        document.write(`<h1>c variable type = ${typeof(c)}</h1>`);//boolean
+        document.write(`<h1>c variable value = ${c}</h1>`);//true
+
+
+        var d = Boolean(str2);
+        document.write(`<h1>d variable type = ${typeof(d)}</h1>`);//boolean
+        document.write(`<h1>d variable value = ${d}</h1>`);//true
+
+
+        var e = Boolean(str3);
+        document.write(`<h1>e variable type = ${typeof(e)}</h1>`);//boolean
+        document.write(`<h1>e variable value = ${e}</h1>`);//true
+
+        var f = Boolean(str4);
+        document.write(`<h1>f variable type = ${typeof(f)}</h1>`);//boolean
+        document.write(`<h1>f variable value = ${f}</h1>`);//false
+
+        var g = Boolean(str5);
+        document.write(`<h1>g variable type = ${typeof(g)}</h1>`);//boolean
+        document.write(`<h1>g variable value = ${g}</h1>`);//false
+
+        //example2
+
+        document.write(`<h1>Boolean(null) = ${Boolean(null)}</h1>`);//false
+        document.write(`<h1>Boolean(undefined) = ${Boolean(undefined)}</h1>`);//false
+        document.write(`<h1>Boolean(123) = ${Boolean(123)}</h1>`);//true
+
+    </script>
+</body>
+</html>
