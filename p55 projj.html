@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <center><h1>Enter the data to encode ur account details</h1></center>
+                <input id="accnumber" class="w-75 mt-3" type="text" placeholder="Enter the account number"> <br>
+                <input id="symbol1" type="text" class="w-75 mt-3"  placeholder="Enter the symbol"> <br>
+                <button onclick="encription()" class="btn btn-outline-dark mt-2">Click to Encode</button>
+            </div>
+            <div class="col-6" id="result1">
+            </div>
+        </div>
+    </section>
+    <script>
+       function encription(){
+        var acnum=document.getElementById("accnumber")
+         var result=document.getElementById("result1");
+         var symbol=document.getElementById("symbol1");
+         if(acnum.value.length!=15){
+            alert("enter the valid account number");
+            return;
+         }
+         if(symbol.value==""){
+            alert("enter the symbol");
+            return;
+         }
+         var encoded="";
+         result.innerHTML="";
+        result.innerHTML+=`<center><h1>Result</h1></center>`
+        for(let i=0;i<acnum.value.length;i++){
+            if(i<2 || i>=acnum.value.length-3){
+                encoded+=acnum.value[i];
+            }
+            else{
+                encoded+=symbol.value;
+            }
+        }
+        result.innerHTML+=`<center><h1 class="bg-success w-75 p-3">${encoded}</h1></center>`
+       }
+    </script>
+</body>
+</html>
