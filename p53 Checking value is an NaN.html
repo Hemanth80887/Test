@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Checking value is an NaN or not(not a number)</h1>
+        <p>if any value is an NaN it will returns true otherwise it returns false</p>
+    </center>
+    <hr>
+
+
+    <script>
+        document.write(`<h1>Value of NaN(123) = ${isNaN(123)}</h1>`);//false
+        document.write(`<h1>Value of NaN("123") = ${isNaN("123")}</h1>`);//false
+        document.write(`<h1>Value of NaN("hi123") = ${isNaN("hi123")}</h1>`);//true
+        document.write(`<h1>Value of NaN("h1llo") = ${isNaN("hello")}</h1>`);//true
+        document.write(`<h1>Value of NaN("123.12") = ${isNaN("123.12")}</h1>`);//false
+        document.write(`<h1>Value of NaN("123e12") = ${isNaN("123e12")}</h1>`);//false
+        document.write(`<h1>Value of NaN(null) = ${isNaN(null)}</h1>`);//false
+        document.write(`<h1>Value of NaN(undefined) = ${isNaN(undefined)}</h1>`);//true
+    </script>
+    </script>
+</body>
+</html>
