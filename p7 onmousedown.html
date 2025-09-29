@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Mouse button events</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>onmousedown</li>
+        <li>onmouseup</li>
+    </ol>
+
+    <button onmousedown="mouseDownhandler()" onmouseup="mouseUphandler()">Click / hold</button>
+    <h2 id="result">Waiting for user click...</h2>
+    <script>
+        var result = document.getElementById("result");
+
+        function mouseDownhandler(){
+            result.innerHTML = '<span style="color:red">User is Holding the mouse button its in down state</span>'
+        }
+
+         function mouseUphandler(){
+            result.innerHTML = '<span style="color:green">User is Left from  the mouse button its in up state</span>'
+        }
+    </script>
+</body>
+</html>
