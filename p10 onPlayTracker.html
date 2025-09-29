@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            display: flex;
+        }
+        .container .left{
+            flex: 1;
+            min-height: 70vh;
+            background-color: #222222;           
+        }
+        .container .logs{
+            width: 400px;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1b2e28;
+
+        }
+        .logs header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #0c0c0c;
+            color: white;
+        }
+        .logs h2{
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        .logs button{
+            border: none;
+            padding: 5px 10px;
+            background-color: red;
+            cursor: pointer;
+            color: white;
+        }
+        .logs button:hover{
+            opacity: 0.3;
+        }
+        #result{
+            padding: 15px;
+            height: 100vh;
+            overflow: auto;
+        }
+        #result p{
+            margin-bottom: 10px;
+        }
+        .left video{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="left">
+        <video src="./example2.mp4" onplay="onPlayTracker()" autoplay muted loop controls onpause="onPauseTracker()" onseeking="onSeekingTracker()" onvolumechange="onvolumeChangeTracker()"></video>
+
+        </div>
+        <div class="logs">
+            <header>
+                <h2>Logs</h2>
+                <button onclick="clearLogs()">Clear</button>
+            </header>
+            <div id="result">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var codeArea = document.getElementById('code')
+        var resultArea = document.getElementById('result')
+
+        const onPlayTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">▶️ ${new Date().toLocaleTimeString()} : Video is <mark>Playing...</mark></p>`
+        }
+
+         const onPauseTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⏸️ ${new Date().toLocaleTimeString()} : Video is <mark>paused...</mark></p>`
+        }
+
+        const onvolumeChangeTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⏸️ ${new Date().toLocaleTimeString()} : <mark>Volume changing</mark>  in video...</p>`
+        }
+
+          const onSeekingTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⏸️ ${new Date().toLocaleTimeString()} : <mark>Forwording</mark>  the video...</p>`
+        }
+
+        
+
+
+
+        function clearLogs(){
+            resultArea.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html>
