@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Keyboard events</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>onkeypress => </li>
+        <li>onkeydown =>one key delay</li>
+        <li>onkeyup => no delay </li>
+    </ol>
+
+    <input type="text" placeholder="Enter your name" id="name" onkeydown="getusernameValue()">
+    <h2 id="result"></h2>
+
+    <!-- <button onclick="getusernameValue()">get username</button> -->
+
+    <script>
+        let username = document.getElementById("name");
+        let resultTag = document.getElementById("result");
+
+        function getusernameValue(){
+            resultTag.innerText = username.value;
+        }
+
+    </script>
+</body>
+</html>
