@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            display: flex;
+        }
+        .container textarea{
+            flex: 1;
+            min-height: 100vh;
+            width: 100%;
+            background-color: #222222;
+            color: greenyellow;
+            font-size: 1.3rem;
+            outline: none;
+            border: none;
+            padding: 30px;
+        }
+        .container .logs{
+            width: 400px;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1b2e28;
+
+        }
+        .logs header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #0c0c0c;
+            color: white;
+        }
+        .logs h2{
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        .logs button{
+            border: none;
+            padding: 5px 10px;
+            background-color: red;
+            cursor: pointer;
+            color: white;
+        }
+        .logs button:hover{
+            opacity: 0.3;
+        }
+        #result{
+            padding: 15px;
+            height: 100vh;
+            overflow: auto;
+        }
+        #result p{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <textarea name="" id="code" placeholder="Write code here.."  onpaste="onPasteTracker()" onselect="onSelectTracker()" oncopy="onCopyTracker()" oncut="onCutTracker()"></textarea>
+        <div class="logs">
+            <header>
+                <h2>Logs</h2>
+                <button onclick="clearLogs()">Clear</button>
+            </header>
+            <div id="result">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var codeArea = document.getElementById('code')
+        var resultArea = document.getElementById('result')
+
+        const onPasteTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⚠️ ${new Date().toLocaleTimeString()} : User is <mark>Pasted</mark> the code...</p>`
+        }
+
+         const onSelectTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⚠️ ${new Date().toLocaleTimeString()} : User is <mark>Selected</mark> the code...</p>`
+        }
+
+         const onCopyTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⚠️ ${new Date().toLocaleTimeString()} : User is <mark>Copied</mark> the code...</p>`
+        }
+
+          const onCutTracker = () =>{
+            resultArea.innerHTML += `<p style="color:red;">⚠️ ${new Date().toLocaleTimeString()} : User is <mark>Cutted</mark> the code...</p>`
+        }
+
+
+
+        function clearLogs(){
+            resultArea.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html>
