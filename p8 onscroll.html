@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 400px;
+            padding: 20px;
+            border: 4px solid #0c0c0c;
+            height: 400px;
+            overflow: auto;
+            font-family: sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onscroll</h1>
+    </center>
+    <hr>
+
+    <div class="card" onmousewheel="scrollTracker()">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quae repudiandae vero eum eius totam soluta. Nesciunt placeat deserunt nihil alias natus voluptatibus eos, porro obcaecati asperiores est beatae in.
+        Quo consequatur repudiandae optio nihil, numquam laboriosam sapiente ullam itaque eligendi, porro, asperiores explicabo rerum consectetur corporis obcaecati temporibus officiis impedit! Perferendis consequatur aut beatae possimus voluptatum illo laboriosam minus.
+        Quisquam nihil magni nam facere? Aliquid ipsa porro amet voluptatem aut rem repellat odit iste qui nostrum in dolores asperiores nihil, quaerat, autem eveniet non quos quis dicta, ducimus aspernatur.
+        Doloribus et dolore facere, at eligendi facilis soluta quos? Dicta recusandae fuga fugit molestias aspernatur, tempore veritatis illo consectetur quaerat unde eos necessitatibus possimus autem molestiae repellendus quis quae corporis!
+        Aut enim soluta nobis? Mollitia natus non, voluptates dolorem, sunt reiciendis aperiam velit nemo recusandae fuga voluptatem similique temporibus eum obcaecati at atque aliquam neque accusamus esse ex sint quia?
+        Numquam excepturi placeat rerum enim quisquam voluptate nisi earum aspernatur sed quam doloremque accusamus impedit quae voluptatibus vero, dolor voluptatum deserunt autem non consequuntur dolorem vel qui architecto? Deserunt, beatae.
+        Fuga a modi explicabo recusandae consectetur minus ducimus ut, tempore magnam laudantium dolores at ex deserunt! Eos eius, sunt reiciendis commodi temporibus vel ad quas facilis laborum consectetur. Qui, ut!
+        Quibusdam ratione perspiciatis nihil neque, earum suscipit nam quasi, voluptate numquam iusto, impedit facere porro? Architecto est laborum corrupti commodi reiciendis voluptatibus rerum labore cupiditate. Minima quasi sint fugit minus?
+        Deserunt autem quibusdam iste sapiente consectetur dolorum aliquid ab iusto dolores? Nulla alias rem veritatis, a aspernatur expedita id distinctio ut. Amet aut, officiis animi impedit fugiat alias soluta tempore?
+        Tenetur corrupti nihil ab? Quidem exercitationem nihil a aliquam dolorum facere deserunt repellendus vitae vero cumque tempore fugiat asperiores, omnis placeat quos velit ab consequuntur incidunt, quaerat voluptatum. Voluptates, maiores.</p>
+    </div>
+
+
+    <script>
+        var card = document.querySelector('.card');
+
+        function scrollTracker(){
+            // alert("user is scrolling...! in card")
+            console.log(card.scrollTop);
+            if(card.scrollTop>40){
+                card.style.background = "#0c0c0c"
+                card.style.color = "#fff"
+            }else{
+                card.style.background = "#fff"
+                card.style.color = "#0c0c0c"
+            }
+            
+        }
+    </script>
+</body>
+</html>
