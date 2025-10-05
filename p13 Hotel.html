@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Hotel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<section class="container">
+  <h1 class="text-center m-3">Welcome to Raj Hotel</h1>
+  <form class="form-control">
+    <div class="mb-3 row p-2">
+      <label for="name" class="col-12 col-md-3 form-label">Enter the name:</label>
+      <input type="text" class="col-12 col-md-8" id="name">
+    </div>
+    <div class="mb-3 row p-2">
+      <label for="pnum" class="col-12 col-md-3 form-label">Enter your Phone number:</label>
+      <input type="number" class="col-12 col-md-8" id="pnum">
+    </div>
+    <div class="mb-3 row p-2">
+      <label for="aadhaar" class="col-12 col-md-3 form-label">Enter your Aadhaar No:</label>
+      <input type="number" class="col-12 col-md-8" id="aadhaar">
+    </div>
+    <div class="mb-3 row p-2">
+      <label for="addrs" class="col-12 col-md-3 form-label">Enter the residence address:</label>
+      <textarea id="addrs" class="col-12 col-md-8"></textarea>
+    </div>
+    <div class="mb-3 row p-2">
+      <label for="checkin" class="col-12 col-md-3 form-label">Enter the check-in Date:</label>
+      <input type="datetime-local" class="col-12 col-md-8 p-1" id="checkin">
+    </div>
+    <div class="mb-3 row p-2">
+      <label for="checkout" class="col-12 col-md-3 form-label">Enter the check-out Date:</label>
+      <input type="datetime-local" class="col-12 col-md-8 p-1" id="checkout">
+    </div>
+    <div class="text-center m-2">
+      <button class="btn btn-outline-danger" type="reset">Cancel</button>
+      <button class="btn btn-outline-success" type="button" onclick="generate()">Submit</button>
+    </div>
+  </form>
+</section>
+
+<section class="container" id="pdf"></section>
+<script>
+  function generate() {
+    const topdf = document.getElementById("pdf");
+    topdf.innerHTML = "";
+
+    const bookedid = Math.floor(Math.random() * 90000000) + 10000000;
+
+    topdf.innerHTML = `
+      <h1 class="text-center m-3">Welcome to Raj Hotel</h1>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h4 class="m-3">Full name: ${document.getElementById("name").value}</h4>
+          <h4 class="m-3">Phone number: ${document.getElementById("pnum").value}</h4>
+          <h4 class="m-3">Aadhaar number: ${document.getElementById("aadhaar").value}</h4>
+        </div>
+        <div class="col-12 col-md-6">
+          <h4 class="m-3">Booking ID: ${bookedid}</h4>
+          <h4 class="m-3">Check-in: ${document.getElementById("checkin").value}</h4>
+          <h4 class="m-3">Check-Out: ${document.getElementById("checkout").value}</h4>
+        </div>
+      </div>
+      <div class="row m-2">
+        <h4 class="col-12 col-md-3">Residence address:</h4>
+        <h5 class="col-12 col-md-9">${document.getElementById("addrs").value}</h5>
+      </div>
+      <h1 class="text-center">Thank You For Visiting!!!</h1>
+    `;
+    
+    html2pdf().from(topdf).save(`RajHotel_${bookedid}.pdf`);
+  }
+</script>
+</body>
+</html>
