@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+</head>
+<body>
+  <section class="container-fluid p-3 p-md-5">
+    <div class="row">
+      <div class="col-12 col-md-5 m-auto">
+        <form class="card shadow-sm" onsubmit="handleSubmit(event)">
+          <div class="card-header">
+            <h1 class="fs-3 text-center fw-normal m-0">Create Account</h1>
+          </div>
+
+          <div class="card-body">
+            <!-- PASSWORD -->
+            <div class="form-group mt-2">
+              <label class="form-label">Password</label>
+              <input type="text" class="form-control" id="password" onkeyup="validatePassword()">
+              <span class="small text-danger" id="password_error"></span>
+            </div>
+            <ul id="password_list">
+              <li id="l1">Password should contain Uppercase letters</li>
+              <li id="l2">Password should contain Lowercase letters</li>
+              <li id="l3">Password should contain Numbers</li>
+              <li id="l4">Password should contain Special characters</li>
+              <li id="l5">Password Length should be ≥ 8</li>
+            </ul>
+
+            <!-- EMAIL -->
+            <div class="form-group mt-4">
+              <label class="form-label">Email Address</label>
+              <input type="text" class="form-control" id="email" onkeyup="validateEmail()">
+              <span class="small text-danger" id="email_error"></span>
+            </div>
+            <ul id="email_list">
+              <li id="e2">Email should contain Lowercase letters</li>
+              <li id="e3">Email should contain Numbers</li>
+              <li id="e4">Email should contain '@' symbol</li>
+            </ul>
+
+            <button class="btn btn-primary mt-3 w-100" type="submit">Create Account</button>
+          </div>
+
+          <div class="card-footer">
+            <p class="small m-0"><b>Note:</b> Ensure your password and email meet all the conditions above before submitting.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ✅ PASSWORD VALIDATION
+    function validatePassword() {
+      const password = document.getElementById("password").value;
+
+      const l1 = document.getElementById("l1");
+      const l2 = document.getElementById("l2");
+      const l3 = document.getElementById("l3");
+      const l4 = document.getElementById("l4");
+      const l5 = document.getElementById("l5");
+
+      // Regex checks
+      l1.style.color = /[A-Z]/.test(password) ? "green" : "red";
+      l2.style.color = /[a-z]/.test(password) ? "green" : "red";
+      l3.style.color = /\d/.test(password) ? "green" : "red";
+      l4.style.color = /[@$!%*&#]/.test(password) ? "green" : "red";
+      l5.style.color = password.length >= 8 ? "green" : "red";
+    }
+
+    // ✅ EMAIL VALIDATION
+    function validateEmail() {
+      const email = document.getElementById("email").value;
+
+      const e2 = document.getElementById("e2");
+      const e3 = document.getElementById("e3");
+      const e4 = document.getElementById("e4");
+
+      e2.style.color = /[a-z]/.test(email) ? "green" : "red";
+      e3.style.color = /\d/.test(email) ? "green" : "red";
+      e4.style.color = /@/.test(email) ? "green" : "red";
+    }
+
+    // ✅ FORM SUBMIT HANDLER
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value;
+
+      // Check all password conditions
+      const validPassword = (
+        /[A-Z]/.test(password) &&
+        /[a-z]/.test(password) &&
+        /\d/.test(password) &&
+        /[@$!%*&#]/.test(password) &&
+        password.length >= 8
+      );
+
+      // Check all email conditions
+      const validEmail = (
+        /[a-z]/.test(email) &&
+        /\d/.test(email) &&
+        /@/.test(email)
+      );
+
+      if (!validPassword || !validEmail) {
+        alert("Please fix all errors before creating your account!");
+      } else {
+        alert("✅ Account created successfully!");
+      }
+    }
+  </script>
+</body>
+</html>
