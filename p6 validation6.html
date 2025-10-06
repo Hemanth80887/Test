@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container-fluid p-3 p-md-5">
+        <div class="row">
+            <div class="col-12 col-md-5 m-auto">
+                <form action="" class="card shadow-sm" onsubmit="submitHandler(event)">
+                    <div class="card-header">
+                        <h1 class=" fs-3 text-center fw-normal m-0">Create account</h1>
+                    </div>
+                    <div class="card-body">
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" id="email" onkeyup="submitHandler(event)">
+                            <span class="small" id="email_error"></span>
+                        </div>
+                        <ul id="list">
+                            
+                            <li id="l2">Password should contain Lowercase letters</li>
+                            <li id="l3">Password should contain Numbers</li>
+                            <li  id="l4">Password should contain Special charecters</li>
+                            
+                        </ul>
+
+                        <button class="btn btn-primary mt-2 w-100" type="submit">Create account</button>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small m-0"><b>Note:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla nisi quos veritatis delectus error?</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       
+        var phone = document.getElementById('email');
+        var email_error = document.getElementById("email_error")
+        var list = document.getElementById("list")
+        
+        var lowercase_error = document.getElementById("l2")
+        var numbers_error = document.getElementById("l3")
+        var special_symbol_error = document.getElementById("l4")
+        
+       
+
+
+     
+
+
+        function submitHandler(e){
+            e.preventDefault(); //to prevent the page reload
+
+            if(email.value.length==0){
+            
+                lowercase_error.style.color = "red"
+                numbers_error.style.color = "red"
+                special_symbol_error.style.color = "red"
+                
+
+                 return;
+            }else{
+            //   const passwordPattren = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*&])(?=.*\d)[A-Za-z\d@&#$%^&*]{8,}$/
+            //   var result = passwordPattren.test(password.value);
+           
+           
+
+
+             const lowercasepattren = /^(?=.*[a-z])[A-Za-z\d@&#$%^&*]{1,}$/
+            // console.log(uppercasepattren.test(password.value));
+            if(lowercasepattren.test(email.value)==true){
+                lowercase_error.style.color = "green"
+            }else{
+                lowercase_error.style.color = "red"
+            }
+
+             const numberpattren = /^(?=.*\d)[A-Za-z\d@&#$%^&*]{1,}$/
+            // console.log(uppercasepattren.test(password.value));
+            if(numberpattren.test(email.value)==true){
+                numbers_error.style.color = "green"
+            }else{
+                numbers_error.style.color = "red"
+            }
+
+             const symbolpattren = /^(?=.*[@&#$%^&*])[A-Za-z\d@&#$%^&*]{1,}$/
+            // console.log(uppercasepattren.test(password.value));
+            if(symbolpattren.test(email.value)==false){
+                special_symbol_error.style.color = "red"
+            }else{
+                special_symbol_error.style.color = "green"
+            }
+
+           
+
+            
+            
+            
+            
+            
+            }
+           
+        }
+    </script>
+</body>
+</html>
