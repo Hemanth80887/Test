@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container-fluid p-3 p-md-5">
+        <div class="row">
+            <div class="col-12 col-md-5 m-auto">
+                <form action="" class="card shadow-sm" onsubmit="submitHandler(event)">
+                    <div class="card-header">
+                        <h1 class=" fs-3 text-center fw-normal m-0">Create account</h1>
+                    </div>
+                    <div class="card-body">
+
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Email address</label>
+                            <input type="text" class="form-control" id="email" >
+                            <span class="small" id="email_error"></span>
+                        </div>
+
+                        <button class="btn btn-primary mt-2 w-100" type="submit">Create account</button>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small m-0"><b>Note:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla nisi quos veritatis delectus error?</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       
+        var email = document.getElementById('email');
+        var email_error = document.getElementById("email_error")
+       
+
+
+     
+
+
+        function submitHandler(e){
+            e.preventDefault(); //to prevent the page reload
+
+            if(email.value.length==0){
+                 email_error.innerHTML = "<span style='color:red'>Please fill the email field</span>";
+                 return;
+            }else{
+                //regular expressions (regx)
+                const emailPattren = /^[a-z0-9._+-]+@[a-z]+\.[a-z]{3}$/;
+                var result = emailPattren.test(email.value);
+                if(result==true){
+                 email_error.innerHTML = "<span style='color:green'>Valid  email field</span>";
+                }else{
+                 email_error.innerHTML = "<span style='color:red'>Please fill the valid email address</span>";
+
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>
