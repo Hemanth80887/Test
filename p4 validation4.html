@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container-fluid p-3 p-md-5">
+        <div class="row">
+            <div class="col-12 col-md-5 m-auto">
+                <form action="" class="card shadow-sm" onsubmit="submitHandler(event)">
+                    <div class="card-header">
+                        <h1 class=" fs-3 text-center fw-normal m-0">Create account</h1>
+                    </div>
+                    <div class="card-body">
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="password" >
+                            <span class="small" id="password_error"></span>
+                        </div>
+
+                        <button class="btn btn-primary mt-2 w-100" type="submit">Create account</button>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small m-0"><b>Note:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla nisi quos veritatis delectus error?</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+       
+        var phone = document.getElementById('password');
+        var password_error = document.getElementById("password_error")
+       
+
+
+     
+
+
+        function submitHandler(e){
+            e.preventDefault(); //to prevent the page reload
+
+            if(password.value.length==0){
+                 password_error.innerHTML = "<span style='color:red'>Please fill the phone number field</span>";
+                 return;
+            }else{
+              const passwordPattren = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*&])(?=.*\d)[A-Za-z\d@&#$%^&*]{8,}$/
+              var result = passwordPattren.test(password.value);
+             if(result==true){
+                 password_error.innerHTML = "<span style='color:green'>Valid  Password</span>";
+                }else{
+                 password_error.innerHTML = "<span style='color:red'>Please fill the valid Phone number</span>";
+
+                }
+            }
+           
+        }
+    </script>
+</body>
+</html>
