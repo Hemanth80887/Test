@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <section class="container-fluid p-3 p-md-5">
+        <div class="row">
+            <div class="col-12 col-md-5 m-auto">
+                <form action="" class="card shadow-sm" onsubmit="submitHandler(event)">
+                    <div class="card-header">
+                        <h1 class=" fs-3 text-center fw-normal m-0">Create account</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group mt-2">
+                            <label for="" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" onkeyup="submitHandler(event)">
+                            <span class="small" id="username_error"></span>
+                        </div>
+
+
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" onkeyup="submitHandler(event)">
+                            <span class="small" id="email_error"></span>
+                        </div>
+
+
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Phone number</label>
+                            <input type="tel" class="form-control" id="phone" onkeyup="submitHandler(event)">
+                            <span class="small" id="phone_error"></span>
+                        </div>
+
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" onkeyup="submitHandler(event)">
+                            <span class="small" id="password_error"></span>
+
+                        </div>
+
+                         <div class="form-group mt-2">
+                            <label for="" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="c_password" onkeyup="submitHandler(event)">
+                            <span class="small" id="c_password_error"></span>
+
+                        </div>
+
+
+                        <label for="" onclick="passwordHandler()">
+                            <input type="checkbox" id="check">
+                            <span class="result">Show Password</span>
+                        </label>
+                        
+                        <button class="btn btn-primary mt-2 w-100" type="submit">Create account</button>
+                    </div>
+                    <div class="card-footer">
+                        <p class="small m-0"><b>Note:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde nulla nisi quos veritatis delectus error?</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var username = document.getElementById('username')
+        var email = document.getElementById('email')
+        var phonenumber = document.getElementById('phone')
+        var password = document.getElementById('password')
+        var confirm_password = document.getElementById('c_password');
+        
+        var username_error = document.getElementById("username_error")
+        var email_error = document.getElementById("email_error")
+        var phone_error = document.getElementById("phone_error")
+        var password_error = document.getElementById("password_error")
+        var confirm_password_error = document.getElementById("c_password_error")
+
+
+        var password_show = false;
+        const passwordHandler = () => {
+            password_show = !password_show;
+            console.log(password_show);
+            
+            if(password_show ==true){
+                password.type = "text";
+                confirm_password.type = "text";
+            }else{
+                password.type= "password";
+                confirm_password.type = "password";
+            }
+        }
+
+
+        function submitHandler(e){
+            e.preventDefault(); //to prevent the page reload
+
+            if(username.value.length==0){
+                username_error.innerHTML = "<span style='color:red'>Please fill the username field</span>"
+            }else{
+               if(username.value.length<6){
+                  username_error.innerHTML = "<span style='color:red'>Username should be more than 6 charecters</span>"
+               }else{
+                 username_error.innerHTML = "<span style='color:green'>Valid username</span>"
+               }
+            }
+
+             if(email.value.length==0){
+                email_error.innerHTML = "<span style='color:red'>Please fill the email field</span>"
+            }else{
+              email_error.innerHTML = "<span style='color:green'>Valid Email address</span>"
+            }
+
+              if(phonenumber.value.length==0){
+                phone_error.innerHTML = "<span style='color:red'>Please fill the phone number field</span>"
+            }else{
+              if(phonenumber.value.length<10 || phonenumber.value.length>13){
+                  phone_error.innerHTML = "<span style='color:red'>Please enter the valid phone number</span>"
+               }else{phone_error.innerHTML = "<span style='color:green'>Valid phone number</span>"
+               }
+            }
+
+              if(password.value.length<8){
+                password_error.innerHTML = "<span style='color:red'>Password length should be more then 8</span>"
+            }else{
+              password_error.innerHTML = "<span style='color:green'>Valid Password</span>"
+            }
+
+
+
+            if(password.value != confirm_password.value){
+                confirm_password_error.innerHTML = "<span style='color:red'>Confirm password should be equal to main password</span>"
+                
+            }else{
+              confirm_password_error.innerHTML = "<span style='color:green'>COnfirm password is valid</span>"
+
+            }
+        }
+    </script>
+</body>
+</html>
