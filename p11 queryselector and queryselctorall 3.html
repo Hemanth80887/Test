@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>queryselector and queryselctorall</h1>
+    </center>
+    <hr>
+
+    <p class="test1">This is the paragraph</p>
+    <h1 class="test1">This is the heading1</h1>
+    <h2 class="test1">This is the heading2</h2>
+    <div class="test1">This is the div1</div>
+    <div class="test1">This is the div2</div>
+
+
+    <script>
+        //single element selecting
+        var test1paragraph = document.querySelector('p.test1');
+        console.log(test1paragraph);
+
+        var test1heading1 = document.querySelector('h1.test1');
+        console.log(test1heading1);
+
+        var test1heading2 = document.querySelector('h2.test1');
+        console.log(test1heading2);
+
+        var test1div = document.querySelector('div.test1');
+        console.log(test1div);
+        
+    </script>
+</body>
+</html>
