@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        th, td{
+            padding: 15px;
+        }
+        tr:nth-child(even){
+            background-color: rgb(240, 240, 240);
+        }
+        th{
+            background-color: rgb(73, 166, 101);
+            color: white;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Getting computed styles and style information form the element</h1>
+    </center>
+    <hr>
+
+
+    <p class="test1" style="color: red; padding: 10px; margin: 10px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quidem architecto voluptate deleniti illum et distinctio expedita rem libero culpa. Incidunt consectetur eos aliquam nesciunt dolorem. Distinctio inventore cupiditate illum.</p>
+
+    <table border="1">
+       <thead>
+         <tr>
+            <th>Property name</th>
+            <th>Property value</th>
+        </tr>
+       </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+
+    <script>
+        var test1 = document.querySelector('p.test1');
+
+        //getting style information from the element
+        console.log("color = ",test1.style.color);
+        console.log("padding = ",test1.style.padding);
+        console.log("margin = ",test1.style.margin);
+        
+
+        //getting computed styles
+        // var test1styles = getComputedStyle(test1); //getComputedStyle(element)
+        // console.log(test1styles.getPropertyValue('color'));
+        // console.log(test1styles.getPropertyValue('background-color'));
+        // console.log(test1styles.getPropertyValue('background'));
+        // console.log(test1styles.getPropertyValue('box-shadow'));
+        // console.log(test1styles.getPropertyValue('margin'));
+        // console.log(test1styles.getPropertyValue('padding'));
+        // console.log(test1styles.getPropertyValue('text-shadow'));
+        // console.log(test1styles.getPropertyValue('font-size'));
+        // console.log(test1styles.getPropertyValue('font-weight'));
+        // console.log(test1styles.getPropertyValue('font-family'));
+        // console.log(test1styles.getPropertyValue('text-decoration-line'));
+
+        function getValue(property){
+            return getComputedStyle(test1).getPropertyValue(property)
+        }
+
+        // console.log(getValue('color'));
+        // console.log(getValue('background'));
+        
+        console.log(getComputedStyle(test1).length);
+        var table = document.querySelector('#table');
+        for(var property of getComputedStyle(test1)){
+            console.log(property);
+            console.log(getValue(property));
+
+            table.innerHTML += `
+                <tr>
+                    <td><b>${property}</b></td>    
+                    <td>${getValue(property)}</td>    
+                </tr>
+            ` 
+        }
+        
+        
+    </script>
+</body>
+</html>
