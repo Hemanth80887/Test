@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>queryselector and queryselctorall</h1>
+    </center>
+    <hr>
+
+    <p class="test1">This is the paragraph</p>
+    <p class="test1">This is the paragraph</p>
+    <h1 class="test1">This is the heading1</h1>
+    <h1 class="test1">This is the heading1</h1>
+    <h2 class="test1">This is the heading2</h2>
+    <h2 class="test1">This is the heading2</h2>
+    <div class="test1">This is the div1</div>
+    <div class="test1">This is the div2</div>
+
+
+    <script>
+        //multiple element selecting
+        var test1paragraph = document.querySelectorAll('p.test1');
+        console.log(test1paragraph);
+
+        var test1heading1 = document.querySelectorAll('h1.test1');
+        console.log(test1heading1);
+
+        var test1heading2 = document.querySelectorAll('h2.test1');
+        console.log(test1heading2);
+
+        var test1div = document.querySelectorAll('div.test1');
+        console.log(test1div);
+
+
+        var test1Classes = document.querySelectorAll(".test1")
+        console.log(test1Classes);
+
+        for(var element of test1Classes){
+            console.log(element);
+        }
+        
+    </script>
+</body>
+</html>
