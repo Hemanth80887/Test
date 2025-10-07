@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+
+    <p id="mark">this is the paragraph text</p>
+    <p>this is the another one paragraph text</p>
+    <hr>
+
+    <button onclick="applyStyles()">applyStyles</button>
+
+    <script>
+        //selecting element using with that id
+        var paragraph = document.getElementById('mark');
+
+        //applying styles to selected tag
+        function applyStyles(){
+            console.log(paragraph.innerHTML);
+
+            paragraph.style.color = "red"            
+        }
+    </script>
+</body>
+</html>
