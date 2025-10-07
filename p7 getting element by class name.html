@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>getting element by class name</h1>
+    </center>
+    <hr>
+
+    <p class="test">this is the paragraph</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates recusandae ullam, aut at labore obcaecati voluptatem sunt explicabo vero, fugit reiciendis fugiat numquam, distinctio voluptate corrupti! Totam quod dolor molestiae.</p>
+    <h1 class="test">this is the heading</h1>
+    <div class="test">this is the heading</div>
+    <span class="test">this is the heading</span>
+    <h5 class="test">this is the heading</h5>
+
+
+    <script>
+        var testclasses = document.getElementsByClassName("test");
+        console.log(testclasses);
+
+        // testclasses[0].style.color = "red"
+        //reading html collection
+        for(var tag of testclasses){
+            console.log(tag);
+            tag.style.background = "lightgray"
+            tag.style.padding = "20px"
+            tag.style.marginTop = "20px"
+            tag.style.display = "block"
+        }
+        
+    </script>
+</body>
+</html>
