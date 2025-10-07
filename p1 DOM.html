@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+     <center>
+            <h1>DOM</h1>
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.</p>
+        </center>
+        <hr>
+
+        <div id="card"></div>
+
+        <script>
+            console.log(document);
+            document.write("This is the content from the script")
+            document.write("<h2>This is the content from the script</h2>")
+            
+            var card = document.getElementById('card');
+            card.innerHTML = "<h1>This is the heading</h1> <p>this is the paragraph</p>"
+            //applying styles
+            card.style.backgroundColor = "gray";
+            card.style.padding = "20px";
+            card.style.width = "200px";
+            card.style.margin = "auto";
+        </script>
+</body>
+</html>
