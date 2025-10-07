@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>.innerHTML and innerText</h1>
+    </center>
+    <hr>
+
+    <div id="card1"></div>
+    <div id="card2"></div>
+    <hr>
+
+    <script>
+        var card1 = document.getElementById("card1")
+        var card2 = document.getElementById("card2")
+
+        card1.innerHTML = "<h1>This is the heading tag inserted using .innerHTML</h1>"
+
+        card2.innerText = "This is the text";
+
+        card1.style.color = "red"
+
+        
+        card2.style.padding = "4%"
+        card2.style.padding = "4%"
+        card2.style.backgroundColor = "lightcoral"
+        card2.style.color = "white"
+    </script>
+    
+</body>
+</html>
