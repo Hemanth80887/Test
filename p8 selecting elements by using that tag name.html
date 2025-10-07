@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+        <p>selecting elements by using that tag name</p>
+    </center>
+    <p>this is the paragraph1</p>
+    <h1>this is the heading1</h1>
+    <h1>this is the heading2</h1>
+    <p>this is the paragraph2</p>
+
+    <script>
+        var h1Tags = document.getElementsByTagName('h1');
+        console.log(h1Tags);
+
+        //storing values inside the variables and use later
+        // var firstH1 = h1Tags[0]
+        // var secondH1 = h1Tags[1]
+        // var thirdH1 = h1Tags[2]
+
+        // console.log(firstH1);
+        // console.log(secondH1);
+        // console.log(thirdH1);
+        
+        //mannually the htmlcollection value
+        h1Tags[0].style.color = "green"
+        h1Tags[1].style.color = "red"
+        h1Tags[2].style.color = "orange"
+
+
+        console.log(h1Tags[0].innerHTML);
+        console.log(h1Tags[1].innerHTML);
+        console.log(h1Tags[2].innerHTML);
+
+
+        //dynamically read the values
+        for(var item of h1Tags){
+            item.style.padding = "40px"
+            item.style.background = "lightcoral"
+            item.style.margin = "20px"
+        }
+
+    </script>
+</body>
+</html>
