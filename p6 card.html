@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: auto;
+            margin-top: 30px;
+            font-family: sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+
+    </section>
+    <button onclick="addCard()">add card</button>
+    <button onclick="removeCard()">remove card</button>
+
+    <script>
+        var container = document.getElementById('container');
+
+        function addCard(){
+            container.innerHTML = `
+            
+                <div class="card">
+                    <h1>This is the card heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, dignissimos ab, debitis laboriosam possimus tenetur aperiam doloremque deleniti, dolorem illo quisquam earum. Accusamus quasi delectus sint non. Mollitia, commodi in?</p> 
+                    <button>Know more</button>   
+                </div>
+            `
+        }
+
+        function removeCard(){
+            container.innerHTML = ""
+        }
+    </script>
+</body>
+</html>
