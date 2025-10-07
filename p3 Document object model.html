@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM (Document object model)</h1>
+    </center>
+    <hr>
+
+    <input type="text" placeholder="Enter your name" id="name" name="username" value="">
+
+    <button onclick="getNameValue()">get</button>
+
+    <script>
+        console.log(document.documentElement);//html complete
+        document.write(document.documentElement)//
+
+
+        console.log(document.documentElement.getAttribute("lang"));
+        console.log(document.documentElement.lang);
+
+        var username = document.getElementById('name')
+        function getNameValue(){
+            // console.log(username.value);
+            // console.log(username.placeholder);
+            // console.log(username.type);
+            // console.log(username.name);
+            // console.log(username.id);
+
+            console.log(username.getAttribute('value'));
+            console.log(username.getAttribute('name'));
+            console.log(username.getAttribute('type'));
+            console.log(username.getAttribute('placeholder'));
+            console.log(username.getAttribute('id'));
+
+            // document.documentElement.style.background = "red"
+            // document.documentElement.innerHTML = "<h1>hello</h1>"
+            
+        }
+        
+    </script>
+</body>
+</html>
