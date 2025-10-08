@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Document.body</h1>
+        <button onclick="toggleTheme('#fff', '#000')">light theme</button>
+        <button onclick="toggleTheme('#000', '#fff')">dark theme</button>
+        <button onclick="toggleTheme('#000', 'gold')">contrast</button>
+    </center>
+    <hr>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis aliquam sit, quam dignissimos sapiente ratione quis illum hic molestiae impedit voluptatum. Itaque in harum maxime eligendi labore saepe illum fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet temporibus neque atque et adipisci, sit officia animi itaque ipsum odio delectus nobis doloribus vero consequuntur recusandae repellat quas alias?
+    Magni corrupti impedit quas numquam veritatis, harum id culpa cupiditate neque? Veniam unde iusto debitis modi ex incidunt amet? Perferendis sint odio maxime animi. Voluptatem consequuntur molestiae quisquam nostrum sit!
+    Laborum, ducimus nihil labore perspiciatis quidem, aliquid tempora ratione est, doloribus unde quod cumque nesciunt distinctio placeat quas deserunt repellendus vero blanditiis sequi hic repudiandae. Aliquid mollitia officia tenetur dicta.</p>
+
+
+    <script>
+        function toggleTheme(bgColor, txtColor){
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = txtColor;
+        }
+    </script>
+</body>
+</html>
