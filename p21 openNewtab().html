@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button onclick="openNewtab()">Open tab</button>
+    <button onclick="closeTab()">Close tab</button>
+    <button onclick="openMultipleTabs()">open mutliple tabs</button>
+    <button onclick="closeMultipleTabs()">close all tabs</button>
+    <script>
+        var operation;
+
+
+
+        function openNewtab(){
+            // operation = window.open('https://github.com', 'popup1', 'width=200, height=200, left=20, top=20')
+             window.open('https://github.com', "heading"," _blank", `width=400, height=400, left=20, top=20`)
+              window.open('https://github.com',  "heading"," _blank", `, width=400, height=400, left=40, top=40`)
+            console.log(operation);
+            
+        }
+
+        openNewtab()
+        openNewtab()
+        openNewtab()
+        openNewtab()
+        
+        var allOperations = []
+        function openMultipleTabs(){
+
+            var count = 0;
+            setInterval(()=>{
+                 if(count<20){
+                     window.open(window.location, "heading"," _blank", `width=400, height=400, left=${count+1*10}, top=${count+1*10}`)
+                     count++;
+                 }
+            }, 1000)
+
+         console.log(allOperations);
+         
+        }
+
+        function closeTab(){
+            operation.close();
+        }
+
+        function closeMultipleTabs(){
+            for(var item of allOperations){
+                item.close();
+            }
+
+            console.log(allOperations);
+            
+        }
+
+        
+    </script>
+</body>
+</html>
