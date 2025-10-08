@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card1{
+            padding: 30px;
+            background-color: lightcoral;
+            font-family: sans-serif;
+            line-height: 1.6;
+            width: 300px;
+            border: 2px solid #0c0c0c;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <center>
+        <h1>classList.add() and classList.remove() and classList.toggle()</h1>
+    </center>
+    <hr>
+
+    <div id="test1">
+        <h1>card1</h1>
+       <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et corporis ducimus nesciunt dolore repudiandae excepturi dolor ab qui veritatis quia necessitatibus ut aliquid vel numquam, porro pariatur dignissimos reprehenderit atque.</p>
+    </div>
+
+    <button onclick="addcard1class()">add  card1 class name</button>
+    <button onclick="removecard1class()">remove card1 class name</button>
+    <button onclick="toggleCard1class()">toggle card1 class name</button>
+
+    
+
+
+    <script>
+        var card1 = document.getElementById('test1')
+      
+
+        function addcard1class(){
+            // card1.classList.add('card1')
+            // card1.classList.add('card2')
+            // card1.classList.add('card1', 'card2')
+            card1.classList.add('card1')
+        }
+
+        function removecard1class(){
+            card1.classList.remove('card1')
+        }
+
+        function toggleCard1class(){
+            card1.classList.toggle('card1')
+        }
+
+    </script>
+</body>
+</html>
