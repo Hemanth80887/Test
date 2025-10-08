@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 100vh;
+        }
+        .heading{
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        #result, .blink{
+            color: darkslateblue;
+        }
+        .blink{
+            animation: blinkAnimation 0.3s ease-in-out infinite ;
+        }
+        @keyframes blinkAnimation{
+            from{
+                opacity: 0;
+            }
+            to{
+               opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="container">
+        <h1 class="heading">Hello I'am <span id="result">Developer</span><span class="blink">|</span></h1>
+    </section>
+
+    <script>
+        var result = document.getElementById('result');
+
+        const roles = [
+            'Developer',
+            'designer',
+            'Tester',
+            'Trainer'
+        ]
+        var index = 0;
+        function typingAnimation(){
+            result.innerText = ""
+
+          if(index<roles.length){
+             var nameIndex = 0;
+            result.innerText = ""
+             var startTyping = setInterval(()=>{
+                  if(nameIndex<roles[index].length){
+                    result.innerText += roles[index][nameIndex];
+                 nameIndex++;
+                 }else{
+                    clearInterval(startTyping);
+                     index++;
+                 }
+             }, 200)
+           
+          }else{
+            index = 0;
+          }
+        }
+
+        setInterval('typingAnimation()', 3000);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
