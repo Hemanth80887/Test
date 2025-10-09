@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video  id="video" autoplay ></video>
+        <button onclick="cameraHandler()">Capture</button>
+
+        <canvas id="canvas1"></canvas>
+
+        <div id="download"></div>
+    </div>
+    
+
+    <script>
+        // console.log(window.navigator);
+        var video = document.getElementById('video')
+        var canvas = document.getElementById('canvas1').getContext('2d');
+         async function camera(){
+
+            try {
+            const cameraStream = await navigator.mediaDevices.getUserMedia({video:{width:1280, height:720}, audio:false});
+
+            video.srcObject = cameraStream;
+            } catch (error) {
+                console.log(error);
+                
+            }
+         }
+
+         camera()
+
+        const cameraHandler = () =>{
+           const width= video.videoWIdth, height = video.videoHeight;
+           canvas.width = width;
+           canvas.height = height;
+            canvas.drawImage(video, 0, 0, 300, 400)
+
+            const dataurl = document.getElementById('canvas1').toDataURL('image/png');
+            console.log(dataurl);
+
+            var anchortag = document.createElement('a');
+            anchortag.href = dataurl;
+            anchortag.download = "photo.png";
+            console.log(anchortag);
+            anchortag.textContent = "download"
+            
+            document.getElementById('download').appendChild(anchortag)
+        }
+
+    </script>
+</body>
+</html>
