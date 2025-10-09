@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <center>
+        <h1>BOM (Browser object model)</h1>
+    </center>
+    <hr> -->
+    <div class="container-fluid p-3 p-md-5 bg-light" style="height: 100vh;">
+        <div class="row">
+            <div class="col-md-5 m-auto">
+                <div class="bg-white p-3">
+                    <h1 class="display-6">Screen properties</h1>
+                    <hr>
+                    <div class="result p-3 bg-light" style="min-height: 200px;">
+
+                    </div>
+                    <button class="btn btn-primary btn-sm mt-3" id="generate-btn">Generate Screen</button>
+                    <button class="btn btn-danger btn-sm mt-3" id="cancel-btn">Erase Screen </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log(screen);
+
+        var result = document.querySelector('div.result');
+        var generateButton = document.getElementById('generate-btn');
+        var cancelBtn = document.getElementById('cancel-btn')
+
+        function generateHandler(){
+            // result.innerHTML = `
+            //     <p class="fs-5"><b>availHeight: </b> ${screen.availHeight}</p>
+            //     <p class="fs-5"><b>availLeft: </b> ${screen.availHeight}</p>
+            
+            // `
+
+            for(let property in screen){
+                    
+                if(typeof(screen[property]) != "function"){
+               if(typeof(screen[property]) !=  "object"){
+                 result.innerHTML += `
+                  <p class="fs-5"><b>${property}: </b> ${screen[property]}</p>
+                 `
+               }
+
+                }
+            }
+        }
+
+
+        generateButton.addEventListener('click', generateHandler);//(eventname, function)
+
+
+        //to erase screen
+        cancelBtn.addEventListener('click', ()=>{
+            result.innerHTML = ''
+        })
+
+
+        
+    </script>
+</body>
+</html>
