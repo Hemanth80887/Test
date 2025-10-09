@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="back()">back</button>
+    <button onclick="next()">Next</button>
+    <button id="reload">Reload</button>
+    <button id="last">visit last 2nd page</button>
+    <button id="next">visit next 2nd page</button>
+    
+
+    <script>
+        console.log(window.history);
+        console.log(window.history.length);
+        
+
+        function next(){
+            window.history.forward()
+        }
+
+        function back(){
+            window.history.back()
+        }
+        document.getElementById("last").addEventListener("dblclick",()=>{
+            window.history.go(-2);
+        })
+        document.getElementById("next").addEventListener("dblclick",()=>{
+            window.history.go(2);
+        })
+
+        document.getElementById("reload").addEventListener("click",()=>{
+            window.history.go(0);
+        })
+        // window.history.go(-2)//go back 2 pages
+        // window.history.go(-1)//go back one pages
+        // window.history.go(0)//reload the current page
+        // window.history.go(1);//go forword one page
+        // window.history.go(2);//go forword 2 page
+    </script>
+</body>
+</html>
