@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <form action="" onsubmit="uploadData(event)">
+        <input type="text" placeholder="Enter your name" id="name">
+        <input type="email" placeholder="Enter your email" id="email">
+        <input type="text" placeholder="Enter your phonenumber" id="phone">
+        <input type="number" placeholder="Enter your age" id="age">
+        <select name="" id="role">
+            <option value="">select your role</option>
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+        </select>
+        <button type="submit">Create account</button>
+        <p class="error"></p>
+    </form>
+
+    <button onclick="deleteUser()">delete</button>
+    
+    <script>
+     
+        // async function uploadData(){
+        //    await axios.post('http://localhost:5000/send/kiran/hello/arun@gmail.com')
+        //         .then((res)=>{
+        //             console.log(res);
+        //             console.log(res.data);
+        //             document.write('backend working fine')
+                    
+        //         })
+        //         .catch((error)=>{
+        //             console.log(error);
+        //         })
+        // }
+
+        var username_input = document.getElementById('name')
+        var email_input = document.getElementById('email')
+        var phone_input = document.getElementById('phone')
+        var age_input = document.getElementById('age')
+        var role_select = document.getElementById('role')
+        var errorstatus = document.querySelector('.error')
+
+         async function uploadData(e){
+            e.preventDefault()
+
+           await axios.post('http://localhost:5000/create/new/user', {
+            username:username_input.value,
+            email:email_input.value,
+            age:age.value,
+            phonenumber:phone_input.value,
+            rule:role_select.value
+           })
+                .then((res)=>{
+                    console.log(res);
+                    console.log(res.data);
+                  
+                    if(res.status==200){
+                        errorstatus.innerHTML = `<span>${res.data.message}</span>`
+                    }
+                    
+                })
+                .catch((error)=>{
+                    console.log(error);
+                    errorstatus.innerHTML = `<span style="color:red">${error.message}</span>`
+                })
+        }
+
+        
+
+        function deleteUser(){
+            axios.delete('http://localhost:5000/delete/user/68eca86f77f2d925ee7979d3')
+            .then((res)=>{
+                console.log(res.data);
+                alert(res.data.message)    
+            })
+            .catch((error)=>{
+                console.log(error);
+                alert(error.message)
+                
+            })
+        }
+        
+    </script>
+</body>
+</html>
