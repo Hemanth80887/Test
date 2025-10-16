@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>BOM DIALOG BOXES</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>Alert</li>
+        <li>Confirm</li>
+        <li>Prompt</li>
+    </ol>
+
+    <button onclick="displayAlert()">Show alert</button>
+    <button onclick="displayConfirm()">Show Confirm</button>
+    <button onclick="displayPrompt()">Show Prompt</button>
+    <script>
+        function displayAlert(){
+            alert("Registration is successfull!.")
+        }
+
+
+        function displayConfirm(){
+            // console.log(confirm("are sure delete this message"))
+            const result = confirm("are sure delete this message");
+
+            if(result){
+                //performs when user clicks ok 
+                document.write("You clicked ok button")
+            }else{
+                //performs when user clicks cancel 
+                document.write("you cliked cancel button")
+            }
+        }
+
+
+        function displayPrompt(){
+            var username = prompt("Enter your username");
+            document.write(`<h1>username = ${username}</h1>`)
+        }
+    </script>
+</body>
+</html>
