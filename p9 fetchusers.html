@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <script>
+        var users = []
+        async function fetchusers(){
+           await axios.get('http://localhost:5000/users', )
+        .then(function(res){
+            console.log(res);
+            users = res.data.users;
+            
+        })
+        .catch(function(err){
+            console.log(err);
+            
+        })
+        console.log(users);
+
+        }
+
+        fetchusers()
+
+        
+        
+    </script>
+</body>
+</html>
