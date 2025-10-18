@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <center>
+            <h2>8) concat();</h2>
+            <p>The concat() concatenates (join) two or more array. Returns a new array. Containing the join arrays.</p>
+            <p>This method does not change the existing arrays</p>
+        </center>
+
+        <hr>
+
+        <p><b>SYNTAX : </b></p>
+
+        <pre>
+            array1.concat(array2, array3, ..., arrayX);
+        </pre>
+
+        <hr>
+
+
+        <script>
+            var class1Students = ["Arun", "kiran", "varun"]
+            var class2Students = ["John", "Chathan", "Don"]
+            var class3Students = [" Karthik B", "karthik C", "Hemanth S"];
+
+            var allCollegeStudents = class1Students.concat(class2Students, class3Students)
+
+            console.log("class1 students = ", class1Students);
+            console.log("class2 students = ", class2Students);
+            console.log("class3 students = ", class3Students);
+            
+        console.log("newly created array using concate method = ", allCollegeStudents);
+        
+        </script>
+</body>
+</html>
