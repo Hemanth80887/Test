@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container {}
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+
+        .card1 {
+            padding: 4%;
+            box-shadow: 0px 5px 5px gray;
+            margin: 4%;
+        }
+
+        img {
+            width: 80%;
+            height: 300px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="container">
+        <header>
+            <button onclick="lowToHigh()">Low to High</button>
+            <button onclick="highToLow()">High to Low</button>
+            <button onclick="onrating()">On ratings</button>
+            <button onclick="onsold()">Max Sold</button>
+            <button onclick="mens()">Mens Clothing</button>
+            <button onclick="jewelery()">jewelery</button>
+            <button onclick="electronics()">electronics</button>
+            <button onclick="womens()">women's clothing</button>
+        </header>
+        <div class="card"></div>
+    </section>
+
+    <script>
+        var products = [];
+        var card = document.querySelector(".card");
+        async function getproducts() {
+            await axios.get("https://fakestoreapi.com/products")
+                .then(res => {
+                    console.log(res);
+                    products = res.data;
+                    displayProducts();
+
+                })
+                .catch(err => console.log(err))
+        }
+        getproducts();
+
+        function displayProducts() {
+            card.innerHTML = "";
+            for (let item of products) {
+                card.innerHTML += `
+                <div class="card1">
+                    <center><img src="${item.image}">
+                        <h3>${item.title}</h3></center>
+                        <h2>Price:&#8377 ${item.price}/-</h2>
+                        <h4>Item sold: ${item.rating.count}</h4>
+                        <h4> Ratings: ${printStars(parseInt(item.rating.rate))}</h4>
+                    
+                    </div>
+                `
+            }
+        }
+
+        function printStars(rating) {
+            var result = "";
+            for (let i = 1; i <= rating; i++) {
+                result += "<i class='fa-solid fa-star' style='color:gold'></i>"
+            }
+
+            for (let j = 1; j <= 5 - rating; j++) {
+                result += "<i class='fa-solid fa-star' style='color:gray'></i>"
+            }
+
+            return result;
+        }
+        function lowToHigh(){
+        products.sort((a, b)=>a.price-b.price);
+        console.log(products);
+        displayProducts()
+        }
+         function highToLow(){
+        products.sort((a, b)=>b.price-a.price);
+        console.log(products);
+        displayProducts()
+  }
+   function onrating(){
+            products.sort((a, b)=>b.rating.rate-a.rating.rate);
+             displayProducts()
+        }
+        function onsold(){
+            products.sort((a, b)=>b.rating.count-a.rating.count);
+             displayProducts()
+        }
+
+        function mens(){
+            card.innerHTML="";
+            for(let item of products){
+                if(item.category=="men's clothing"){
+                     card.innerHTML += `
+                <div class="card1">
+                    <center><img src="${item.image}">
+                        <h3>${item.title}</h3></center>
+                        <h2>Price:&#8377 ${item.price}/-</h2>
+                        <h4>Item sold: ${item.rating.count}</h4>
+                        <h4> Ratings: ${printStars(parseInt(item.rating.rate))}</h4>
+                    
+                    </div>
+                `
+                }
+            }
+        }
+
+         function womens(){
+            card.innerHTML="";
+            for(let item of products){
+                if(item.category=="women's clothing"){
+                     card.innerHTML += `
+                <div class="card1">
+                    <center><img src="${item.image}">
+                        <h3>${item.title}</h3></center>
+                        <h2>Price:&#8377 ${item.price}/-</h2>
+                        <h4>Item sold: ${item.rating.count}</h4>
+                        <h4> Ratings: ${printStars(parseInt(item.rating.rate))}</h4>
+                    
+                    </div>
+                `
+                }
+            }
+        }
+
+        function jewelery(){
+            card.innerHTML="";
+            for(let item of products){
+                if(item.category=="jewelery"){
+                     card.innerHTML += `
+                <div class="card1">
+                    <center><img src="${item.image}">
+                        <h3>${item.title}</h3></center>
+                        <h2>Price:&#8377 ${item.price}/-</h2>
+                        <h4>Item sold: ${item.rating.count}</h4>
+                        <h4> Ratings: ${printStars(parseInt(item.rating.rate))}</h4>
+                    
+                    </div>
+                `
+                }
+            }
+        }
+
+        function electronics(){
+            card.innerHTML="";
+            for(let item of products){
+                if(item.category=="electronics"){
+                     card.innerHTML += `
+                <div class="card1">
+                    <center><img src="${item.image}">
+                        <h3>${item.title}</h3></center>
+                        <h2>Price:&#8377 ${item.price}/-</h2>
+                        <h4>Item sold: ${item.rating.count}</h4>
+                        <h4> Ratings: ${printStars(parseInt(item.rating.rate))}</h4>
+                    
+                    </div>
+                `
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
