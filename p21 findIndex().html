@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <center>
+            <h2>17) findIndex();</h2>
+            <p>The findIndex() method returns the first index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function , then -1 is returned</p>
+        </center>
+
+        <hr>
+
+        <p><b>SYNTAX : </b></p>
+
+        <pre>
+            array.findIndex(function(currentValue, index, arr), thisValues);
+        </pre>
+
+        <hr>
+
+        <script>
+            var students = [
+                {
+                    studentname:"arun",
+                    knowAnswer:false
+                },
+                 {
+                    studentname:"kiran",
+                    knowAnswer:false
+                },
+                 {
+                    studentname:"varun",
+                    knowAnswer:true
+                },
+                 {
+                    studentname:"tharun",
+                    knowAnswer:true
+                }
+            ]
+
+            const whoKnowAnswer = students.findIndex((item)=>item.knowAnswer==true);
+            console.log(whoKnowAnswer);//2
+            console.log(whoKnowAnswer+1);//3
+            console.log("student details = ", students[whoKnowAnswer]);
+            
+            
+        </script>
+</body>
+</html>
