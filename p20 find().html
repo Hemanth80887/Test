@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+            <h2>16) find();</h2>
+            <p>The find() method returns the first element in the provided array that satisfies the provided testing function.</p>
+            <p>If no values satisfy the testing function, underfined is returned</p>
+        </center>
+
+        <hr>
+
+        <p><b>SYNTAX : </b></p>
+
+        <pre>
+            array.find((element)=>{});
+        </pre>
+
+        <hr>
+
+        <script>
+            var marks = [100, 20, 45, 89, 60, 46];
+
+            const foundElement = marks.find((item)=>item<30);
+            console.log(foundElement);
+
+            if(foundElement==undefined){
+                console.log("user is passed,,");
+                
+            }else{
+                console.log("user failed");
+            }
+
+
+            var mobiles = [
+                {
+                    mobilename:"test1",
+                    price:10000
+                },
+                {
+                    mobilename:"test2",
+                    price:1000
+                },
+                {
+                    mobilename:"test3",
+                    price:20000
+                },
+                {
+                    mobilename:"test4",
+                    price:30000
+                }
+            ]
+
+         function findMobile(budget){
+               const result = mobiles.find((item)=>item.price<=budget)
+               if(result==undefined){
+                console.log("no mobiles found in your budget", budget);
+                
+                
+               }else{
+                console.log("some mobiles found in your budget", budget);
+                console.log("mobile = ", result);
+               }
+         }
+
+         findMobile(1000)
+         findMobile(100)
+         findMobile(20000)
+            
+        </script>
+</body>
+</html>
