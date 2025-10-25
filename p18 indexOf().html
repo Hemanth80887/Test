@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <center>
+            <h2>14) indexOf();</h2>
+            <p>The indexOf() method returns the first index(position) of a specified value, returns -1 if the value is not found and it searches from left to right.</p>
+            <p>Negative start values counts from the last element (but still searches from left to right)</p>
+        </center>
+
+        <hr>
+
+        <p><b>SYNTAX : </b></p>
+
+        <pre>
+            1) array.indexOf();
+            2) array.indexOf(item, start);
+        </pre>
+
+        <hr>
+
+        <script>
+             let fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+             console.log(fruits);
+
+             //searching from starting to end
+             console.log(fruits.indexOf("Banana"));//1
+             console.log(fruits.indexOf("banana"));//1
+
+             if(fruits.indexOf("hello")>=0){
+                console.log("given value is found");
+                
+             }else{
+                console.log("given value is not found");
+             }
+
+
+             //searching from perticular index position to end
+             console.log(fruits.indexOf("Mango"));
+             console.log(fruits.indexOf("Mango", 3)); //(value, starting_index_position)
+             console.log(fruits.indexOf("Apple", 2)); //(value, starting_index_position)
+             
+             function searchIndex(value, starting_index, array){
+                for(let i = starting_index; i<array.length; i++){
+                   if(array[i]==value){
+                    return  i;
+                   }
+                    
+                }
+                return -1;
+
+             }
+             
+             console.log(searchIndex("Banana", 0, fruits));
+
+
+             function reverseHandler(array){
+                var reversedArray = []
+                for(let i=array.length-1; i>=0; i--){
+                    console.log(array[i]);
+                    reversedArray.push(array[i])
+                }
+
+                return reversedArray;
+             }
+
+             console.log(reverseHandler(fruits));
+             
+            
+             
+             
+             
+        </script>
+</body>
+</html>
