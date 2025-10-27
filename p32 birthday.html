@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function birthdayCakeCandles(candles) {
+             // Write your code here
+            var maxNumber = candles[0]
+             for(var i=1; i<candles.length; i++){
+                if(candles[i]>maxNumber){
+                    maxNumber=candles[i]
+                }
+             }
+
+            //  console.log(maxNumber);//3
+
+             //check how many its repeated
+             var count = 0;
+             for(let j = 0; j<candles.length; j++){
+                if(candles[j]==maxNumber){
+                    count++;
+                }
+             }
+
+             console.log(count);
+             
+             
+        }
+
+        birthdayCakeCandles([3, 2, 1, 3])
+        birthdayCakeCandles([4, 4, 1, 3])
+    </script>
+    
+</body>
+</html>
