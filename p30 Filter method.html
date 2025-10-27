@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Filter method</h1>
+        <p>the filter method filters the array woth given condition and it created the new array and store which values is satisfied the given condition</p>
+    </center>
+    <hr>
+
+    <pre>
+        array.filter((item)=>condition) //created new array
+    </pre>
+    <hr>
+
+    <script>
+        var usersAge = [23, 20, 18, 45, 10, 34, 15, 9, 4, 5, 6];
+        var filteredArray = usersAge.filter((item)=>item>18);
+        console.log("users age = ", usersAge);
+        console.log("filteredArray = ", filteredArray);
+        
+
+        //with object array
+         var students = [
+                {
+                    studentname:"arun",
+                    knowAnswer:false
+                },
+                 {
+                    studentname:"kiran",
+                    knowAnswer:false
+                },
+                 {
+                    studentname:"varun",
+                    knowAnswer:true
+                },
+                 {
+                    studentname:"tharun",
+                    knowAnswer:true
+                }
+            ]
+
+            var filteredStudents = students.filter((item)=>item.knowAnswer==true);
+            console.log("filteredStudents = ", filteredStudents);
+            
+    </script>
+    
+</body>
+</html>
