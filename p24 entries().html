@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+            <h1>ARRAY METHODS PART - 4</h1>
+        </center>
+        <hr>
+
+        <center>
+            <h2>19) entries();</h2>
+            <p>The entries() method returns an array Iterator object with key/value pairs.</p>
+            <p>And this method does not changes the original array</p>
+        </center>
+        <hr>
+
+        <script>
+            let fruits = ["Apple", "Banana",  "Orange","Banana", "Papaya"];
+            console.log("fruits = ", fruits);
+            
+            var iteratedArray = fruits.entries();
+            //[[0, Apple], [1, Banana], [2, Orange], [3, 'Banana'], [4, 'Papaya']]
+            // console.log("fruits entries = ", iteratedArray.next().value);//[0, Apple]
+            // console.log("fruits entries = ", iteratedArray.next().value);//[1, Banana]
+            // console.log("fruits entries = ", iteratedArray.next().value);//[2, Orange]
+            // console.log("fruits entries = ", iteratedArray.next().value);//[3, 'Banana']
+            // console.log("fruits entries = ", iteratedArray.next().value);//[4, 'Papaya']
+            // console.log("fruits entries = ", iteratedArray.next().value);//undefined
+            
+            //using for of method
+            // for(let item of iteratedArray){
+            //     console.log("from for of method = ", item);
+            // }
+
+            //to read directly
+            for(let [index, element] of iteratedArray){
+                console.log("index = ", index);
+                console.log("element = ", element);
+                
+            }
+        </script>
+</body>
+</html>
