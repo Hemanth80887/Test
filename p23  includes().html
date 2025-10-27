@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+      <center>
+            <h2>18) includes();</h2>
+            <p>The includes() method returns true if an array contains a specified value (Case Sensitive) else returns false.</p>
+        </center>
+
+        <hr>
+
+        <p><b>SYNTAX : </b></p>
+
+        <pre>
+            array.includes(element, start);
+        </pre>
+
+        <hr>
+    
+
+        <script>
+
+             let fruits = ["Apple", "Banana",  "Orange","Banana", "Papaya"];
+
+             console.log(fruits.includes("Apple"));//true
+             console.log(fruits.includes("Mango"));//false
+
+             if(fruits.includes("Mongo")==true){
+                document.write("<h1>mango fruit is present in given fruits</h1>")
+             }else{
+                document.write("<h1>mango fruit is not present in given fruits</h1>")
+             }
+        </script>
+</body>
+</html>
