@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <center>
+            <h2>21) some();</h2>
+            <p>The every() method tests whether at least one element in the array passes the test implemented by the provided function.</p>
+            <p>It returns a true Value if, in the array, it founds an element for which the provided function returns true; otherwise it returns false. It does not modifies the array.</p>
+        </center>
+        <hr>
+
+        <p><b>SYNATX :</b></p>
+        <pre>
+            array.some((element)=>{});
+        </pre>
+        <hr>
+
+        <script>
+            var usersAges1 = [10, 5, 6, 13, 15, 20, 14]; //at least one value is satisfied the condition so comeplete some value is true only
+            var result1 = usersAges1.some((item)=>item>18);
+            console.log(result1);
+            if(result1==true){
+                console.log("in users1 at least one person age is greater than 18 so is can vote");
+            }else{
+                console.log("in users1 no one's age is greater than 18 so  these persons can't vote");
+            }
+
+
+
+            //example 2 for fasle
+             var usersAges2 = [10, 5, 6, 13, 15, 10, 14]; //no value is satisfied the condition so comeplete some value is false only
+            var result2 = usersAges2.some((item)=>item>18);
+            console.log(result2);
+            if(result2==true){
+                console.log("in users2 at least one person age is greater than 18 so is can vote");
+            }else{
+                console.log("in users2 no one's age is greater than 18 so  these persons can't vote");
+            }
+            
+        </script>
+</body>
+</html>
