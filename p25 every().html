@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+            <h2>20) every();</h2>
+            <p>The every() method tests whether all elements in the array pass the test implemented by the provided function.</p>
+            <p>It returns a Boolean Value.</p>
+        </center>
+        <hr>
+          <p><b>SYNATX :</b></p>
+        <pre>
+            array.every((element)=>{});
+        </pre>
+        <hr>
+
+        <script>
+            var user1Marks = [45, 55, 65, 100, 34, 40]
+            var user2Marks = [45, 55, 65, 100, 34, 10]
+            
+            // console.log(userMarks.every((item)=>item>30));
+            var result1 = user1Marks.every((item)=>item>30); //all values is satisfied so every method is the true
+            if(result1==true){
+                //when the all values in an array satisfies the given condition
+                console.log("user1 is passed");
+            }else{
+                console.log("user1 is failed");
+            }
+
+
+
+
+            //testing userfalserue
+            if(result2==true){
+                //when the all values in an array satisfies the given condition
+                console.log("user2 is passed");
+            }else{
+                console.log("user2 is failed");
+            }
+        </script>
+</body>
+</html>
