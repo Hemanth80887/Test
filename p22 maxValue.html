@@ -1,0 +1,28 @@
+var arr = [10, 5, 20, 8, 2]
+
+            function findMinimum(array){
+                var minValue = array[0];
+                for(let i=1; i<array.length; i++){
+                    if(array[i]<minValue){
+                        minValue = array[i]
+                    }
+                }
+
+                return minValue;
+            }
+            
+            console.log(findMinimum(arr));
+            
+
+            function findMaximum(array){
+                var maxValue = array[0];
+                for(let i=1; i<array.length; i++){
+                    if(array[i]>maxValue){
+                        maxValue = array[i]
+                    }
+                }
+
+                return maxValue;
+            }
+
+            console.log(findMaximum(arr));
