@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function timeConversion(s) {
+            // Write your code here
+            var splittedValue = s.split(":");
+            console.log(splittedValue);//['07', '05', '45PM']
+            var hrs = parseInt(splittedValue[0]);
+            var mins = splittedValue[1];
+            console.log(hrs);
+
+           var timeformatesplit = splittedValue[2].split("");
+           console.log(timeformatesplit);
+            var secons = timeformatesplit[0] + timeformatesplit[1];
+
+           var zone = timeformatesplit[2]+timeformatesplit[3]
+        //    console.log(timeformatesplit[2], timeformatesplit[3]);
+           console.log(zone);
+
+           if(zone=="PM"){
+               if(hrs==12){
+                hrs=12;
+               }else{
+                hrs = hrs+12;
+               }
+           }else{
+            if(hrs==12){
+                hrs="00"
+            }else{
+                 hrs = hrs<9?("0"+hrs):(hrs);
+            }
+           }
+
+           console.log(`${hrs}:${mins}:${secons}`);
+  
+            
+        }
+
+        timeConversion("12:40:22AM")
+        // timeConversion("12:05:45PM")
+        // timeConversion("12:05:45AM")
+
+    var str = "07:05:45PM";
+        // console.log(str.split());
+        // console.log(str.split(""));
+        // console.log(str.split(":"));//['07', '05', '45PM']
+
+    </script>
+</body>
+</html>
