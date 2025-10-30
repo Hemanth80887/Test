@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <form action="">
+            <label for="">ENter username</label>
+            <input type="text" placeholder="Enter here..." id="username">
+            <button type="button" onclick="lowerCaseHandler()">to Lowercase</button>
+            <button type="button" onclick="upperCaseHandler()">to Uppercase</button>
+            <div id="result">
+               
+            </div>
+        </form>
+    </section>
+
+    <script>
+        var usernameInput = document.getElementById("username");
+        var resultContainer = document.getElementById("result");
+        const lowerCaseHandler = () => {
+            resultContainer.innerHTML = ""; //make empty container
+            resultContainer.innerHTML = `<p>${usernameInput.value.toLowerCase()}</p>`
+        }
+
+          const upperCaseHandler = () => {
+            resultContainer.innerHTML = ""; //make empty container
+            resultContainer.innerHTML = `<p>${usernameInput.value.toUpperCase()}</p>`
+        }
+    </script>
+</body>
+</html>
