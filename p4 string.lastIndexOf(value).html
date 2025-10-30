@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+            <h1>STRING METHODS..!</h1>
+            <p>here lastIndexOf method searches elements from right ot left and it returns index of the value specified other if the value is not found it returns -1</p>
+        </center>
+        <hr>
+
+        <pre>
+            string.lastIndexOf(value)
+            string.lastIndexOf(value, starting_index)
+        </pre>
+
+
+        <script>
+            var str1 = "javascript";
+            console.log(str1.lastIndexOf("a"));//3 //to seach starts from 0 index
+            console.log(str1.lastIndexOf("a", 4));//3//to search starts from 4 index
+
+            if(str1.lastIndexOf('t')>=0){
+                console.log("given t is present");
+                
+            }else{
+                console.log("given t is not present");
+                
+            }
+        </script>
+</body>
+</html>
