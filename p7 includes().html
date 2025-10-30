@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>includes()</h1>
+        <p>the includes check the given value is present in given string or not, if present returns true, if not present return false.</p>
+    </center>
+
+    <script>
+
+        var str1 =  "This is the javascript"
+        console.log(str1.includes("javascript"));
+        
+
+
+        var file = "p1.css";
+
+        switch (true) {
+            case file.includes(".html"):
+                console.log("html extenction");
+                break;
+        
+            case file.includes(".css"):
+                console.log("CSS extenction");
+                break;
+
+             case file.includes(".js"):
+                console.log("JS extenction");
+                break;
+            default:
+                
+                console.log("text file");
+        
+
+                break;
+        }
+    </script>
+</body>
+</html>
