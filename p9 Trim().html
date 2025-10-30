@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Trim()</h1>
+        <p>the trim() is used to remove the space at begining of the string or ending of the string using trim() => for all sides left and right anf we trimStart() and trimLeft() and we have trimEnd() and trimRight() </p>
+    </center>
+    <hr>
+
+
+    <input type="text" name="" id="msg" placeholder="Type your message..." onkeyup="messageTypingHandler()">
+    <p id="status"></p>
+
+
+    <script>
+
+        var str1 = "  Hello word!   !!     ";
+        console.log(str1);
+        console.log(str1.trim());
+        console.log(str1.trim());
+
+
+        var msg = document.getElementById("msg");
+        var typingStatus = document.getElementById("status");
+
+        function messageTypingHandler(){
+            if(msg.value.trim().length>0){
+                typingStatus.innerText = "Typing..."
+            }else{
+                typingStatus.innerText = "";
+            }
+        }
+        
+    </script>
+</body>
+</html>
