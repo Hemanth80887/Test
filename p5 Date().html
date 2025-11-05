@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var date = new Date();
+        console.log(date);
+        document.write(`<h2>time and date = ${date.toLocaleString()}</h3>`)
+        document.write(`<h2> date = ${date.toLocaleDateString().replaceAll("/", "-")}</h3>`)
+        // document.write(`<h2> date = ${.replaceAll("/", "-")}</h3>`)
+        document.write(`<h2> time = ${date.toLocaleTimeString()}</h3>`)
+
+            var time = date.toLocaleDateString();
+            console.log(time);
+            var splittedDate = time.split("/");
+            console.log(splittedDate);
+            var result1 = `${splittedDate[1]}/${splittedDate[0]}/${splittedDate[2]}`
+            var result2 = `Day ${splittedDate[1]}/Month ${splittedDate[0]}/year ${splittedDate[2]}`
+        document.write(`<h2> date = ${result1}</h3>`)
+        document.write(`<h2> date = ${result2}</h3>`)
+            
+    </script>
+</body>
+</html>
