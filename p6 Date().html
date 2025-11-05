@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes blink{
+           
+            100%{
+                background-color: red;
+            }
+        }
+
+        button{
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            background-color: gray;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hours">
+        <button>8</button>
+        <button>4</button>
+        <button>2</button>
+        <button>1</button>
+    </div>
+
+
+    <script>
+        var allHours = {
+            h1: [0, 0, 0, 1],
+            h2: [0, 0, 1, 0],
+            h3: [0, 0, 1, 1],
+            h4: [0, 1, 0, 0],
+            h5: [0, 1, 0, 1],
+            h6: [0, 1, 1, 0],
+            h7: [0, 1, 1, 1],
+            h8: [1, 0, 0, 0],
+            h9: [1, 0, 0, 1],
+            h10: [1, 0, 1, 0],
+            h11: [1, 0, 1, 1],
+            h0: [1, 1, 0, 0]
+        }
+
+
+        function handler(){
+            var presentTime = new Date(2025, 11, 5, 7, 0, 0);
+            console.log(presentTime.getHours() % 12);
+            var hourskey = "h"+presentTime.getHours() % 12;
+            console.log(hourskey);
+
+            console.log(allHours[hourskey]);
+            var mainArray = allHours[hourskey]
+            for(let index = 0; index<mainArray.length; index++){
+                if(mainArray[index]!=0){
+                    var listItem = document.querySelector(`.hours button:nth-child(${index+1})`)
+                    // console.log(listItem.innerText);
+                    // listItem.classList.add("active")
+                    listItem.style.animation = "blink 0.2s linear infinite"
+                    
+                }
+            }
+        }
+        handler();
+    </script>
+</body>
+</html>
