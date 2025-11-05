@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Constructors</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>Date()</li>
+        <li>Math()</li>
+        <li>Number()</li>
+        <li>String()</li>
+        <li>Boolean()</li>
+        <li>Object()</li>
+        <li>Array()</li>
+        <li>IsNaN()</li>
+        <li>IsFinite()</li>
+    </ol>
+    <hr>
+
+    <h1>Date()</h1>
+    <p>note: For every Constructors need one instance and we can create the instance for any Constructors using new keyword</p>
+    <script>
+        var date  = new Date(); //instance
+
+        document.write(`<h1>${typeof date}</h1>`);//object
+        document.write(`<h1>${typeof Date()}</h1>`)//string
+        document.write(`<h1>${date}</h1>`)//string
+
+
+
+        //Date constructor with parameter
+        var date1 = new Date(2018, 0, 21, 14, 45, 30);//year, month, date, hours, minutes, seconds
+        document.write(`<h1>${date1}</h1>`)//string
+
+
+        //Date constructor with parameter
+        var date2 = new Date("30 january 2010")
+        document.write(`<h1>${date2}</h1>`)//string
+
+
+    </script>
+</body>
+</html>
