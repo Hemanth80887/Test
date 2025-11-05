@@ -1,0 +1,185 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 9.5.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.640 sec)
+
+mysql> create database batch10;
+Query OK, 1 row affected (0.259 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| batch10            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.016 sec)
+
+mysql> use batch10;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| batch10    |
++------------+
+1 row in set (0.007 sec)
+
+mysql> show tables;
+Empty set (0.224 sec)
+
+mysql> create table student(studentId int(20),studentName varchar(20),deptName varchar(20));
+Query OK, 0 rows affected, 1 warning (0.443 sec)
+
+mysql> desc student;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| studentId   | int         | YES  |     | NULL    |       |
+| studentName | varchar(20) | YES  |     | NULL    |       |
+| deptName    | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.160 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_batch10 |
++-------------------+
+| student           |
++-------------------+
+1 row in set (0.024 sec)
+
+mysql>
+mysql> alter table student add column collegeName varchar(20);
+Query OK, 0 rows affected (0.745 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| studentId   | int         | YES  |     | NULL    |       |
+| studentName | varchar(20) | YES  |     | NULL    |       |
+| deptName    | varchar(20) | YES  |     | NULL    |       |
+| collegeName | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.024 sec)
+
+mysql> alter table student modify column studentName text;
+Query OK, 0 rows affected (0.644 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| studentId   | int         | YES  |     | NULL    |       |
+| studentName | text        | YES  |     | NULL    |       |
+| deptName    | varchar(20) | YES  |     | NULL    |       |
+| collegeName | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+4 rows in set (0.035 sec)
+
+mysql> alter table student drop column collegeName;
+Query OK, 0 rows affected (0.494 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| studentId   | int         | YES  |     | NULL    |       |
+| studentName | text        | YES  |     | NULL    |       |
+| deptName    | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.031 sec)
+
+mysql> insert into student values(1,"Harsh","CSE");
+Query OK, 1 row affected (0.181 sec)
+
+mysql> insert into student(studentId,studentName) values (2,"Aman");
+Query OK, 1 row affected (0.119 sec)
+
+mysql> select * from student
+    -> ;
++-----------+-------------+----------+
+| studentId | studentName | deptName |
++-----------+-------------+----------+
+|         1 | Harsh       | CSE      |
+|         2 | Aman        | NULL     |
++-----------+-------------+----------+
+2 rows in set (0.074 sec)
+
+mysql> select studentName from student;
++-------------+
+| studentName |
++-------------+
+| Harsh       |
+| Aman        |
++-------------+
+2 rows in set (0.009 sec)
+
+mysql> select studentName as names from student;
++-------+
+| names |
++-------+
+| Harsh |
+| Aman  |
++-------+
+2 rows in set (0.010 sec)
+
+mysql> select * from student where studentId=1;
++-----------+-------------+----------+
+| studentId | studentName | deptName |
++-----------+-------------+----------+
+|         1 | Harsh       | CSE      |
++-----------+-------------+----------+
+1 row in set (0.088 sec)
+
+mysql>
+mysql> select s.studentName from student as s;
++-------------+
+| studentName |
++-------------+
+| Harsh       |
+| Aman        |
++-------------+
+2 rows in set (0.011 sec)
+
+mysql> update student set deptName = "IT" where studentId = 2;
+Query OK, 1 row affected (0.051 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> desc student;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| studentId   | int         | YES  |     | NULL    |       |
+| studentName | text        | YES  |     | NULL    |       |
+| deptName    | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.026 sec)
+
+mysql>
