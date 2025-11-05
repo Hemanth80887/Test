@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function whatsAppTImeLogic(time){
+            const presentTime = new Date();
+            const messageTime = new Date(time);
+            const diffreceTime = presentTime - messageTime;//in milliseconds
+            // console.log(Math.floor(diffreceTime/1000));
+            console.log(diffreceTime);
+            
+            const seconds = Math.floor(diffreceTime/1000);
+            const minutes = Math.floor(seconds/60);
+            const hours = Math.floor(minutes/60);
+            const days = Math.floor(hours/24);
+            console.log(minutes);
+            
+            if(seconds<60) return "Just Now"
+            if(minutes<60) return `${minutes} minutes ago..` 
+            if(hours<24) return `${hours} hours ago..` 
+            return    `${days} Days ago..`          
+
+        }
+        
+        console.log(whatsAppTImeLogic(new Date(2025, 10, 4, 13, 5, 10)));
+        
+    </script>
+</body>
+</html>
