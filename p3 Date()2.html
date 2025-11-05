@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Digital Clock</h1>
+    </center>
+    <hr>
+
+    <center>
+        <h1 id="time">00:00:00</h1>
+        <button onclick="startHandler()">Start</button>
+        <button onclick="stopTime()">Stop</button>
+    </center>
+
+    <script>
+        var h1Tag = document.getElementById("time");
+        var index = 0;
+        function getTime(){
+            console.log(index);
+            
+            h1Tag.innerHTML = ""
+            var date = new Date();
+            var time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+
+            console.log(time.split(""));
+            var splittedTime = time.split("");
+            setInterval(()=>{
+                if(index==0){
+                    h1Tag.innerHTML =""
+                }
+                if(index<splittedTime.length){
+                h1Tag.innerHTML += `<span>${splittedTime[index]}</span>` 
+                index++
+            }else{
+                h1Tag.innerHTML = "00:00:00"
+                index=0;
+            }
+            }, 1000)
+
+        }
+        var startTime;
+        function startHandler(){
+            startTime = setInterval("getTime()", 3000);
+        }
+
+        function stopTime(){
+            clearInterval(startTime)
+        }
+    </script>
+</body>
+</html>
