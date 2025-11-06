@@ -1,0 +1,35 @@
+var x = 10;
+let y = 20;
+const z = 30;
+
+{
+    let y = 40;
+    const z = 50;
+    var x = y + z;
+    {
+        let y = 60;
+        const z = x + y;
+        x = z - y;
+        {
+            let y = 70;
+            const z = x + y;
+            x = z - y;
+            {
+                let y = 80;
+                const z = y + x;
+                x = z - y;
+                {
+                    let y = 90;
+                    const z = y + x;
+                    x = z - y;
+                    console.log("P51. - p7.js:25", x, y, z);
+                }
+                console.log("P52. - p7.js:27", x, y, z);
+            }
+            console.log("P53. - p7.js:29", x, y, z);
+        }
+        console.log("P54. - p7.js:31", x, y, z);
+    }
+    console.log("P55. - p7.js:33", x, y, z);
+}
+console.log("P56. - p7.js:35", x, y, z);
