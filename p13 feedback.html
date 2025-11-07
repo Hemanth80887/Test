@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="p-2 p-md-4 p-lg-5">
+    <!-- <center>
+        <h1 class="text-danger bg-dark p-5 mt-5 display-6">Object array</h1>
+    </center>
+    <hr> -->
+
+
+    <script>
+        //example1
+         // var fruit1 = "apple"
+        // var fruit2 = "banana"
+        // var fruit3 = "Cherry"
+
+        var fruits = ["apple", "banana", "Cherry"]
+
+
+        //example2
+        // var user1 = {
+        //     username:"Arun",
+        //     email:"arun@gmail.com",
+        //     age:15
+        // }
+
+        // var user2 = {
+        //     username:"Arun",
+        //     email:"arun@gmail.com",
+        //     age:15
+        // }
+
+        var users = [
+            {
+            username:"Arun",
+            email:"arun@gmail.com",
+            age:15
+            },
+
+            {
+            username:"kiran",
+            email:"kiran@gmail.com",
+            age:16
+            },
+
+            {
+            username:"varun",
+            email:"varun@gmail.com",
+            age:25
+            }
+        ]
+
+        console.log(users[0]);
+        console.log(users[1]);
+        console.log(users[2]);
+        console.log(users[3]);//undefined
+
+        //getting values from objects
+        //anyware if the value is a object then we can read the  object values
+        //using => object.keyname
+      
+
+        //mannual way
+         console.log("user1 username = ", users[0].username);
+        console.log("user1 email = ", users[0].email);
+        console.log("user1 Age = ", users[0].age);
+
+        console.log("---------------------------");
+
+
+          console.log("user2 username = ", users[1].username);
+        console.log("user2 email = ", users[1].email);
+        console.log("user2 Age = ", users[1].age);
+
+        console.log("---------------------------");
+
+         console.log("user3 username = ", users[2].username);
+        console.log("user3 email = ", users[2].email);
+        console.log("user3 Age = ", users[2].age);
+
+
+        // using loops 
+        // for(let i=0; i<users.length; i++){
+        //     console.log("from for loop = ", users[i]);
+
+        //     document.write(`
+        //         <div class="card mb-4">
+        //             <div class="card-header">
+        //                 <p class="m-0 fs-6">User information</p>    
+        //             </div>
+        //            <div class="card-body">
+        //              <h1 class="fs-3">username : ${users[i].username}</h1>   
+        //             <p class="text-secondary">Email: <i>${users[i].email}</i></p> 
+        //             <p>Age: <i>${users[i].age}</i></p>
+                    
+        //             <label class="form-label">Feedback <span class="text-danger">*</span></label>
+        //             <input type="text" placeholder="your feedback" class="form-control w-100">
+        //             </div>
+
+        //             <div class="card-footer">
+        //                 <button class="btn btn-dark btn-sm">View More</button>    
+        //                 <button class="btn btn-outline-dark btn-sm">Send Message</button>    
+        //             </div>
+        //         </div>
+        //     `)
+        // }
+
+
+
+        for(let item of users){
+             document.write(`
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <p class="m-0 fs-6">User information</p>    
+                    </div>
+                   <div class="card-body">
+                     <h1 class="fs-3">username : ${item.username}</h1>   
+                    <p class="text-secondary">Email: <i>${item.email}</i></p> 
+                    <p>Age: <i>${item.age}</i></p>
+                    
+                    <label class="form-label">Feedback <span class="text-danger">*</span></label>
+                    <input type="text" placeholder="your feedback" class="form-control w-100">
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-dark btn-sm">View More</button>    
+                        <button class="btn btn-outline-dark btn-sm">Send Message</button>    
+                    </div>
+                </div>
+            `)
+        }
+            
+        
+
+
+       
+    </script>
+</body>
+</html>
