@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            padding: 4%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            width: 400px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        .card-header{
+            padding: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+        .card-header h2{
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+        .card-body{
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            padding: 10px;
+            background-color: rgb(243, 252, 255);
+
+            position: relative;
+        }
+        .card-body img{
+            width: 100px;
+        }
+
+        .card-footer{
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card-footer button{
+            border: none;
+            padding: 5px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 5px;
+            background-color: #3C467B;
+            color: white;
+            cursor: pointer;
+        }
+        .card-footer button:hover{
+            background-color: #2d3769;
+        }
+        .card-footer button:active{
+            transform: scale(0.9);
+        }
+        #result{
+            font-size: 1.6rem;
+            font-weight: 600;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        #result span{
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        @media(max-width:768px){
+            .card{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="card">
+        <div class="card-header">
+            <h2>Roll Dice</h2>
+        </div>
+
+         <div class="card-body">
+            <img src="./images/Dice_four.png" alt="" id="dice_image">
+            <h1 id="result">Total <span id="random_number">0</span></h1>
+        </div>
+
+        <div class="card-footer">
+            <button onclick="rollDiceHandler()">Roll</button>
+        </div>
+
+       </div>
+    </div>
+
+
+    <script>
+        var image = document.getElementById("dice_image");
+        var spanTag = document.getElementById("random_number");
+        var allImages = [
+            './images/Dice_one.png',
+            './images/Dice_two.png',
+            './images/Dice_three.png',
+            './images/Dice_four.png',
+            './images/Dice_five.png',
+            './images/Dice_six.png',
+        ]
+        function rollDiceHandler(){
+            //after use click the button
+            image.src = "./images/dice-roll-dice.gif" //dice roll animation gif
+            image.style.width = "150px"
+
+            //executing code after 3seconds
+           setTimeout(function(){
+            image.style.width = "100px";
+            image.src = "";
+             var randomNumber = Math.round(Math.random()*6);
+             if(randomNumber !=0){
+            console.log(randomNumber);
+            console.log(allImages[randomNumber-1]);
+            image.src = allImages[randomNumber-1];
+            spanTag.innerText = randomNumber;
+          }
+           }, 500)
+
+        }
+    </script>
+</body>
+</html>
