@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Math - Object</h1>
+    </center>
+    <hr>
+
+
+    <script>
+        console.log(typeof(Math)); //object
+        console.log(typeof(Date()));//string
+        console.log(typeof(new Date()));//object
+
+        document.write(`<h1>abs(-12) = ${Math.abs(-12)}</h1>`)
+        document.write(`<h1>sqrt(25) = ${Math.sqrt(25)}</h1>`)
+        document.write(`<h1>cbrt(27) = ${Math.cbrt(27)}</h1>`)
+        document.write(`<h1>min(27, 3, 4, 67, 89, 90) = ${Math.min(27, 3, 4, 67, 89, 90)}</h1>`)
+        document.write(`<h1>max(27, 3, 4, 67, 89, 90) = ${Math.max(27, 3, 4, 67, 89, 90)}</h1>`)
+        
+        document.write(`<h1>floor(2.9) = ${Math.floor(2.9)}</h1>`);//2 => because floor will returns lowest int
+        document.write(`<h1>ceil(2.9) = ${Math.ceil(2.9)}</h1>`);//3 => because ceil will return highest int
+
+        document.write(`<h1>floor(2.1) = ${Math.floor(2.1)}</h1>`);//2 => because ceil will return highest int
+        document.write(`<h1>ceil(2.1) = ${Math.ceil(2.1)}</h1>`);//3 => because ceil will return highest int
+
+
+        document.write(`<h1>round(2.5) = ${Math.round(2.5)}</h1>`);//3 because => if any value after 0.5 it will becomes highest int otherwise it becomes lowest integer
+        document.write(`<h1>round(2.4) = ${Math.round(2.4)}</h1>`);//2 because => if any value after 0.5 it will becomes highest int otherwise it becomes lowest integer
+
+        document.write(`<h1>acos(adj/hyp) = ${Math.acos(8/10)}</h1>`);//0.6435011087932843
+        document.write(`<h1>acos(adj/hyp) = ${Math.acos(-1)}</h1>`);//3.141592653589793
+        document.write(`<h1>acos(adj/hyp) = ${Math.acos(0)}</h1>`);//1.5707963267948966
+
+
+        document.write(`<h1>acosh(x) = ${Math.acosh(2)}</h1>`);//1.3169578969248166
+        document.write(`<h1>acosh(x) = ${Math.acosh(12.33)}</h1>`);//3.2035340024679604
+
+        //trunc will removes decimal numbers 
+        document.write(`<h1>trunc(x) = ${Math.trunc(12.33)}</h1>`);//12
+        document.write(`<h1>trunc(x) = ${Math.trunc(1.33)}</h1>`);//1
+
+        
+        // Math.acos(2)
+        // Math.asinh(10)
+        // Math.acosh(10)
+        // Math.atan(1)
+        // Math.atanh(1)
+        // Math.atan2(1)
+        // Math.cosh(1)
+        // Math.exp(x);
+
+        // Math.fround()
+        // Math.log(x)
+        // Math.log1p(x)
+        // Math.log10(x)
+        // Math.log2(x)
+        // Math.pow(x, y); //(2, 3);
+        // Math.sign(x)
+        // Math.sin(x)
+        // Math.sinh(x)
+        // Math.trunc(decimal_value); => returns integer of value (removes fractional digits )
+
+
+    </script>
+</body>
+</html>
